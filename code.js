@@ -1,5 +1,6 @@
 /*jshint maxerr: 1000 */
 
+
 function startTimer(delay, PLC) {
     var hours;
 
@@ -24,6 +25,16 @@ function startTimer(delay, PLC) {
     var period = endHour - 7;
 
     var endMinuteTest = hours[period];
+    
+    if (period < 0) {
+      alert('It\'s before school!');
+      return;
+    }
+    
+    if (!endMinuteTest) {
+      alert('It\'s after school!');
+      return;
+    }
 
     var endMinuteTestArray;
 
@@ -127,9 +138,12 @@ function display(endHour, endMinute, delay, longMessage, PLC) {
         startTimer(delay, PLC);
         return;
     }
+    
+    timeLeft = hours + ':' + ("0" + minutes).slice(-2) + ':' + ("0" + seconds).slice(-2);
+    setText(timeLeft, 'Clock');
 
-    document.title = (hours + ':' + ("0" + minutes).slice(-2) + ':' + ("0" + seconds).slice(-2) + ' ' + longMessage);
-    setTimeout(display, 1000, endHour, endMinute, delay, longMessage, PLC);
+    document.title = (timeLeft + ' ' + longMessage);
+    window.stopID = setTimeout(display, 1000, endHour, endMinute, delay, longMessage, PLC);
 }
 
 function getWednesdays() {
@@ -169,10 +183,8 @@ function isPLC() {
     return false;
 }
 
-function setText(text) {
-    var textElement = document.getElementById("BEES");
-    textElement.innerHTML = text;
-    // console.log(text);
+function setText(text,ID) {
+    document.getElementById(ID).innerHTML = text;
 }
 
 function numberFormat(numberStr) {
@@ -195,6 +207,9 @@ function isUnusual() {
 }
 
 function run(delay) {
+  
+    if (window.stopID) clearTimeout(window.stopID);
+  
     var weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     var today = new Date();
@@ -205,23 +220,23 @@ function run(delay) {
     if (today.getDay() === 6 || new Date().getDay() === 0) {
         alert('It\'s the weekend. Why are you here?');
         dayMessage = dayMessage + 'and it is the weekend.';
-        setText(dayMessage);
+        setText(dayMessage, 'Date');
         return;
     } else if (isUnusual()) {
         alert('Today has a unique schedule. Countdown won\'t work today. Sorry.');
         dayMessage = dayMessage + 'and it is an unusual day.';
-        setText(dayMessage);
+        setText(dayMessage, 'Date');
         return;
     } else if (isPLC()) {
         alert('Today is a PLC day. Hurray!');
         dayMessage = dayMessage + 'and it is a PLC day.';
-        setText(dayMessage);
+        setText(dayMessage, 'Date');
         startTimer(delay, true);
     } else {
         dayMessage = dayMessage + 'and it is a regular weekday.';
-        setText(dayMessage);
+        setText(dayMessage, 'Date');
         startTimer(delay);
     }
 }
 
-run();
+run(parseInt(document.getElementById('delayInput').value));
