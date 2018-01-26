@@ -2,16 +2,6 @@
 
 <html>
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113020374-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-113020374-1');
-</script>
-
   <meta charset="utf-8">
   <title>Countdown</title>
   <link href="style.css" rel="stylesheet" type="text/css"/>
@@ -115,10 +105,10 @@
 		<aside class="right-sidebar">
 			<h3 style='font-family:monospace; font-size: 2em; font-weight: bold; padding: 5px 5px 5px 0px;'>Links</h3>
       <a href='https://rogerhub.com/final-grade-calculator/' style='font-family:monospace; font-size: 1.5em; font-weight: bold; padding: 0 0 0 10px'>Finals Calculator</a>
-      <h1 style='font-family:monospace; font-size: 1.8em; font-weight: bold; padding: 10px 10px 10px 0px;'><br><br><br><br><br><br><br><br><br><br><br><br>Delay?</h1><p>Higher numbers that it ended after the bell, while lower, and negative, means before. Adjust this number if the countdown is innacurate.</p>
-      <label for="delayInpute">Seconds:</label>
+      <h1 style='font-family:monospace; font-size: 1.8em; font-weight: bold; padding: 10px 10px 10px 0px;'><br><br><br><br><br><br><br><br><br><br><br><br>Was the countdown delayed?</h1><p>Change this number and hit submit to fine tune the countdown. Raise the number if the bell was before the countdown, and lower it if the bell was after.</p>
+      <label for="delayInput">Seconds:</label>
       <input id="delayInput" type="number" style="width: 50px;" value='0' name='delayInput'>
-      <input type='button' value='Submit' onclick="run(parseInt(document.getElementById('delayInput').value));">
+      <input type='button' value='Restart Countdown' id='delayButton' onclick="run(parseInt(document.getElementById('delayInput').value));">
       <script>
           /* the code */
           var k = document.getElementById("delayInput");
@@ -132,6 +122,11 @@
           }
           /* autosave onchange and every 10000ms and when you close the window */
           k.onchange = b();
+          k.onkeypress=function(e){
+            if(e.keyCode==13){
+              document.getElementById('delayButton').click();
+            }
+          }
           setInterval(b, 10000);
           window.onunload = b();
       </script>

@@ -25,12 +25,12 @@ function startTimer(delay, PLC) {
     var period = endHour - 7;
 
     var endMinuteTest = hours[period];
-    
+
     if (period < 0) {
       alert('It\'s before school!');
       return;
     }
-    
+
     if (!endMinuteTest) {
       alert('It\'s after school!');
       return;
@@ -138,8 +138,11 @@ function display(endHour, endMinute, delay, longMessage, PLC) {
         startTimer(delay, PLC);
         return;
     }
-    
+
     timeLeft = hours + ':' + ("0" + minutes).slice(-2) + ':' + ("0" + seconds).slice(-2);
+
+    if (hours === 0) timeLeft = timeLeft.substring(2)
+
     setText(timeLeft, 'Clock');
 
     document.title = (timeLeft + ' ' + longMessage);
@@ -188,11 +191,14 @@ function setText(text,ID) {
 }
 
 function numberFormat(numberStr) {
-    if (numberStr[-1] === '1') {
+
+    if (numberStr.substring(-2) === '11') {
+      return 'th';
+    } else if (numberStr.substring(-1) === '1') {
         return 'st';
-    } else if (numberStr[-1] === '2') {
+    } else if (numberStr.substring(-1) === '2') {
         return 'nd';
-    } else if (numberStr[-1] === '3') {
+    } else if (numberStr.substring(-1) === '3') {
         return 'rd';
     } else {
         return 'th';
@@ -207,13 +213,13 @@ function isUnusual() {
 }
 
 function run(delay) {
-  
+
     if (window.stopID) clearTimeout(window.stopID);
-  
+
     var weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     var today = new Date();
-    var dayMessage = 'Today is ' + weekdays[today.getDay()] + ', ' + months[today.getMonth()] + ' ' + today.getDate() + numberFormat(today.getDate()) + ', ';
+    var dayMessage = 'Today is ' + weekdays[today.getDay()] + ', ' + months[today.getMonth()] + ' ' + today.getDate() + numberFormat('' + today.getDate()) + ', ';
 
 
 
@@ -239,4 +245,4 @@ function run(delay) {
     }
 }
 
-run(parseInt(document.getElementById('delayInput').value));
+run(parseInt(localStorage.getItem('delay')));
