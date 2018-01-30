@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<!--Chris Johnson's Eyebrows-->
+<!--MEMES-->
 <div class="wrapper">
 
 	<header class="header">
@@ -105,10 +105,35 @@
 		<aside class="right-sidebar">
 			<h3 style='font-family:monospace; font-size: 2em; font-weight: bold; padding: 5px 5px 5px 0px;'>Links</h3>
       <a href='https://rogerhub.com/final-grade-calculator/' style='font-family:monospace; font-size: 1.5em; font-weight: bold; padding: 0 0 0 10px'>Finals Calculator</a>
-      <h1 style='font-family:monospace; font-size: 1.8em; font-weight: bold; padding: 10px 10px 10px 0px;'><br><br><br><br><br><br><br><br><br><br><br><br>Was the countdown delayed?</h1><p>Change this number and hit submit to fine tune the countdown. Raise the number if the bell was before the countdown, and lower it if the bell was after.</p>
+      <h3 style='font-family:monospace; font-size: 2em; font-weight: bold; padding: 5px 5px 5px 0px;'><br><br><br><br><br><br><br><br>Custom Countdown:</h3>
+      <label style = 'font-family:monospace;' for="customCountdown">End Date:</label>
+      <input id="customCountdown" type="datetime-local" style="width: 200px;" name='customCountdown'>
+      <input type='button' value='Start' id='customButton' onclick="run(new Date(getElementById('customCountdown').value));">
+      <script>
+          /* the code */
+          var i = document.getElementById("customCountdown");
+          /* save */
+          var o = function() {
+              localStorage.setItem("custom", i.value);
+          }
+          /* retrieve (only on page load) */
+          if (window.localStorage.getItem("custom")) {
+              i.value = localStorage.getItem("custom");
+          }
+          /* autosave onchange and every 10000ms and when you close the window */
+          i.onchange = o();
+          i.onkeypress=function(e){
+            if(e.keyCode==13){
+              document.getElementById('customButton').click();
+            }
+          }
+          setInterval(o, 10000);
+          window.onunload = o();
+      </script>
+      <h1 style='font-family:monospace; font-size: 1.8em; font-weight: bold; padding: 10px 10px 10px 0px;'><br><br><br><br><br>Was the countdown delayed?</h1><p>Change this number and hit submit to fine tune the countdown. Raise the number if the bell was before the countdown, and lower it if the bell was after.</p>
       <label for="delayInput">Seconds:</label>
       <input id="delayInput" type="number" style="width: 50px;" value='0' name='delayInput'>
-      <input type='button' value='Restart Countdown' id='delayButton' onclick="run(parseInt(document.getElementById('delayInput').value));">
+      <input type='button' value='Restart Countdown' id='delayButton' onclick="run();">
       <script>
           /* the code */
           var k = document.getElementById("delayInput");
