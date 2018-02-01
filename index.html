@@ -134,7 +134,7 @@
       <form name="messageMe" netlify>
   <p>
     <label>Message: <input name="message" id="message"></label>
-    <button type="submit">Send</button>
+    <button type="submit" onClick="return empty()">Send</button>
 	  <script>function empty() {
     var x;
     x = document.getElementById("message").value;
