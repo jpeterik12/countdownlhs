@@ -131,10 +131,19 @@
           window.onunload = o();
       </script>
       <h3 style='font-family:monospace; font-size: 2em; font-weight: bold; padding: 5px 5px 5px 0px;'><br>Message Me!</h3>
-      <form name="messageMe" netlify action="/">
+      <form name="messageMe" netlify>
   <p>
-    <label>Message: <input name="message"></label>
+    <label>Message: <input name="message" id="message"></label>
     <button type="submit">Send</button>
+	  <script>function empty() {
+    var x;
+    x = document.getElementById("message").value;
+    if (x == "") {
+        alert("Send me a real message");
+        return false;
+    };
+}
+	  </script>
   </p>
 </form>
       <h1 style='font-family:monospace; font-size: 1.8em; font-weight: bold; padding: 10px 10px 10px 0px;'><br>Was the countdown delayed?</h1><p>Change this number and hit submit to fine tune the countdown. Raise the number if the bell was before the countdown, and lower it if the bell was after.</p>
