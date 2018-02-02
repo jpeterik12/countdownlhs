@@ -1,4 +1,6 @@
 function createClock() {
+  var deleter = document.getElementById("clock");
+  deleter.parentNode.removeChild(deleter);
   clock = document.createElement('p');
   clock.innerHTML = '00:00';
   clock.style = 'position: fixed; top: 0; right: 0; font-family:monospace; padding: 0 0 0 0; font-size: 1.5em; z-index: 9999999999;';
