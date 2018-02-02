@@ -5,7 +5,7 @@ function createClock() {
   clock.innerHTML = '00:00';
   clock.style = 'position: fixed; top: 0; right: 0; font-family:monospace; padding: 0 0 0 0; font-size: 1.5em; z-index: 9999999999;';
   clock.id = 'clock';
-  alert(document.body.appendChild(clock));
+  document.body.appendChild(clock);
 }
 
 
