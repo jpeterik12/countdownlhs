@@ -4,17 +4,17 @@ function createClock() {
   
   clockdiv = document.createElement('div');
   clockdiv.innerHTML = '<p style="position: fixed; top: 0; right: 0; font-family:monospace; padding: 0 0 0 0; font-size: 1.5em; z-index: 99999999999999999999999; border: 1px solid #000000; background-color: white" id=clock>00:00</p>';
-  clockdiv.style = 'position: fixed; top: 0; right: 0; padding: 0 0 0 0; min-width: 100px; min-height: 50px;';
+  clockdiv.style = 'position: fixed; top: 0; right: 0; padding: 0 0 0 0;';
   clockdiv.id = 'clock-div';
   
   
-  clockdiv.onmouseover = function(){
-    document.getElementById('clock').style.display = 'none';
-  };
+//   clockdiv.onmouseover = function(){
+//     document.getElementById('clock').style.display = 'none';
+//   };
   
-  clockdiv.onmouseout = function(){
-    document.getElementById('clock').style.display = 'inline';
-  };
+//   clockdiv.onmouseout = function(){
+//     document.getElementById('clock').style.display = 'inline';
+//   };
   
   document.body.appendChild(clockdiv);
 }
