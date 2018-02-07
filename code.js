@@ -101,8 +101,8 @@ function getMessage(period, isArray, arrayNum) {
       ['left in period 3', 'left in period 4'],
       ['left in lunch A', 'left in lunch B'],
       'left in lunch C',
-      'left in period 6',
-      'left in period 7',
+      ['left in period 6',
+      'left in period 7'],
     ];
   } else {
     messages = [
@@ -112,8 +112,8 @@ function getMessage(period, isArray, arrayNum) {
       'left in period 3',
       ['left in period 4', 'left in lunch A'],
       ['left in lunch B', 'left in lunch C'],
-      ['left in period 6',
-      'left in period 7'],
+      'left in period 6',
+      'left in period 7',
     ];
   }
 
