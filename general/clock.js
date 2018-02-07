@@ -177,7 +177,7 @@ function getWednesdays() {
 
 function isPLC(date) {
   'use strict';
-  if (date.getDay != 3) return false;
+  if (date.getDay() != 3) return false;
 
   var wednesdays = getWednesdays();
   var wednesdayOne = wednesdays[0];
