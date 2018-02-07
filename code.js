@@ -9,7 +9,7 @@ function getEndDate() {
   var now = new Date(Date.now() + delay);
 
   if (window.PLC) {
-    hours = [45, 33, 20, [7, 54], [23, 52], 21, 7, 53];
+    hours = [45, 33, 20, [7, 54], [23, 52], 21, [7, 53]];
   } else {
     hours = [45, 40, 34, 28, [22, 51], [20, 49], 43, 37];
   }
@@ -112,8 +112,8 @@ function getMessage(period, isArray, arrayNum) {
       'left in period 3',
       ['left in period 4', 'left in lunch A'],
       ['left in lunch B', 'left in lunch C'],
-      'left in period 6',
-      'left in period 7',
+      ['left in period 6',
+      'left in period 7'],
     ];
   }
 
