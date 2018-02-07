@@ -29,8 +29,8 @@ function createClock() {
   if (deleter) deleter.parentNode.removeChild(deleter);
   
   clockdiv = document.createElement('div');
-  clockdiv.innerHTML = '<p style="font-family:monospace; padding: 0 0 0 0; font-size: 20px; z-index: 99999999999999999999999; border: 1px solid #000000; background-color: white" id=clock>00:00</p>';
-  clockdiv.style = 'position: fixed; top: 0px; right: 0px; padding: 0 0 0 0; transition: all 1s ease-out;';
+  clockdiv.innerHTML = '<p style="z-index: inherit; font-family:monospace; padding: 0 0 0 0; font-size: 20px; border: 1px solid #000000; background-color: white" id=clock>00:00</p>';
+  clockdiv.style = 'z-index: 2147483647; position: fixed; top: 0px; right: 0px; padding: 0 0 0 0; transition: all 1s ease-out;';
   clockdiv.id = 'clock-div';
   
   
