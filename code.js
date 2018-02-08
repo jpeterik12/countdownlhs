@@ -254,6 +254,7 @@ function formatDate(date) {
 }
 
 function run(endDate) {
+  alert('running');
   if (window.stopID) clearTimeout(window.stopID);
 
   delay = parseInt(localStorage.getItem('delay'));
