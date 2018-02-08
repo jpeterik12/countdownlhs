@@ -130,8 +130,10 @@ function loop(endDate, message) {
   now = new Date(Date.now() + window.delay);
 
   var diff = endDate - now;
+  
+  var days = Math.floor(diff / (1000 * 3600 * 24));
 
-  var hours = Math.floor(diff / 3.6e6);
+  var hours = Math.floor((diff / 3.6e6) - (days *24));
 
   var minutes = Math.floor(diff % 3.6e6 / 6e4);
 
@@ -143,10 +145,12 @@ function loop(endDate, message) {
   }
 
   timeLeft =
-    hours + ':' + ('0' + minutes).slice(-2) + ':' + ('0' + seconds).slice(-2);
+    days + ':' + ('0' + hours).slice(-2) + ':' + ('0' + minutes).slice(-2) + ':' + ('0' + seconds).slice(-2);
 
-  if (hours === 0) timeLeft = timeLeft.substring(2);
-
+  if (days === 0) {
+    timeLeft = timeLeft.substring(2);
+    if (hours === 0) timeLeft = timeLeft.substring(3);
+  }
   setText(timeLeft, 'Clock');
 
   document.title = (timeLeft + ' ' + message);
