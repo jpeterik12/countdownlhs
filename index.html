@@ -110,7 +110,7 @@
             <h3 class="headerman">Custom Countdown:</h3>
             <label clasfor="customCountdown">Date:</label>
             <input id="customCountdown" type="datetime-local" style="width: 225px;" name='customCountdown'>
-            <input type='button' value='Start' id='customButton' onclick="run(new Date(document.getElementById(customCountdown).value));">
+            <input type='button' value='Start' id='customButton' onclick="run(new Date(document.getElementById('customCountdown').value));">
             <script>
               /* the code */
               var i = document.getElementById("customCountdown");
