@@ -280,7 +280,7 @@ function run(endDate) {
     setText(dayMessage, 'Date');
     return;
   } else if (isUnusual(today)) {
-    alert("Today has a unique schedule. Countdown won't work today. Sorry.");
+    alert("Why are you here? It's a snow day!");
     dayMessage = dayMessage + 'and it is a snow day.';
     setText(dayMessage, 'Date');
     return;
