@@ -130,7 +130,7 @@ function loop(endDate, message) {
   now = new Date(Date.now() + window.delay);
 
   var diff = endDate - now;
-  
+
   var days = Math.floor(diff / (1000 * 3600 * 24));
 
   var hours = Math.floor((diff / 3.6e6) - (days *24));
@@ -219,7 +219,7 @@ function isUnusual(date) {
   dateStr =
     date.getMonth() + 1 + '/' + date.getDate() + '/' + date.getFullYear();
 
-  unusualDays = ['1/26/2018','2/9/2018'];
+  unusualDays = ['1/26/2018'];
   return unusualDays.indexOf(dateStr) != -1;
 }
 
@@ -281,7 +281,7 @@ function run(endDate) {
     return;
   } else if (isUnusual(today)) {
     alert("Today has a unique schedule. Countdown won't work today. Sorry.");
-    dayMessage = dayMessage + 'and it is a snow day.';
+    dayMessage = dayMessage + 'and it is an unusual day.';
     setText(dayMessage, 'Date');
     return;
   } else if (window.PLC) {

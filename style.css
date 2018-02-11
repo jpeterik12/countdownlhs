@@ -50,39 +50,58 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 
 
 
-.headerman {
+.header-text {
   font-family: monospace;
   font-size: 25px;
   font-weight: bold;
-  padding: 10px 10px 10px 0;
+  display: inline-block
 }
 
-.belowheader {
-  font-family:monospace;
+.below-header {
+  font-family: monospace;
   font-size: 1em;
   padding: 0 0 0 0;
 }
 
-.sidebardiv {
+.sidebar-div {
   overflow: hidden;
-	transition: max-height 5s;
-	max-height: 300px;
 }
 
-.sidebardiv:hover {
-  max-height: 300px;
+.opener {
+  display: none;
 }
 
-.sidebardiv:focus-within {
-  max-height: 300px;
+label + label {
+  cursor: pointer;
 }
 
-.yearschedule {
+.opener + label {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    background:url(images/Expander.png) left top no-repeat;
+    cursor: pointer;
+}
+
+.opener:checked + label {
+    background-position: -19px top;
+}
+
+.expanding {
+  overflow: hidden;
+  max-height: 0;
+}
+
+.opener:checked ~ .expanding {
+  max-height: 100px;
+}
+
+.year-schedule {
   width: 100%;
   height: 400px;
 }
 
-.yearschedule:focus{
+.years-chedule:focus{
   width: 600px;
   height: 600px;
   position: fixed;
@@ -90,9 +109,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
   left: calc(50% - 300px);
   z-index: 300;
 }
-
-
-
 
 .wrapper {
 	width: 100%;
