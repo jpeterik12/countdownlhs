@@ -132,6 +132,6 @@ function isUnusual(date) {
   dateStr =
     date.getMonth() + 1 + '/' + date.getDate() + '/' + date.getFullYear();
 
-  unusualDays = ['1/26/2018'];
+  unusualDays = ['2/16/2018', '2/19/2018'];
   return unusualDays.indexOf(dateStr) != -1;
 }
