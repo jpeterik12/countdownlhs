@@ -144,13 +144,8 @@ function run(endDate) {
     setText(dayMessage, 'Date');
     return;
   } else if (isUnusual(today)) {
-<<<<<<< HEAD:code.js
-    alert("Why are you here? It's a snow day!");
+    alert("Today is an unusual day. Sorry!");
     dayMessage = dayMessage + 'and it is a snow day.';
-=======
-    alert("Today has a unique schedule. Countdown won't work today. Sorry.");
-    dayMessage = dayMessage + 'and it is an unusual day.';
->>>>>>> beta:javascript/code.js
     setText(dayMessage, 'Date');
     return;
   } else if (window.PLC) {
