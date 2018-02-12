@@ -1,216 +1,245 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Countdown</title>
-    <link href="style.css" rel="stylesheet" type="text/css"/>
-    <link rel="icon" href="http://www.iconarchive.com/download/i103298/vcferreira/firefox-os/clock.ico"/>
-    <link href="style.css" rel="stylesheet">
-  </head>
-  <body>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="http://www.iconarchive.com/download/i103298/vcferreira/firefox-os/clock.ico" />
+    <link href="styles/index.css" rel="stylesheet">
+</head>
+
+<body>
     <!--I love You!-->
     <div class="wrapper">
-      <header class="header">
-        <h1 id="Date" class="headerman" style='float:left;'>Starting...</h1>
-        <h1 id="Clock" style='font-family:monospace; font-size: 1.5em; padding: 5px 5px 5px 5px; float:right'>Loading...</h1>
-      </header>
-      <!-- .header-->
-      <div class="middle">
-        <div class="container">
-          <main class="content">
-            <table class="tg" align='center'>
-              <tr>
-                <th class="tg-l1xi"></th>
-                <th class="tg-l1xi">REGULAR</th>
-                <th class="tg-l1xi">PLC DAY</th>
-                <th class="tg-l1xi">HALF DAY</th>
-              </tr>
-              <tr>
-                <td class="tg-8s67">Warning Bell</td>
-                <td class="tg-lqy6">07:45 AM</td>
-                <td class="tg-lqy6">07:45 AM</td>
-                <td class="tg-lqy6">07:45 AM</td>
-              </tr>
-              <tr>
-                <td class="tg-8s67">1st Period</td>
-                <td class="tg-x5m0">07:50 AM - 08:40 AM</td>
-                <td class="tg-x5m0">07:50 AM - 08:33 AM</td>
-                <td class="tg-x5m0">07:50 AM - 08:17 AM</td>
-              </tr>
-              <tr>
-                <td class="tg-8s67">2nd Period</td>
-                <td class="tg-lqy6">08:44 AM - 09:34 AM</td>
-                <td class="tg-lqy6">08:37 AM - 09:20 AM</td>
-                <td class="tg-lqy6">08:21 AM - 08:48 AM</td>
-              </tr>
-              <tr>
-                <td class="tg-8s67">3rd Period</td>
-                <td class="tg-x5m0">09:38 AM - 10:28 AM</td>
-                <td class="tg-x5m0">09:24 AM - 10:07 AM</td>
-                <td class="tg-x5m0">08:52 AM - 09:19 AM</td>
-              </tr>
-              <tr>
-                <td class="tg-8s67">4th Period</td>
-                <td class="tg-lqy6">10:30 AM - 11:22 AM</td>
-                <td class="tg-lqy6">10:11 AM - 10:54 AM</td>
-                <td class="tg-lqy6">09:23 AM - 09:50 AM</td>
-              </tr>
-              <tr>
-                <td class="tg-8s67">5th Period</td>
-                <td class="tg-x5m0">11:26 AM - 12:49 PM</td>
-                <td class="tg-x5m0">10:58 AM - 12:21 PM</td>
-                <td class="tg-x5m0">09:54 AM - 10:21 AM</td>
-              </tr>
-              <tr disp>
-                <td class="tg-8s67" style="line-height: 3px;height:3px;">-Lunch A</td>
-                <td class="tg-lqy6" style="line-height: 3px;height:3px;">11:26 AM - 11:51 AM</td>
-                <td class="tg-lqy6" style="line-height: 3px;height:3px;">10:58 AM - 11:23 AM</td>
-                <td class="tg-lqy6" style="line-height: 3px;height:3px;">No lunches today</td>
-              </tr>
-              <tr disp>
-                <td class="tg-8s67" style="line-height: 3px;height:3px;">-Lunch B</td>
-                <td class="tg-lqy6" style="line-height: 3px;height:3px;">11:55 AM - 12:20 PM
-                <td class="tg-lqy6" style="line-height: 3px;height:3px;">11:27 AM - 11:52 AM</td>
-                <td class="tg-lqy6" style="line-height: 3px;height:3px;">No lunches today</td>
-              </tr>
-              <tr disp>
-                <td class="tg-8s67" style="line-height: 3px;height:3px;">-Lunch C</td>
-                <td class="tg-lqy6" style="line-height: 3px;height:3px;">12:24 PM - 12:49 PM</td>
-                <td class="tg-lqy6" style="line-height: 3px;height:3px;">11:56 AM - 12:21 PM</td>
-                <td class="tg-lqy6" style="line-height: 3px;height:3px;">No lunches today</td>
-              </tr>
-              <tr>
-                <td class="tg-8s67">6th Period</td>
-                <td class="tg-x5m0">12:53 PM - 01:43 PM</td>
-                <td class="tg-x5m0">12:25 PM - 01:07 PM</td>
-                <td class="tg-x5m0">10:25 AM - 10:52 AM</td>
-              </tr>
-              <tr>
-                <td class="tg-8s67">7th Period</td>
-                <td class="tg-lqy6">01:47 PM - 02:37 PM</td>
-                <td class="tg-lqy6">01:11 PM - 01:53 PM</td>
-                <td class="tg-lqy6">10:56 AM - 11:22 AM</td>
-              </tr>
-            </table>
-          </main>
-          <!-- .content -->
+        <header class="header">
+            <h1 id="Date" class="header-text" style='float:left;'>Starting...</h1>
+            <h1 id="Clock" style='font-family:monospace; font-size: 1.5em; padding: 5px 5px 5px 5px; float:right'>Loading...</h1>
+        </header>
+        <!-- .header-->
+        <div class="middle">
+            <div class="container">
+                <main class="content">
+                    <table class="tg" align='center'>
+                        <tr>
+                            <th class="tg-l1xi"></th>
+                            <th class="tg-l1xi">REGULAR</th>
+                            <th class="tg-l1xi">PLC DAY</th>
+                            <th class="tg-l1xi">HALF DAY</th>
+                        </tr>
+                        <tr>
+                            <td class="tg-8s67">Warning Bell</td>
+                            <td class="tg-lqy6">07:45 AM</td>
+                            <td class="tg-lqy6">07:45 AM</td>
+                            <td class="tg-lqy6">07:45 AM</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-8s67">1st Period</td>
+                            <td class="tg-x5m0">07:50 AM - 08:40 AM</td>
+                            <td class="tg-x5m0">07:50 AM - 08:33 AM</td>
+                            <td class="tg-x5m0">07:50 AM - 08:17 AM</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-8s67">2nd Period</td>
+                            <td class="tg-lqy6">08:44 AM - 09:34 AM</td>
+                            <td class="tg-lqy6">08:37 AM - 09:20 AM</td>
+                            <td class="tg-lqy6">08:21 AM - 08:48 AM</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-8s67">3rd Period</td>
+                            <td class="tg-x5m0">09:38 AM - 10:28 AM</td>
+                            <td class="tg-x5m0">09:24 AM - 10:07 AM</td>
+                            <td class="tg-x5m0">08:52 AM - 09:19 AM</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-8s67">4th Period</td>
+                            <td class="tg-lqy6">10:30 AM - 11:22 AM</td>
+                            <td class="tg-lqy6">10:11 AM - 10:54 AM</td>
+                            <td class="tg-lqy6">09:23 AM - 09:50 AM</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-8s67">5th Period</td>
+                            <td class="tg-x5m0">11:26 AM - 12:49 PM</td>
+                            <td class="tg-x5m0">10:58 AM - 12:21 PM</td>
+                            <td class="tg-x5m0">09:54 AM - 10:21 AM</td>
+                        </tr>
+                        <tr disp>
+                            <td class="tg-8s67" style="line-height: 3px;height:3px;">-Lunch A</td>
+                            <td class="tg-lqy6" style="line-height: 3px;height:3px;">11:26 AM - 11:51 AM</td>
+                            <td class="tg-lqy6" style="line-height: 3px;height:3px;">10:58 AM - 11:23 AM</td>
+                            <td class="tg-lqy6" style="line-height: 3px;height:3px;">No lunches today</td>
+                        </tr>
+                        <tr disp>
+                            <td class="tg-8s67" style="line-height: 3px;height:3px;">-Lunch B</td>
+                            <td class="tg-lqy6" style="line-height: 3px;height:3px;">11:55 AM - 12:20 PM
+                                <td class="tg-lqy6" style="line-height: 3px;height:3px;">11:27 AM - 11:52 AM</td>
+                                <td class="tg-lqy6" style="line-height: 3px;height:3px;">No lunches today</td>
+                        </tr>
+                        <tr disp>
+                            <td class="tg-8s67" style="line-height: 3px;height:3px;">-Lunch C</td>
+                            <td class="tg-lqy6" style="line-height: 3px;height:3px;">12:24 PM - 12:49 PM</td>
+                            <td class="tg-lqy6" style="line-height: 3px;height:3px;">11:56 AM - 12:21 PM</td>
+                            <td class="tg-lqy6" style="line-height: 3px;height:3px;">No lunches today</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-8s67">6th Period</td>
+                            <td class="tg-x5m0">12:53 PM - 01:43 PM</td>
+                            <td class="tg-x5m0">12:25 PM - 01:07 PM</td>
+                            <td class="tg-x5m0">10:25 AM - 10:52 AM</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-8s67">7th Period</td>
+                            <td class="tg-lqy6">01:47 PM - 02:37 PM</td>
+                            <td class="tg-lqy6">01:11 PM - 01:53 PM</td>
+                            <td class="tg-lqy6">10:56 AM - 11:22 AM</td>
+                        </tr>
+                    </table>
+                </main>
+                <!-- .content -->
+            </div>
+            <!-- .container-->
+            <aside class="left-sidebar">
+                <object class="year-schedule" data="https://lisle202.socs.net/pages/uploaded_files/Updated%20Version%20of%20Final%202017-18%20School%20Calendar%20new%20format%20B-3.pdf"></object>
+            </aside>
+            <!-- .left-sidebar -->
+            <aside class="right-sidebar">
+                <div>
+                    <div class='sidebar-div'>
+                        <input type='checkbox' class='opener' id='linksOpener'>
+                        <label for='linksOpener'></label>
+                        <label for='linksOpener'>
+                            <h3 class="header-text">Links:</h3>
+                        </label>
+                        <div class='expanding'>
+                            <a href='https://rogerhub.com/final-grade-calculator/' class='below-header'>Finals Calculator</a>
+                        </div>
+                    </div>
+                    <div class='sidebar-div'>
+                        <input type='checkbox' class='opener' id='customOpener'>
+                        <label for='customOpener'></label>
+                        <label for='customOpener'>
+                            <h3 class="header-text">Custom Countdown:</h3>
+                        </label>
+                        <div class='expanding'>
+                            <label clasfor="customCountdown">Date:</label>
+                            <input id="customCountdown" type="datetime-local" style="width: 225px;" name='customCountdown'>
+                            <input type='button' value='Start' id='customButton' onclick="run(new Date(document.getElementById('customCountdown').value));">
+                            <script>
+                                /* the code */
+                                  var i = document.getElementById("customCountdown");
+                                  /* save */
+                                  var o = function() {
+                                      localStorage.setItem("custom", i.value);
+                                  }
+                                  /* retrieve (only on page load) */
+                                  if (window.localStorage.getItem("custom")) {
+                                      i.value = localStorage.getItem("custom");
+                                  }
+                                  /* autosave onchange and every 10000ms and when you close the window */
+                                  i.onchange = o();
+                                  i.onkeypress=function(e){
+                                    if(e.keyCode==13){
+                                      document.getElementById('customButton').click();
+                                    }
+                                  }
+                                  setInterval(o, 10000);
+                                  window.onunload = o();
+                            </script>
+                        </div>
+                    </div>
+                    <div class='sidebar-div'>
+                        <input type='checkbox' class='opener' id='messageOpener'>
+                        <label for='messageOpener'></label>
+                        <label for='messageOpener'>
+                            <h3 class="header-text">Message Me:</h3>
+                        </label>
+                        <div class='expanding'>
+                            <form name="messageMe" netlify action='/general/redirect.html'>
+                                <p>
+                                    <label>Message: <input name="message" id="message" style='width: 203px;'></label>
+                                    <button type="submit" onClick="return empty()">Send</button>
+                                    <script>
+                                        function empty() {
+                                                          var x;
+                                                          x = document.getElementById("message").value;
+                                                          if (x == "") {
+                                                              alert("Send me a real message");
+                                                              return false;
+                                                          }
+                                                          if (x.indexOf('fuck') != -1 || x.indexOf('shit') != -1 || x.indexOf('ass') != -1 || x.indexOf('bitch') != -1 || x.indexOf('dick') != -1 || x.indexOf('penis') != -1) {
+                                                           alert("Don't swear, the system is watching");
+                                                           return false;
+                                                          }
+                                                          }
+                                    </script>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                    <div class='sidebar-div'>
+                        <input type='checkbox' class='opener' id='delayOpener'>
+                        <label for='delayOpener'></label>
+                        <label for='delayOpener'>
+                            <h1 class="header-text">Delay?</h1>
+                        </label>
+                        <div class='expanding'>
+                            <p class='below-header'>Change this number and hit submit to fine tune the countdown. Raise the number if the bell was before the countdown, and lower it if the bell was after.</p>
+                            <label for="delayInput">Seconds:</label>
+                            <input id="delayInput" type="number" style="width: 50px;" value='0' name='delayInput'>
+                            <input type='button' value='Restart Countdown' id='delayButton' onclick="run();">
+                            <script>
+                                /* the code */
+                                  var k = document.getElementById("delayInput");
+                                  /* save */
+                                  var b = function() {
+                                      localStorage.setItem("delay", k.value);
+                                  }
+                                  /* retrieve (only on page load) */
+                                  if (window.localStorage.getItem("delay")) {
+                                      k.value = localStorage.getItem("delay");
+                                  }
+                                  /* autosave onchange and every 10000ms and when you close the window */
+                                  k.onchange = b();
+                                  k.onkeypress=function(e){
+                                    if(e.keyCode==13){
+                                      document.getElementById('delayButton').click();
+                                    }
+                                  }
+                                  setInterval(b, 10000);
+                                  window.onunload = b();
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <!-- .right-sidebar -->
         </div>
-        <!-- .container-->
-        <aside class="left-sidebar">
-          <object class = "yearschedule" data="https://lisle202.socs.net/pages/uploaded_files/Updated%20Version%20of%20Final%202017-18%20School%20Calendar%20new%20format%20B-3.pdf"></object>
-        </aside>
-        <!-- .left-sidebar -->
-        <aside class="right-sidebar">
-          <div>
-            <div class='sidebardiv'>
-            <h3 class="headerman">Links:</h3>
-            <a href='https://rogerhub.com/final-grade-calculator/' class='belowheader'>Finals Calculator</a>
-          </div>
-            <div class='sidebardiv'>
-            <h3 class="headerman">Custom Countdown:</h3>
-            <label clasfor="customCountdown">Date:</label>
-            <input id="customCountdown" type="datetime-local" style="width: 225px;" name='customCountdown'>
-            <input type='button' value='Start' id='customButton' onclick="run(new Date(document.getElementById('customCountdown').value));">
+        <!-- .middle-->
+        <footer class="footer">
+            <textarea placeholder="This is a text box. Type here, and it will save the data if you close the site. Only you can read what you put here. Use it for whatever.&#10;Examples:&#10;-Homework&#10;-Research Notes&#10;-Other Notes&#10;-Your Life Story&#10;-The Bee Movie Script"
+                id="notepad" style="width:99.5%; height:100%;"></textarea>
             <script>
-              /* the code */
-              var i = document.getElementById("customCountdown");
-              /* save */
-              var o = function() {
-                  localStorage.setItem("custom", i.value);
-              }
-              /* retrieve (only on page load) */
-              if (window.localStorage.getItem("custom")) {
-                  i.value = localStorage.getItem("custom");
-              }
-              /* autosave onchange and every 10000ms and when you close the window */
-              i.onchange = o();
-              i.onkeypress=function(e){
-                if(e.keyCode==13){
-                  document.getElementById('customButton').click();
-                }
-              }
-              setInterval(o, 10000);
-              window.onunload = o();
+                /* the code */
+                  var n = document.getElementById("notepad");
+                  /* save */
+                  var s = function() {
+                      localStorage.setItem("notepad", n.value);
+                  }
+                  /* retrieve (only on page load) */
+                  if (window.localStorage.getItem("notepad")) {
+                      n.value = localStorage.getItem("notepad");
+                  }
+                  /* autosave onchange and every 10000ms and when you close the window */
+                  n.onchange = s();
+                  setInterval(s, 10000);
+                  window.onunload = s();
             </script>
-          </div>
-            <div class='sidebardiv'>
-            <h3 class="headerman">Message Me:</h3>
-            <form name="messageMe" netlify action='/redirect.html'>
-              <p>
-                <label>Message: <input name="message" id="message" style='width: 203px;'></label>
-                <button type="submit" onClick="return empty()">Send</button>
-                <script>function empty() {
-                  var x;
-                  x = document.getElementById("message").value;
-                  if (x == "") {
-                      alert("Send me a real message");
-                      return false;
-                  }
-                  if (x.indexOf('fuck') != -1 || x.indexOf('shit') != -1 || x.indexOf('ass') != -1 || x.indexOf('bitch') != -1 || x.indexOf('dick') != -1 || x.indexOf('penis') != -1) {
-                   alert("Don't swear, the system is watching");
-                   return false;
-                  }
-                  }
-                </script>
-              </p>
-            </form>
-          </div>
-            <div class='sidebardiv'>
-            <h1 class="headerman">Delay?</h1>
-            <p class='belowheader'>Change this number and hit submit to fine tune the countdown. Raise the number if the bell was before the countdown, and lower it if the bell was after.</p>
-            <label for="delayInput">Seconds:</label>
-            <input id="delayInput" type="number" style="width: 50px;" value='0' name='delayInput'>
-            <input type='button' value='Restart Countdown' id='delayButton' onclick="run();">
-            <script>
-              /* the code */
-              var k = document.getElementById("delayInput");
-              /* save */
-              var b = function() {
-                  localStorage.setItem("delay", k.value);
-              }
-              /* retrieve (only on page load) */
-              if (window.localStorage.getItem("delay")) {
-                  k.value = localStorage.getItem("delay");
-              }
-              /* autosave onchange and every 10000ms and when you close the window */
-              k.onchange = b();
-              k.onkeypress=function(e){
-                if(e.keyCode==13){
-                  document.getElementById('delayButton').click();
-                }
-              }
-              setInterval(b, 10000);
-              window.onunload = b();
-            </script>
-          </div>
-          </div>
-        </aside>
-        <!-- .right-sidebar -->
-      </div>
-      <!-- .middle-->
-      <footer class="footer">
-        <textarea placeholder="This is a text box. Type here, and it will save the data if you close the site. Only you can read what you put here. Use it for whatever.&#10;Examples:&#10;-Homework&#10;-Research Notes&#10;-Other Notes&#10;-Your Life Story&#10;-The Bee Movie Script"
-          id="notepad" style="width:99.5%; height:100%;"></textarea>
-        <script>
-          /* the code */
-          var n = document.getElementById("notepad");
-          /* save */
-          var s = function() {
-              localStorage.setItem("notepad", n.value);
-          }
-          /* retrieve (only on page load) */
-          if (window.localStorage.getItem("notepad")) {
-              n.value = localStorage.getItem("notepad");
-          }
-          /* autosave onchange and every 10000ms and when you close the window */
-          n.onchange = s();
-          setInterval(s, 10000);
-          window.onunload = s();
-        </script>
-      </footer>
-      <!-- .footer -->
+        </footer>
+        <!-- .footer -->
     </div>
     <!-- .wrapper -->
-    <script src='code.js' ></script>
-  </body>
+    <script src='javascript/common.js'></script>
+    <script src='javascript/code.js'></script>
+</body>
+
 </html>

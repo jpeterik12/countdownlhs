@@ -1,95 +1,10 @@
 /*jshint maxerr: 1000 */
 
+//regular
+
 function startTimer() {
   getEndDate();
 }
-
-function getEndDate() {
-  var hours;
-  var now = new Date(Date.now() + delay);
-
-  if (window.PLC) {
-    hours = [45, 33, 20, [7, 54], [23, 52], 21, [7, 53]];
-  } else {
-    hours = [45, 40, 34, 28, [22, 51], [20, 49], 43, 37];
-  }
-
-  var endHour = now.getHours();
-
-  var currentMinute = now.getMinutes();
-
-  var period = endHour - 7;
-
-  if (period < 0) {
-    alert("It's before school!");
-    return;
-  }
-
-  var endMinuteTest = hours[period];
-
-  if (!endMinuteTest) {
-    alert("It's after school!");
-    return;
-  }
-
-  var endMinuteTestArray;
-
-  var isArray = false;
-
-  var arrayNum;
-
-  if (Array.isArray(endMinuteTest)) {
-    endMinuteTestArray = endMinuteTest;
-
-    endMinuteTest = endMinuteTestArray[0];
-
-    isArray = true;
-
-    arrayNum = 0;
-
-    if (currentMinute >= endMinuteTest) {
-      endMinuteTest = endMinuteTestArray[1];
-      arrayNum = 1;
-    }
-  }
-
-  if (currentMinute >= endMinuteTest) {
-    endHour++;
-
-    period = endHour - 7;
-
-    endMinuteTest = hours[period];
-
-    if (!endMinuteTest) {
-      alert("It's after school!");
-      return;
-    }
-
-    isArray = false;
-  }
-
-  if (Array.isArray(endMinuteTest)) {
-    endMinuteTestArray = endMinuteTest;
-
-    endMinute = endMinuteTestArray[0];
-
-    isArray = true;
-    arrayNum = 0;
-  } else {
-    endMinute = endMinuteTest;
-  }
-
-  var endDate = new Date(Date.now() + window.delay);
-  endDate.setHours(endHour);
-
-  endDate.setMinutes(endMinute);
-
-  endDate.setSeconds(0);
-  message = getMessage(period, isArray, arrayNum);
-
-  loop(endDate, message);
-}
-
 function getMessage(period, isArray, arrayNum) {
   var messages;
 
@@ -125,12 +40,11 @@ function getMessage(period, isArray, arrayNum) {
 
   return message;
 }
-
 function loop(endDate, message) {
   now = new Date(Date.now() + window.delay);
 
   var diff = endDate - now;
-  
+
   var days = Math.floor(diff / (1000 * 3600 * 24));
 
   var hours = Math.floor((diff / 3.6e6) - (days *24));
@@ -157,46 +71,6 @@ function loop(endDate, message) {
   // console.log(timeLeft + ' ' + message);
   window.stopID = setTimeout(loop, 1000, endDate, message, PLC);
 }
-
-function getWednesdays() {
-  'use strict';
-  var todaygetWed = new Date(Date.now() + window.delay);
-  var month = todaygetWed.getMonth();
-  var wednesdays = [];
-
-  todaygetWed.setDate(1);
-  todaygetWed.setHours(0, 0, 0, 0);
-
-  while (todaygetWed.getDay() !== 3) {
-    todaygetWed.setDate(todaygetWed.getDate() + 1);
-  }
-
-  while (todaygetWed.getMonth() === month) {
-    wednesdays.push(new Date(todaygetWed.getTime()));
-    todaygetWed.setDate(todaygetWed.getDate() + 7);
-  }
-
-  return wednesdays;
-}
-
-function isPLC(date) {
-  'use strict';
-  if (date.getDay() != 3) return false;
-
-  var wednesdays = getWednesdays();
-  var wednesdayOne = wednesdays[0];
-  var wednesdayThree = wednesdays[2];
-  return (
-    date.getDate() == wednesdayOne.getDate() ||
-    date.getDate() == wednesdayThree.getDate()
-  );
-}
-
-function setText(text, ID) {
-  document.getElementById(ID).innerHTML = text;
-  // console.log(text);
-}
-
 function numberFormat(numberStr) {
   if (numberStr.substr(-2) === '11') {
     return 'th';
@@ -214,15 +88,6 @@ function numberFormat(numberStr) {
     return 'th';
   }
 }
-
-function isUnusual(date) {
-  dateStr =
-    date.getMonth() + 1 + '/' + date.getDate() + '/' + date.getFullYear();
-
-  unusualDays = ['1/26/2018','2/9/2018'];
-  return unusualDays.indexOf(dateStr) != -1;
-}
-
 function formatDate(date) {
   var weekdays = [
     'Sunday',
@@ -256,7 +121,6 @@ function formatDate(date) {
     numberFormat('' + date.getDate())
   );
 }
-
 function run(endDate) {
   if (window.stopID) clearTimeout(window.stopID);
 
@@ -280,8 +144,13 @@ function run(endDate) {
     setText(dayMessage, 'Date');
     return;
   } else if (isUnusual(today)) {
+<<<<<<< HEAD:code.js
     alert("Why are you here? It's a snow day!");
     dayMessage = dayMessage + 'and it is a snow day.';
+=======
+    alert("Today has a unique schedule. Countdown won't work today. Sorry.");
+    dayMessage = dayMessage + 'and it is an unusual day.';
+>>>>>>> beta:javascript/code.js
     setText(dayMessage, 'Date');
     return;
   } else if (window.PLC) {
@@ -295,5 +164,4 @@ function run(endDate) {
     startTimer(delay);
   }
 }
-
 run();
