@@ -79,7 +79,7 @@ label + label {
     display:inline-block;
     width:19px;
     height:19px;
-    background:url(images/arrows.png) left top no-repeat;
+    background:url(../images/arrows.png) left top no-repeat;
     cursor: pointer;
 }
 
