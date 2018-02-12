@@ -6,7 +6,7 @@
     <title>Countdown</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="icon" href="http://www.iconarchive.com/download/i103298/vcferreira/firefox-os/clock.ico" />
-    <link href="style.css" rel="stylesheet">
+    <link href="styles/index.css" rel="stylesheet">
 </head>
 
 <body>
@@ -154,7 +154,7 @@
                             <h3 class="header-text">Message Me:</h3>
                         </label>
                         <div class='expanding'>
-                            <form name="messageMe" netlify action='/redirect.html'>
+                            <form name="messageMe" netlify action='/general/redirect.html'>
                                 <p>
                                     <label>Message: <input name="message" id="message" style='width: 203px;'></label>
                                     <button type="submit" onClick="return empty()">Send</button>
@@ -238,7 +238,8 @@
         <!-- .footer -->
     </div>
     <!-- .wrapper -->
-    <script src='code.js' ></script>
+    <script src='javascript/common.js'></script>
+    <script src='javascript/code.js'></script>
 </body>
 
 </html>
