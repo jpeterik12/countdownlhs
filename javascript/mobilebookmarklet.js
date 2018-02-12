@@ -39,10 +39,12 @@ function createClock() {
 
   document.body.appendChild(clockdiv);
 }
+
 function startTimer() {
   createClock();
   getEndDate();
 }
+
 function loop(endDate) {
   now = new Date();
 
@@ -63,10 +65,13 @@ function loop(endDate) {
 
   window.stopID = setTimeout(loop, 1000, endDate);
 }
+
 function run() {
   if (window.stopID) clearTimeout(window.stopID);
 
   today = new Date();
+  
+  window.delay = 0;
 
   window.PLC = isPLC(today);
 
