@@ -24,7 +24,7 @@ function getEndDate() {
   }
 
   var endMinuteTest = hours[period];
-
+  
   if (!endMinuteTest) {
     alert("It's after school!");
     return;
@@ -83,7 +83,7 @@ function getEndDate() {
   endDate.setMinutes(endMinute);
 
   endDate.setSeconds(0);
-  if (getMessage) {
+  if (typeof getMessage !== 'undefined') {
     loop(endDate, getMessage(period, isArray, arrayNum));
   } else {
     loop(endDate);
