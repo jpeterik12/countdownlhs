@@ -101,7 +101,7 @@ label + label {
   height: 400px;
 }
 
-.years-chedule:focus{
+.years-chedule:focus {
   width: 600px;
   height: 600px;
   position: fixed;
