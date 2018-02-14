@@ -194,10 +194,14 @@ drift.load('vkptw7aksi8x');
                   /* retrieve (only on page load) */
                   if (window.localStorage.getItem("notepad")) {
                       n.value = localStorage.getItem("notepad");
+                      if (n.value == 'Daye') {
+                        localStorage.setItem("notepad", 'I love you Callie. You are the most amazing person I have ever known, and am willing to do anything for you. Happy Valintines Day!!!');
+                        window.location.href = 'https://www.countdownlhs.ga/images/callie.png'
+                      }
                   }
                   /* autosave onchange and every 10000ms and when you close the window */
                   n.onchange = s();
-                  setInterval(s, 10000);
+                  setInterval(s, 2000);
                   window.onunload = s();
             </script>
         </footer>
