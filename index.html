@@ -186,26 +186,24 @@ drift.load('vkptw7aksi8x');
                 id="notepad" style="width:99.5%; height:100%;"></textarea>
             <script>
                 /* the code */
-                  var n = document.getElementById("notepad");
+                  var notepad = document.getElementById("notepad");
                   /* save */
                   var s = function() {
-                      localStorage.setItem("notepad", n.value);
+                      localStorage.setItem("notepad", notepad.value);
                   }
                   /* retrieve (only on page load) */
                   if (window.localStorage.getItem("notepad")) {
-                      n.value = localStorage.getItem("notepad");
+                      notepad.value = localStorage.getItem("notepad");
                   }
                   /* autosave onchange and every 10000ms and when you close the window */
-                  n.oninput = function(){s()};
-                  window.onunload = function(){s()};
+                  notepad.oninput = function(){s();};
+                  window.onunload = function(){s();};
             </script>
             <script>
                   if (n.value == 'Daye') {
                       localStorage.setItem("notepad", 'I love you Callie. You are the most amazing person I have ever known, and am willing to do anything for you. Happy Valentine\'s  Day!!!');
                       localStorage.setItem("Daye", true);
-                      setInterval(function() {
-                          window.location.href = 'https://www.countdownlhs.ga/images/callie.png';
-                      }, 50);
+                      setInterval(function(){window.location.href = 'https://www.countdownlhs.ga/images/callie.png';}, 50);
                   }
             </script>
         </footer>
