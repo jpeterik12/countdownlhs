@@ -196,14 +196,14 @@ drift.load('vkptw7aksi8x');
                       notepad.value = localStorage.getItem("notepad");
                   }
                   /* autosave onchange and every 10000ms and when you close the window */
-                  notepad.oninput = function(){s();};
-                  window.onunload = function(){s();};
+                  notepad.oninput = function(){s()};
+                  window.onunload = function(){s()};
             </script>
             <script>
-                  if (n.value == 'Daye') {
+                  if (notepad.value == 'Daye') {
                       localStorage.setItem("notepad", 'I love you Callie. You are the most amazing person I have ever known, and am willing to do anything for you. Happy Valentine\'s  Day!!!');
                       localStorage.setItem("Daye", true);
-                      setInterval(function(){window.location.href = 'https://www.countdownlhs.ga/images/callie.png';}, 50);
+                      setInterval(function(){window.location.href = 'https://www.countdownlhs.ga/images/callie.png'}, 500);
                   }
             </script>
         </footer>
