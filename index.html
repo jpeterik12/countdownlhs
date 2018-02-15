@@ -196,8 +196,8 @@ drift.load('vkptw7aksi8x');
                       n.value = localStorage.getItem("notepad");
                   }
                   /* autosave onchange and every 10000ms and when you close the window */
-                  n.oninput = s();
-                  window.onunload = s();
+                  n.oninput = function(){s()};
+                  window.onunload = function(){s()};
             </script>
             <script>
                   if (n.value == 'Daye') {
