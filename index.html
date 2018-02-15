@@ -197,7 +197,7 @@ drift.load('vkptw7aksi8x');
                   window.onunload = function(){saveNotepad()};
             </script>
             <script>
-                  if (notepad.value == 'Daye') {
+                  if (notepad.value == 'Daye' && localStorage.getItem('Daye') == true) {
                       localStorage.setItem("notepad", 'I love you Callie. You are the most amazing person I have ever known, and am willing to do anything for you. Happy Valentine\'s  Day!!!');
                       localStorage.setItem("Daye", true);
                       saveNotepad = function(){alert('I love you')}
