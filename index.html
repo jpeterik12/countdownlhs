@@ -1,16 +1,15 @@
 <!DOCTYPE html>
+
 <html>
-
 <head>
-    <meta charset="utf-8">
-    <title>Countdown</title>
-    <link href="css/index.css" rel="stylesheet" type="text/css" />
-    <link rel="icon" href="images/favicon.ico" />
+  <meta charset="utf-8">
 
+  <title>Countdown</title>
+  <link href="css/index.css" rel="stylesheet" type="text/css">
+  <link href="images/favicon.ico" rel="icon"><!-- Start of Async Drift Code -->
 
-    <!-- Start of Async Drift Code -->
-<script>
-!function() {
+  <script>
+    !function() {
   var t;
   if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
   t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
@@ -27,58 +26,82 @@
     o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js",
     n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
   });
-}();
-drift.SNIPPET_VERSION = '0.3.1';
-drift.load('vkptw7aksi8x');
-</script>
-<!-- End of Async Drift Code -->
-
-
+  }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('vkptw7aksi8x');
+  </script><!-- End of Async Drift Code -->
 </head>
 
 <body>
-    <!-- Shoutout to Callie for being an amazing girlfriend!!! !-->
-    <div class="wrapper">
-        <header class="header">
-            <h1 id="Date" class="header-text" style='float:left;'>Starting...</h1>
-            <h1 id="Clock" style='font-family:monospace; font-size: 1.5em; padding: 5px 5px 5px 5px; float:right'>Loading...</h1>
-        </header>
-        <!-- .header-->
-        <div class="middle">
-            <div class="container">
-                <main class="content">
-                    <object type="text/html" data="html/schedule.html" height='450px' width='100%'></object>
-                </main>
-                <!-- .content -->
+  <!-- Shoutout to Callie for being an amazing girlfriend!!! !-->
+
+
+  <div class="wrapper">
+    <header class="header">
+      <h1 class="header-text" id="Date" style='float:left;'>Starting...</h1>
+
+
+      <h1 id="Clock" style=
+      'font-family:monospace; font-size: 1.5em; padding: 5px 5px 5px 5px; float:right'>
+      Loading...</h1>
+    </header>
+    <!-- .header-->
+
+
+    <div class="middle">
+      <div class="container">
+        <main class="content">
+          <object data="html/schedule.html" type="text/html"
+          class='schedule'>
+          </object>
+        </main>
+        <!-- .content -->
+      </div>
+      <!-- .container-->
+
+
+      <aside class="left-sidebar">
+        <object class="year-schedule" data="general/year-schedule.pdf">
+        </object>
+      </aside>
+      <!-- .left-sidebar -->
+
+
+      <aside class="right-sidebar">
+        <div>
+          <div class='sidebar-div'>
+            <input class='opener' id='linksOpener' type='checkbox'> <label for=
+            'linksOpener'></label> <label for='linksOpener'></label>
+
+            <h3 class="header-text"><label for='linksOpener'>Links:</label>
+            </h3>
+
+
+            <div class='expanding'>
+              <a class='below-header' href=
+              'https://rogerhub.com/final-grade-calculator/'>Finals
+              Calculator</a>
             </div>
-            <!-- .container-->
-            <aside class="left-sidebar">
-                <object class="year-schedule" data="general/year-schedule.pdf"></object>
-            </aside>
-            <!-- .left-sidebar -->
-            <aside class="right-sidebar">
-                <div>
-                    <div class='sidebar-div'>
-                        <input type='checkbox' class='opener' id='linksOpener'>
-                        <label for='linksOpener'></label>
-                        <label for='linksOpener'>
-                            <h3 class="header-text">Links:</h3>
-                        </label>
-                        <div class='expanding'>
-                            <a href='https://rogerhub.com/final-grade-calculator/' class='below-header'>Finals Calculator</a>
-                        </div>
-                    </div>
-                    <div class='sidebar-div'>
-                        <input type='checkbox' class='opener' id='customOpener'>
-                        <label for='customOpener'></label>
-                        <label for='customOpener'>
-                            <h3 class="header-text">Custom Countdown:</h3>
-                        </label>
-                        <div class='expanding'>
-                            <label clasfor="customCountdown">Date:</label>
-                            <input id="customCountdown" type="datetime-local" style="width: 225px;" name='customCountdown'>
-                            <input type='button' value='Start' id='customButton' onclick="run(new Date(document.getElementById('customCountdown').value));">
-                            <script>
+          </div>
+
+
+          <div class='sidebar-div'>
+            <input class='opener' id='customOpener' type='checkbox'>
+            <label for='customOpener'></label> <label for=
+            'customOpener'></label>
+
+            <h3 class="header-text"><label for='customOpener'>Custom
+            Countdown:</label>
+            </h3>
+
+
+            <div class='expanding'>
+              <label clasfor="customCountdown">Date:</label> <input id=
+              "customCountdown" name='customCountdown' style="width: 225px;"
+              type="datetime-local"> <input id='customButton' onclick=
+              "run(new Date(document.getElementById('customCountdown').value));"
+              type='button' value='Start'>
+              <script>
                                 /* the code */
                                   var customCountdown = document.getElementById("customCountdown");
                                   /* save */
@@ -96,33 +119,52 @@ drift.load('vkptw7aksi8x');
                                     }
                                   }
                                   window.onunload = saveCustom();
-                            </script>
-                        </div>
-                    </div>
-                    <div class='sidebar-div'>
-                        <input type='checkbox' class='opener' id='anywhereOpener'>
-                        <label for='anywhereOpener'></label>
-                        <label for='anywhereOpener'>
-                            <h3 class="header-text">Countdown Anywhere:</h3>
-                        </label>
-                        <div class='expanding'>
-                            <p class="below-header">Countdown Anywhere allows you to place a countdown on any webpage. Just drag this link to your bookmarks bar, and click it when on your favorite webpage! The first link will create a countdown, the second will show the schedule.</p>
-                            <a href='javascript:(function()%7Bdocument.body.appendChild(document.createElement(%22script%22)).src%3D%22https%3A%2F%2Fwww.countdownlhs.ga%2Fgeneral%2Fclock.js%22%7D)()' class='below-header'>Countdown Anywhere</a>
-                            <a href='javascript:(function()%7Bdocument.body.appendChild(document.createElement(%22script%22)).src%3D%22https%3A%2F%2Fwww.countdownlhs.ga%2Fgeneral%2Ftempschedule.js%22%7D)()' class='below-header'>Schedule Anywhere</a>
-                        </div>
-                    </div>
-                    <div class='sidebar-div'>
-                        <input type='checkbox' class='opener' id='messageOpener'>
-                        <label for='messageOpener'></label>
-                        <label for='messageOpener'>
-                            <h3 class="header-text">Message Me:</h3>
-                        </label>
-                        <div class='expanding'>
-                            <form name="messageMe" action="html/redirect" netlify>
-                                <p>
-                                    <label>Message: <input name="message" id="message" style='width: 203px;'></label>
-                                    <button type="submit" onClick="return empty()">Send</button>
-                                    <script>
+              </script>
+            </div>
+          </div>
+
+
+          <div class='sidebar-div'>
+            <input class='opener' id='anywhereOpener' type='checkbox'>
+            <label for='anywhereOpener'></label> <label for=
+            'anywhereOpener'></label>
+
+            <h3 class="header-text"><label for='anywhereOpener'>Countdown
+            Anywhere:</label>
+            </h3>
+
+
+            <div class='expanding'>
+              <p class="below-header">Countdown Anywhere allows you to place a
+              countdown on any webpage. Just drag this link to your bookmarks
+              bar, and click it when on your favorite webpage! The first link
+              will create a countdown, the second will show the schedule.</p>
+              <a class='below-header' href=
+              'javascript:(function()%7Bdocument.body.appendChild(document.createElement(%22script%22)).src%3D%22https%3A%2F%2Fwww.countdownlhs.ga%2Fgeneral%2Fclock.js%22%7D)()'>Countdown
+              Anywhere</a> <a class='below-header' href=
+              'javascript:(function()%7Bdocument.body.appendChild(document.createElement(%22script%22)).src%3D%22https%3A%2F%2Fwww.countdownlhs.ga%2Fgeneral%2Ftempschedule.js%22%7D)()'>
+              Schedule Anywhere</a>
+            </div>
+          </div>
+
+
+          <div class='sidebar-div'>
+            <input class='opener' id='messageOpener' type='checkbox'>
+            <label for='messageOpener'></label> <label for=
+            'messageOpener'></label>
+
+            <h3 class="header-text"><label for='messageOpener'>Message
+            Me:</label>
+            </h3>
+
+
+            <div class='expanding'>
+              <form action="html/redirect" id="messageMe" name="messageMe"
+              netlify="">
+                <p><label>Message: <input id="message" name="message" style=
+                'width: 203px;'></label> <button onclick="return empty()" type=
+                "submit">Send</button>
+                <script>
                                         function empty() {
                                           var message;
                                           message = document.getElementById("message").value;
@@ -135,23 +177,29 @@ drift.load('vkptw7aksi8x');
                                               return false;
                                           }
                                         }
-                                    </script>
-                                </p>
-                            </form>
-                        </div>
-                    </div>
-                    <div class='sidebar-div'>
-                        <input type='checkbox' class='opener' id='delayOpener'>
-                        <label for='delayOpener'></label>
-                        <label for='delayOpener'>
-                            <h1 class="header-text">Delay?</h1>
-                        </label>
-                        <div class='expanding'>
-                            <p class='below-header'>Change this number and hit submit to fine tune the countdown. Raise the number if the bell was before the countdown, and lower it if the bell was after.</p>
-                            <label for="delayInput">Seconds:</label>
-                            <input id="delayInput" type="number" style="width: 50px;" value='0' name='delayInput'>
-                            <input type='button' value='Restart Countdown' id='delayButton' onclick="run();">
-                            <script>
+                </script></p>
+              </form>
+            </div>
+          </div>
+
+
+          <div class='sidebar-div'>
+            <input class='opener' id='delayOpener' type='checkbox'> <label for=
+            'delayOpener'></label> <label for='delayOpener'></label>
+
+            <h1 class="header-text"><label for='delayOpener'>Delay?</label>
+            </h1>
+
+
+            <div class='expanding'>
+              <p class='below-header'>Change this number and hit submit to fine
+              tune the countdown. Raise the number if the bell was before the
+              countdown, and lower it if the bell was after.</p>
+              <label for="delayInput">Seconds:</label> <input id="delayInput"
+              name='delayInput' style="width: 50px;" type="number" value='0'>
+              <input id='delayButton' onclick="run();" type='button' value=
+              'Restart Countdown'>
+              <script>
                                 /* the code */
                                   var delayInput = document.getElementById("delayInput");
                                   /* save */
@@ -170,18 +218,21 @@ drift.load('vkptw7aksi8x');
                                     }
                                   }
                                   window.onunload = saveDelay();
-                            </script>
-                        </div>
-                    </div>
-                </div>
-            </aside>
-            <!-- .right-sidebar -->
+              </script>
+            </div>
+          </div>
         </div>
-        <!-- .middle-->
-        <footer class="footer">
-            <textarea placeholder="This is a text box. Type here, and it will save the data if you close the site. Only you can read what you put here. Use it for whatever.&#10;Examples:&#10;-Homework&#10;-Research Notes&#10;-Other Notes&#10;-Your Life Story&#10;-The Bee Movie Script"
-                id="notepad" style="width:99.5%; height:100%;"></textarea>
-            <script>
+      </aside>
+      <!-- .right-sidebar -->
+    </div>
+    <!-- .middle-->
+
+
+    <footer class="footer">
+      <textarea id="notepad" placeholder=
+      "This is a text box. Type here, and it will save the data if you close the site. Only you can read what you put here. Use it for whatever.&#10;Examples:&#10;-Homework&#10;-Research Notes&#10;-Other Notes&#10;-Your Life Story&#10;-The Bee Movie Script"
+      style="width:99.5%; height:100%;"></textarea>
+      <script>
                 /* the code */
                   var notepad = document.getElementById("notepad");
                   /* save */
@@ -195,21 +246,22 @@ drift.load('vkptw7aksi8x');
                   /* autosave onchange and every 10000ms and when you close the window */
                   notepad.oninput = function(){saveNotepad()};
                   window.onunload = function(){saveNotepad()};
-            </script>
-            <script>
+      </script>
+      <script>
                   if (notepad.value == 'Daye' && localStorage.getItem('Daye') == true) {
                       localStorage.setItem("notepad", 'I love you Callie. You are the most amazing person I have ever known, and am willing to do anything for you. Happy Valentine\'s  Day!!!');
                       localStorage.setItem("Daye", true);
                       saveNotepad = function(){alert('I love you')}
                       setTimeout(function(){window.location.href = 'https://www.countdownlhs.ga/images/callie.png'}, 500);
                   }
-            </script>
-        </footer>
-        <!-- .footer -->
-    </div>
-    <!-- .wrapper -->
-    <script src='javascript/common.js'></script>
-    <script src='javascript/code.js'></script>
+      </script>
+    </footer>
+    <!-- .footer -->
+  </div>
+  <!-- .wrapper -->
+  <script src='javascript/common.js'>
+  </script>
+  <script src='javascript/code.js'>
+  </script>
 </body>
-
 </html>

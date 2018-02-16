@@ -110,6 +110,17 @@ label + label {
   z-index: 300;
 }
 
+
+
+
+
+.schedule{
+	position: relative;
+	left: 27%;
+	width: 46%;
+	height: 60vh;
+}
+
 .wrapper {
 	width: 100%;
 	min-width: 1340px;
@@ -142,6 +153,8 @@ label + label {
 	overflow: hidden;
 }
 .content {
+	left: 350px;
+	right: 350px;
   padding: 0 0 0 0;
 }
 
