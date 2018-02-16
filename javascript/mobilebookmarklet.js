@@ -7,21 +7,21 @@ function clockMove() {
     if (this.style.right == '0px') {
       this.style.top = 'calc(100% - ' + this.offsetHeight + 'px)';
       this.onmouseover = null;
-      setTimeout(function(diver){ diver.onmouseover = clockMove }, 1000, this);
+      setTimeout(function(diver){ diver.onmouseover = clockMove; }, 1000, this);
     } else {
       this.style.right = '0px';
       this.onmouseover = null;
-      setTimeout(function(diver){ diver.onmouseover = clockMove }, 1000, this);
+      setTimeout(function(diver){ diver.onmouseover = clockMove; }, 1000, this);
     }
   } else {
     if (this.style.right == '0px') {
       this.style.right = 'calc(100% - ' + this.offsetWidth + 'px)';
       this.onmouseover = null;
-      setTimeout(function(diver){ diver.onmouseover = clockMove }, 1000, this);
+      setTimeout(function(diver){ diver.onmouseover = clockMove; }, 1000, this);
     } else {
       this.style.top = '0px';
       this.onmouseover = null;
-      setTimeout(function(diver){ diver.onmouseover = clockMove }, 1000, this);
+      setTimeout(function(diver){ diver.onmouseover = clockMove; }, 1000, this);
     }
   }
 }
@@ -70,7 +70,7 @@ function run() {
   if (window.stopID) clearTimeout(window.stopID);
 
   today = new Date();
-  
+
   window.delay = 0;
 
   window.PLC = isPLC(today);

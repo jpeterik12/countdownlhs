@@ -1,4 +1,2 @@
-# countdown
-countdown for LHS
-Website for countdown.
-It's Cool
+# countdownlhs.ga
+The coolest site this side of the internet
