@@ -48,7 +48,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 }
 /* End of Eric Meyer's CSS Reset */
 
-
+.daye {
+	background: url(../images/callie.png);
+	background-size: auto 100%;
+	font-size: 2em;
+	background-color: gray;
+	color: white;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
 
 .header-text {
 	display: inline-block;

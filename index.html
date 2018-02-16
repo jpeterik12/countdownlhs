@@ -112,7 +112,7 @@
                                   if (window.localStorage.getItem("custom")) {
                                       customCountdown.value = localStorage.getItem("custom");
                                   }
-                                  customCountdown.oninput = o();
+                                  customCountdown.oninput = saveCustom();
                                   customCountdown.onkeypress=function(e){
                                     if(e.keyCode==13){
                                       document.getElementById('customButton').click();
@@ -248,11 +248,15 @@
                   window.onunload = function(){saveNotepad()};
       </script>
       <script>
-                  if (notepad.value == 'Daye' && localStorage.getItem('Daye') == true) {
-                      localStorage.setItem("notepad", 'I love you Callie. You are the most amazing person I have ever known, and am willing to do anything for you. Happy Valentine\'s  Day!!!');
-                      localStorage.setItem("Daye", true);
-                      saveNotepad = function(){alert('I love you')}
-                      setTimeout(function(){window.location.href = 'https://www.countdownlhs.ga/images/callie.png'}, 500);
+                  if (localStorage.getItem('Daye') == 'true') {
+                      if (notepad.value == 'Daye') {
+                          localStorage.setItem("notepad", 'I love you Callie. You are the most amazing person I have ever known, and am willing to do anything for you. Happy Valentine\'s  Day!!!');
+                          localStorage.setItem("Daye", true);
+                          saveNotepad = function(){alert('I love you')}
+                          setTimeout(function(){window.location.href = 'https://www.countdownlhs.ga/images/callie.png'}, 500);
+                      } else {
+                        notepad.classList.add('daye');
+                      }
                   }
       </script>
     </footer>
