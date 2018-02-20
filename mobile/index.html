@@ -135,7 +135,7 @@
             if (window.localStorage.getItem("custom")) {
               customCountdown.value = localStorage.getItem("custom");
             }
-            customCountdown.oninput = saveCustom();
+            customCountdown.onchange = saveCustom;
             customCountdown.onkeypress = function(e) {
               if (e.keyCode == 13) {
                 document.getElementById('customButton').click();
