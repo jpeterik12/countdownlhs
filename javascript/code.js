@@ -145,7 +145,7 @@ function run(endDate) {
     return;
   } else if (isUnusual(today)) {
     alert("Today is an unusual day. Sorry!");
-    dayMessage = dayMessage + 'and it is a snow day.';
+    dayMessage = dayMessage + 'and it is a unusual day.';
     setText(dayMessage, 'Date');
     return;
   } else if (window.PLC) {
