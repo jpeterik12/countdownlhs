@@ -74,16 +74,17 @@
       }
       resizeClock();
     </script>
-    <h3 class="header-text">Test</h3>
+    <h3 style="display: none;"
+        id="Date">Test</h3>
 
-    <!-- <div>
+    <div>
       <div class="sidebar-div">
         <input class="opener"
                id="scheduleOpener"
                type="checkbox">
         <label for="scheduleOpener"></label>
         <label for="scheduleOpener"></label>
-        <h3 class="header-text"><label for="scheduleOpener">School Schedule</label></h3>
+        <h3 class="header-text"><label for="scheduleOpener">School Schedule:</label></h3>
         <div class="expanding">
           <div style="overflow: hidden; height:53vw">
             <object data="https://countdownlhs.ga/html/schedule.html"
@@ -144,24 +145,6 @@
           </script>
         </div>
       </div>
-      <div class="sidebar-div"
-           style="display: none;">
-        <input class="opener"
-               id="anywhereOpener"
-               type="checkbox">
-        <label for="anywhereOpener"></label>
-        <label for="anywhereOpener"></label>
-        <h3 class="header-text"><label for="anywhereOpener">Countdown Anywhere:</label></h3>
-        <div class="expanding">
-          <p class="below-header">Countdown Anywhere allows you to place a countdown on any webpage. Just drag this link to your bookmarks bar, and click it when on your favorite webpage! The first link will create a countdown, the second will show the schedule.</p>
-          <a class="below-header"
-             href="javascript:(function()%7Bdocument.body.appendChild(document.createElement(%22script%22)).src%3D%22https%3A%2F%2Fwww.countdownlhs.ga%2Fgeneral%2Fclock.js%22%7D)()">Countdown Anywhere
-                </a>
-          <a class="below-header"
-             href="javascript:(function()%7Bdocument.body.appendChild(document.createElement(%22script%22)).src%3D%22https%3A%2F%2Fwww.countdownlhs.ga%2Fgeneral%2Ftempschedule.js%22%7D)()">
-                  Schedule Anywhere</a>
-        </div>
-      </div>
       <div class="sidebar-div">
         <input class="opener"
                id="messageOpener"
@@ -205,7 +188,7 @@
                type="checkbox">
         <label for="delayOpener"></label>
         <label for="delayOpener"></label>
-        <h1 class="header-text"><label for="delayOpener">Delay?</label></h1>
+        <h1 class="header-text"><label for="delayOpener">Delay:</label></h1>
         <div class="expanding">
           <p class="below-header">Change this number and hit submit to fine tune the countdown. Raise the number if the bell was before the countdown, and lower it if the bell was after.</p>
           <label for="delayInput">Seconds:</label>
@@ -240,37 +223,43 @@
           </script>
         </div>
       </div>
-    </div> -->
-
-
-
-    <div style="overflow: hidden; height:53vw">
-      <object data="../html/schedule.html"
-              type="text/html"
-              style="width: 100%; height: 100%;"></object>
-
+      <div class="sidebar-div">
+        <input class="opener"
+               id="notepadOpener"
+               type="checkbox">
+        <label for="notepadOpener"></label>
+        <label for="notepadOpener"></label>
+        <h3 class="header-text"><label for="notepadOpener">Notepad:</label></h3>
+        <div class="expanding">
+          <textarea id="notepad"
+                    class="notepad"
+                    placeholder="This is a text box. Type here, and it will save the data if you close the site."></textarea>
+        </div>
+        <script>
+          /* the code */
+          var notepad = document.getElementById("notepad");
+          /* save */
+          var saveNotepad = function() {
+            localStorage.setItem("notepad", notepad.value);
+          }
+          /* retrieve (only on page load) */
+          if (window.localStorage.getItem("notepad")) {
+            notepad.value = localStorage.getItem("notepad");
+          }
+          /* autosave onchange and every 10000ms and when you close the window */
+          notepad.oninput = function() {
+            saveNotepad()
+          };
+          window.onunload = function() {
+            saveNotepad()
+          };
+        </script>
+      </div>
     </div>
-    <textarea id="notepad"
-              class="notepad"
-              placeholder="This is a text box. Type here, and it will save the data if you close the site."></textarea>
+
+
     <script>
-      /* the code */
-      var notepad = document.getElementById("notepad");
-      /* save */
-      var saveNotepad = function() {
-        localStorage.setItem("notepad", notepad.value);
-      }
-      /* retrieve (only on page load) */
-      if (window.localStorage.getItem("notepad")) {
-        notepad.value = localStorage.getItem("notepad");
-      }
-      /* autosave onchange and every 10000ms and when you close the window */
-      notepad.oninput = function() {
-        saveNotepad()
-      };
-      window.onunload = function() {
-        saveNotepad()
-      };
+      localStorage.setItem('delay', 0);
     </script>
     <script src="../javascript/common.js">
     </script>

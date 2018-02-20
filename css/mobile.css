@@ -47,12 +47,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 	display: block;
 }
 /* End of Eric Meyer's CSS Reset */
-/*
 
-
-body {
-	width:50%;
+html, body {
+  overflow-x: hidden;
 }
+body {
+  position: fixed;
+}
+
 
 .header-text {
 	display: inline-block;
@@ -100,11 +102,7 @@ label + label {
   max-height: none;
 }
 
-
 .notepad {
-	bottom: 0;
 	font-size: 1em;
-	height: 30%;
-	position: fixed;
 	width: 100%;
-} */
+}
