@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Countdown</title>
+    <link href="images/favicon.ico"
+          rel="icon">
+    <link href="../css/mobile.css"
+          rel="stylesheet"
+          type="text/css">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  </head>
+
+  <body>
+    <span style="font-family: monospace; font-size: 1em;"
+          id="Clock">00:00</span>
+    <script>
+      function resizeClock() {
+        clock = document.getElementById('Clock');
+        fontSize = parseInt(window.getComputedStyle(clock).fontSize, 10);
+        clockWidth = parseInt(clock.offsetWidth, 10);
+        totalWidth = window.innerWidth;
+        widthMultiplier = totalWidth / clockWidth;
+        fontSize *= widthMultiplier * .97;
+        clock.style.fontSize = fontSize + 'px';
+      }
+      resizeClock();
+    </script>
+    <div style="overflow: hidden; height:53vw">
+      <object data="../html/schedule.html"
+              type="text/html"
+              style="width: 100%; height: 100%;"></object>
+
+    </div>
+    <footer class="footer">
+      <textarea id="notepad"
+                placeholder="This is a text box. Type here, and it will save the data if you close the site."
+                style="width:99.5%; height:100%; font-size: 1em;"></textarea>
+      <script>
+        /* the code */
+        var notepad = document.getElementById("notepad");
+        /* save */
+        var saveNotepad = function() {
+          localStorage.setItem("notepad", notepad.value);
+        }
+        /* retrieve (only on page load) */
+        if (window.localStorage.getItem("notepad")) {
+          notepad.value = localStorage.getItem("notepad");
+        }
+        /* autosave onchange and every 10000ms and when you close the window */
+        notepad.oninput = function() {
+          saveNotepad()
+        };
+        window.onunload = function() {
+          saveNotepad()
+        };
+      </script>
+    </footer>
+    <script src="../javascript/common.js">
+    </script>
+    <script src="../javascript/code.js">
+    </script>
+  </body>
+
+</html>
