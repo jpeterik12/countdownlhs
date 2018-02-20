@@ -47,19 +47,64 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 	display: block;
 }
 /* End of Eric Meyer's CSS Reset */
+/*
 
-.footer {
+
+body {
+	width:50%;
+}
+
+.header-text {
+	display: inline-block;
+  font-family: monospace;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.below-header {
+  font-family: monospace;
+  font-size: 1em;
+  padding: 0 0 0 0;
+}
+
+.sidebar-div {
+  overflow: hidden;
+}
+
+.opener {
+  display: none;
+}
+
+label + label {
+  cursor: pointer;
+}
+
+.opener + label {
+	background:url(https://www.countdownlhs.ga/images/arrows.png) left top no-repeat;
+	cursor: pointer;
+  display:inline-block;
+	height:19px;
+  width:19px;
+}
+
+.opener:checked + label {
+    background-position: -19px top;
+}
+
+.expanding {
+	max-height: 0;
+  overflow: hidden;
+}
+
+.opener:checked ~ .expanding {
+  max-height: none;
+}
+
+
+.notepad {
 	bottom: 0;
+	font-size: 1em;
 	height: 30%;
 	position: fixed;
-	/* transition: height 1s ease-out; */
 	width: 100%;
-}
-
-/* .footer:hover {
-  height: 30%;
-}
-
-.footer:focus-within {
-  height: 30%;
 } */
