@@ -51,9 +51,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 html, body {
   overflow-x: hidden;
 }
-body {
+/* body {
   position: fixed;
-}
+} */
 
 
 .header-text {
