@@ -104,5 +104,6 @@ label + label {
 
 .notepad {
 	font-size: 1em;
+	height: 6em;
 	width: 100%;
 }

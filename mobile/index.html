@@ -121,7 +121,7 @@
                  style="width: 225px;"
                  type="datetime-local">
           <input id="customButton"
-                 onclick="run(new Date(document.getElementById('customCountdown').value));"
+                 onclick="run(new Date(document.getElementById('customCountdown').value)); resizeClock();"
                  type="button"
                  value="Start">
           <script>
@@ -256,11 +256,6 @@
         </script>
       </div>
     </div>
-
-
-    <script>
-      localStorage.setItem('delay', 0);
-    </script>
     <script src="../javascript/common.js">
     </script>
     <script src="../javascript/code.js">
