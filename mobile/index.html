@@ -133,7 +133,7 @@
                  style="width: 225px;"
                  type="datetime-local">
           <input id="customButton"
-                 onclick="run(new Date(document.getElementById('customCountdown').value)); resizeClock();"
+                 onclick="run(new Date(document.getElementById('customCountdown').value.replace(/-/g,'/').replace('T',' '))); resizeClock();"
                  type="button"
                  value="Start">
           <script>
