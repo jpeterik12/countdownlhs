@@ -48,13 +48,65 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 }
 /* End of Eric Meyer's CSS Reset */
 
-.daye {
-	background: url(../images/callie.png);
-	background-color: gray;
-	background-size: auto 100%;
-	color: white;
-	font-size: 2em;
-	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+html, body { height: 100%; }
+
+.wrapper {
+	/* background-color: #2196F3; */
+  display: grid;
+	grid-gap: 10px;
+	grid-template-columns: 25% auto 25%;
+	grid-template-rows: 10% auto 25%;
+	height: 100%;
+	width: 100%;
+}
+
+.schedule {
+	height: 100%;
+  width: 100%;
+}
+
+/* .inner-box {
+  background-color: rgba(255, 255, 255, 0.8);
+} */
+
+.middle-box {
+	align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+	justify-content: space-between;
+	overflow: hidden;
+}
+
+.calender {
+	height: 100%;
+  width: 100%;
+}
+
+.calender:focus {
+	height: 90vh;
+	left: calc(50% - 37.5vw);
+  position: fixed;
+	top: calc(50% - 45vh);
+	width: 75vw;
+	z-index: 300;
+}
+
+.full-width {
+  grid-column: 1 / 4;
+}
+
+.notepad {
+	bottom: 0;
+  height: 10%;
+  left: 0;
+	position: absolute;
+  resize: none;
+	transition: height 1s;
+	width: calc(100% - 6px);
+}
+
+.notepad:hover,.notepad:focus {
+  height: 25%;
 }
 
 .header-text {
@@ -67,7 +119,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 .below-header {
   font-family: monospace;
   font-size: 1em;
-  padding: 0 0 0 0;
 }
 
 .sidebar-div {
@@ -83,15 +134,15 @@ label + label {
 }
 
 .opener + label {
-	background:url(../images/arrows.png) left top no-repeat;
+	background:url(/images/arrows.png) left top no-repeat;
 	cursor: pointer;
-  display:inline-block;
+  display: inline-block;
 	height:19px;
   width:19px;
 }
 
 .opener:checked + label {
-    background-position: -19px top;
+  background-position: -19px top;
 }
 
 .expanding {
@@ -103,99 +154,11 @@ label + label {
   max-height: 100px;
 }
 
-.year-schedule {
-	height: 400px;
-  width: 100%;
-}
-
-.year-schedule:focus {
-	height: 600px;
-	left: calc(50% - 300px);
-  position: fixed;
-	top: calc(50% - 300px);
-	width: 600px;
-	z-index: 300;
-}
-
-.schedule{
-	height: 100%;
-	width: 100%;
-}
-
-.wrapper {
-	min-width: 1340px;
-	width: 100%;
-}
-
-
-/* Header
------------------------------------------------------------------------------*/
-.header {
-	height: 50px;
-}
-
-
-/* Middle
------------------------------------------------------------------------------*/
-.middle {
-	bottom: 140;
-	height: 100%;
-	position: relative;
-	width: 100%;
-}
-.middle:after {
-	clear: both;
-	content: '';
-	display: table;
-}
-.container {
-	float: left;
-	overflow: hidden;
-	width: 100%;
-}
-.content {
-	height: calc(46vw * 0.6);
-	left: 27vw;
-	padding: 0 0 0 0;
-	position: relative;
-	width: 46vw;
-}
-
-
-/* Left Sidebar
------------------------------------------------------------------------------*/
-.left-sidebar {
-	float: left;
-	margin-left: -100%;
-	position: relative;
-	width: 350px;
-}
-
-
-/* Right Sidebar
------------------------------------------------------------------------------*/
-.right-sidebar {
-	float: left;
-	margin-left: -350px;
-	position: relative;
-	width: 350px;
-}
-
-
-/* Footer
------------------------------------------------------------------------------*/
-.footer {
-	bottom: 0;
-	height: 50px;
-	position: fixed;
-	transition: height 1s ease-out;
-	width: 100%;
-}
-
-.footer:hover {
-  height: 30%;
-}
-
-.footer:focus-within {
-  height: 30%;
+.daye {
+	background: url(../images/callie.png);
+	background-color: gray;
+	background-size: auto 100%;
+	color: white;
+	font-size: 2em;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }

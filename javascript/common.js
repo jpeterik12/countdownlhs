@@ -24,7 +24,7 @@ function getEndDate() {
   }
 
   var endMinuteTest = hours[period];
-  
+
   if (!endMinuteTest) {
     alert("It's after school!");
     return;
@@ -132,6 +132,6 @@ function isUnusual(date) {
   dateStr =
     date.getMonth() + 1 + '/' + date.getDate() + '/' + date.getFullYear();
 
-  unusualDays = ['2/16/2018', '2/19/2018'];
+  unusualDays = ['3/2/2018'];
   return unusualDays.indexOf(dateStr) != -1;
 }

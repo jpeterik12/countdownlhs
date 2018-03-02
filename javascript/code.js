@@ -1,10 +1,9 @@
 /*jshint maxerr: 1000 */
 
-//regular
-
 function startTimer() {
   getEndDate();
 }
+
 function getMessage(period, isArray, arrayNum) {
   var messages;
 
@@ -40,6 +39,7 @@ function getMessage(period, isArray, arrayNum) {
 
   return message;
 }
+
 function loop(endDate, message) {
   now = new Date(Date.now() + window.delay);
 
@@ -65,12 +65,13 @@ function loop(endDate, message) {
     timeLeft = timeLeft.substring(2);
     if (hours === 0) timeLeft = timeLeft.substring(3);
   }
-  setText(timeLeft, 'Clock');
+  setText(timeLeft, 'clock');
 
   document.title = (timeLeft + ' ' + message);
   // console.log(timeLeft + ' ' + message);
   window.stopID = setTimeout(loop, 1000, endDate, message, PLC);
 }
+
 function numberFormat(numberStr) {
   if (numberStr.substr(-2) === '11') {
     return 'th';
@@ -88,6 +89,7 @@ function numberFormat(numberStr) {
     return 'th';
   }
 }
+
 function formatDate(date) {
   var weekdays = [
     'Sunday',
@@ -121,6 +123,7 @@ function formatDate(date) {
     numberFormat('' + date.getDate())
   );
 }
+
 function run(endDate) {
   if (window.stopID) clearTimeout(window.stopID);
 
@@ -136,27 +139,28 @@ function run(endDate) {
   if (endDate) {
     alert('Custom countdown set!');
     dayMessage = dayMessage + 'and you are running a custom countdown.';
-    setText(dayMessage, 'Date');
+    setText(dayMessage, 'date');
     loop(endDate, 'left');
   } else if (today.getDay() === 6 || today.getDay() === 0) {
     alert("It's the weekend. Why are you here?");
     dayMessage = dayMessage + 'and it is the weekend.';
-    setText(dayMessage, 'Date');
+    setText(dayMessage, 'date');
     return;
   } else if (isUnusual(today)) {
     alert("Today is an unusual day. Sorry!");
     dayMessage = dayMessage + 'and it is a unusual day.';
-    setText(dayMessage, 'Date');
+    setText(dayMessage, 'date');
     return;
   } else if (window.PLC) {
     alert('Today is a PLC day. Hurray!');
     dayMessage = dayMessage + 'and it is a PLC day.';
-    setText(dayMessage, 'Date');
+    setText(dayMessage, 'date');
     startTimer(delay);
   } else {
     dayMessage = dayMessage + 'and it is a regular weekday.';
-    setText(dayMessage, 'Date');
+    setText(dayMessage, 'date');
     startTimer(delay);
   }
 }
+
 run();

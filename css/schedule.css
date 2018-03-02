@@ -50,6 +50,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 
 
 .schedule-base {
+	background-color: #ffffff;
 	border-collapse: collapse;
 	border-spacing: 0;
 	height: 100%;
