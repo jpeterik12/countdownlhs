@@ -155,7 +155,7 @@ label + label {
 }
 
 .daye {
-	background: url(../images/callie.png);
+	background: url(/images/callie.png);
 	background-color: gray;
 	background-size: auto 100%;
 	color: white;
