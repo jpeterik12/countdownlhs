@@ -53,9 +53,13 @@ html, body { height: 100%; }
 .wrapper {
 	/* background-color: #2196F3; */
   display: grid;
+	/* stylelint-enable */
+	/* csslint ignore:start */
 	grid-gap: 10px;
-	grid-template-columns: 25% auto 25%;
-	grid-template-rows: 10% auto 25%;
+	grid-template-columns: 1fr 2fr 1fr;/* csslint allow: adjoining-classes */
+	grid-template-rows: 10fr 65fr 25fr;/* csslint allow: adjoining-classes */
+	/* stylelint-dsiable */
+	/* csslint ignore:end */
 	height: 100%;
 	width: 100%;
 }
