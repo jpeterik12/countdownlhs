@@ -57,7 +57,7 @@ html, body { height: 100%; }
 	/* csslint ignore:start */
 	grid-gap: 10px;
 	grid-template-columns: 1fr 2fr 1fr;/* csslint allow: adjoining-classes */
-	grid-template-rows: 5fr 70fr 25fr;/* csslint allow: adjoining-classes */
+	grid-template-rows: 1fr 17fr 2fr;/* csslint allow: adjoining-classes */
 	/* stylelint-dsiable */
 	/* csslint ignore:end */
 	height: 100%;
@@ -83,6 +83,7 @@ html, body { height: 100%; }
 
 .calender {
 	height: 100%;
+	max-height: 33vw;
   width: 100%;
 }
 
