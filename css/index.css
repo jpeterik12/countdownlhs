@@ -83,6 +83,7 @@ html, body { height: 100%; }
 
 .calender {
 	height: 100%;
+	max-height: 33vw;
   width: 100%;
 }
 
