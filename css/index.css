@@ -56,8 +56,8 @@ html, body { height: 100%; }
 	/* stylelint-enable */
 	/* csslint ignore:start */
 	grid-gap: 10px;
-	grid-template-columns: 1fr 2fr 1fr;/* csslint allow: adjoining-classes */
-	grid-template-rows: 1fr 17fr 2fr;/* csslint allow: adjoining-classes */
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-rows: 1fr 17fr 2fr;
 	/* stylelint-dsiable */
 	/* csslint ignore:end */
 	height: 100%;
