@@ -76,6 +76,7 @@ html, body { height: 100%; }
 .middle-box {
 	align-items: flex-start;
   display: flex;
+  height: 98%;
   flex-direction: column;
 	justify-content: space-between;
 	overflow: hidden;
