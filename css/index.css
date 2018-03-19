@@ -55,9 +55,9 @@ html, body { height: 100%; }
   display: grid;
 	/* stylelint-enable */
 	/* csslint ignore:start */
-	grid-gap: 10px;
-	grid-template-columns: 1fr 2fr 1fr;
-	grid-template-rows: 1fr 17fr 2fr;
+	grid-gap: 0px;
+	grid-template-columns: 25vw 50vw 25vw;
+	grid-template-rows: 5vh 85vh 10vh;
 	/* stylelint-dsiable */
 	/* csslint ignore:end */
 	height: 100%;
@@ -69,17 +69,18 @@ html, body { height: 100%; }
   width: 100%;
 }
 
-/* .inner-box {
-  background-color: rgba(255, 255, 255, 0.8);
-} */
+.inner-box {
+	min-height: 0;
+  min-width: 0;
+}
 
 .middle-box {
 	align-items: flex-start;
   display: flex;
-  height: 100%;
   flex-direction: column;
 	justify-content: space-between;
-	overflow: hidden;
+	overflow: auto;
+	overflow-x: hidden; overflow-y: auto;
 }
 
 .calender {
