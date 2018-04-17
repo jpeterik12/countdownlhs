@@ -2,119 +2,64 @@
 
 //common
 
-function getEndDate() {
-  var hours;
-  var now = new Date(Date.now() + window.delay);
-
-  if (window.PLC) {
-    hours = [45, 33, 20, [7, 54], [23, 52], 21, [7, 53]];
-  } else {
-    hours = [45, 40, 34, 28, [22, 51], [20, 49], 43, 37];
-  }
-
-  var endHour = now.getHours();
-
-  var currentMinute = now.getMinutes();
-
-  var period = endHour - 7;
-
-  if (period < 0) {
-    alert("It's before school!");
-    return;
-  }
-
-  var endMinuteTest = hours[period];
-
-  if (!endMinuteTest) {
-    alert("It's after school!");
-    return;
-  }
-
-  var endMinuteTestArray;
-
-  var isArray = false;
-
-  var arrayNum;
-
-  if (Array.isArray(endMinuteTest)) {
-    endMinuteTestArray = endMinuteTest;
-
-    endMinuteTest = endMinuteTestArray[0];
-
-    isArray = true;
-
-    arrayNum = 0;
-
-    if (currentMinute >= endMinuteTest) {
-      endMinuteTest = endMinuteTestArray[1];
-      arrayNum = 1;
-    }
-  }
-
-  if (currentMinute >= endMinuteTest) {
-    endHour++;
-
-    period = endHour - 7;
-
-    endMinuteTest = hours[period];
-
-    if (!endMinuteTest) {
-      alert("It's after school!");
-      return;
-    }
-
-    isArray = false;
-  }
-
-  if (Array.isArray(endMinuteTest)) {
-    endMinuteTestArray = endMinuteTest;
-
-    endMinute = endMinuteTestArray[0];
-
-    isArray = true;
-    arrayNum = 0;
-  } else {
-    endMinute = endMinuteTest;
-  }
-
-  var endDate = new Date(Date.now() + window.delay);
-  endDate.setHours(endHour);
-
-  endDate.setMinutes(endMinute);
-
-  endDate.setSeconds(0);
-  if (typeof getMessage !== 'undefined') {
-    loop(endDate, getMessage(period, isArray, arrayNum));
-  } else {
-    loop(endDate);
-  }
+function dater() {
+  if (!window.delay) window.delay = 0;
+  date = new Date(Date.now() + window.delay);
+  // date = new Date();
+  // date.setMinutes(date.getMinutes()-10);
+  return date;
 }
 
-function getWednesdays(date) {
-  'use strict';
-  var todaygetWed = new Date(date.getTime());
-  var month = todaygetWed.getMonth();
-  var wednesdays = [];
+function getNextTime(array, start, currentMinute) {
+  arrayTest = array.slice(start);
 
-  todaygetWed.setDate(1);
-  todaygetWed.setHours(0, 0, 0, 0);
-
-  while (todaygetWed.getDay() !== 3) {
-    todaygetWed.setDate(todaygetWed.getDate() + 1);
+  for (var x in arrayTest) {
+    if (arrayTest[x].length) {
+      if (x === '0') {
+        for (var y in arrayTest[x]) {
+          if (arrayTest[x][y][0] > currentMinute)
+            return [start, arrayTest[x][y][0], arrayTest[x][y][1], false];
+        }
+      } else
+        return [
+          parseInt(x) + start,
+          arrayTest[x][0][0],
+          arrayTest[x][0][1],
+          false,
+        ];
+    }
   }
-
-  while (todaygetWed.getMonth() === month) {
-    wednesdays.push(new Date(todaygetWed.getTime()));
-    todaygetWed.setDate(todaygetWed.getDate() + 7);
+  for (var z in array) {
+    if (array[z].length) {
+      return [parseInt(z), array[z][0][0], array[z][0][1], true];
+    }
   }
-
-  return wednesdays;
+  console.log('No Schedule');
+  return 'Ohno';
 }
 
 function isPLC(date) {
   'use strict';
   if (date.getDay() != 3) return false;
+  function getWednesdays(date) {
+    var todaygetWed = new Date(date.getTime());
+    var month = todaygetWed.getMonth();
+    var wednesdays = [];
 
+    todaygetWed.setDate(1);
+    todaygetWed.setHours(0, 0, 0, 0);
+
+    while (todaygetWed.getDay() !== 3) {
+      todaygetWed.setDate(todaygetWed.getDate() + 1);
+    }
+
+    while (todaygetWed.getMonth() === month) {
+      wednesdays.push(new Date(todaygetWed.getTime()));
+      todaygetWed.setDate(todaygetWed.getDate() + 7);
+    }
+
+    return wednesdays;
+  }
   var wednesdays = getWednesdays(date);
   var wednesdayOne = wednesdays[0];
   var wednesdayThree = wednesdays[2];
@@ -122,10 +67,6 @@ function isPLC(date) {
     date.getDate() == wednesdayOne.getDate() ||
     date.getDate() == wednesdayThree.getDate()
   );
-}
-
-function setText(text, ID) {
-  document.getElementById(ID).innerHTML = text;
 }
 
 function isUnusual(date) {
