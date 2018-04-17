@@ -112,8 +112,11 @@ function run(schedule, endDate) {
   if (window.stopID) clearTimeout(window.stopID);
 
   window.delay = 0;
-  if (localStorage.getItem('delay'))
-    window.delay = parseInt(localStorage.getItem('delay'));
+  if (window.location.href == 'https://www.countdownlhs.ga') {
+    if (localStorage.getItem('delay')) {
+      window.delay = parseInt(localStorage.getItem('delay'));
+    }
+  }
 
   today = dater();
   dayMessage = 'Today is ' + formatDate(today) + ', ';
