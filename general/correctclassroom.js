@@ -8,5 +8,5 @@ if (window.location.hostname == 'www.countdownlhs.ga') {
 
 
 function cuteMessage() {
-  return 'Hey, I\'ve got a question: Would you rather have a small amount of handwritten messages to show up whenever you use this, or a random one from a long list of generated ones?'
+  return 'Hey, I\'ve got a question: Would you rather have a small amount of handwritten messages to show up whenever you use this, or a random one from a long list of generated ones?';
 }
