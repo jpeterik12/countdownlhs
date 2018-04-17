@@ -33,6 +33,7 @@ function loop(endDate, message) {
     timeLeft = timeLeft.substring(2);
     if (hours === 0) timeLeft = timeLeft.substring(3);
   }
+
   setText(timeLeft + ' ' + message, 'title');
   setText(timeLeft, 'clock');
   window.stopID = setTimeout(loop, 1000, endTime, scheduleArray[2]);
@@ -48,7 +49,7 @@ function startTimer(schedule) {
 function setText(text, ID) {
   if (document.getElementById(ID)) {
     document.getElementById(ID).innerHTML = text;
-  } else if (ID == 'title' && window.location.href != 'about:blank') {
+  } else if (ID == 'title' && (window.location.href == 'https://www.countdownlhs.ga/' || window.location.href == 'localhost')) {
     document.title = text;
   } else {
     console.log(ID + ':', text);
