@@ -49,7 +49,7 @@ function startTimer(schedule) {
 function setText(text, ID) {
   if (document.getElementById(ID)) {
     document.getElementById(ID).innerHTML = text;
-  } else if (ID == 'title' && (window.location.href == 'https://www.countdownlhs.ga/' || window.location.href == 'localhost')) {
+  } else if (ID == 'title' && (window.location.hostname == 'www.countdownlhs.ga' || window.location.hostname == 'localhost')) {
     document.title = text;
   } else {
     console.log(ID + ':', text);
@@ -113,7 +113,7 @@ function run(schedule, endDate) {
   if (window.stopID) clearTimeout(window.stopID);
 
   window.delay = 0;
-  if (window.location.href == 'https://www.countdownlhs.ga') {
+  if (window.location.hostname == 'www.countdownlhs.ga') {
     if (localStorage.getItem('delay')) {
       window.delay = parseInt(localStorage.getItem('delay'));
     }
