@@ -14,25 +14,19 @@ function start(endDate) {
     }
   }
 
+  dayMessage = 'Today is ' + formatDate(dater()) + ', ';
+
+
   if (endDate) {
     alert('Custom countdown set!');
     dayMessage = dayMessage + 'and you are running a custom countdown.';
     setText(dayMessage, 'date');
     window.stopID = setTimeout(loop, 1000, endDate, ' until date');
     return;
-  } else if (today.getDay() === 6 || today.getDay() === 0) {
-      alert("It's the weekend. Why are you here?");
-      dayMessage = dayMessage + 'and it is the weekend.';
-      setText(dayMessage, 'date');
-      return;
-    } else if (isUnusual(today)) {
-      alert("Today is an unusual day. Countdown won't work today. Sorry!");
-      dayMessage = dayMessage + 'and it is a unusual day.';
-      setText(dayMessage, 'date');
-      return;
-    }
+  }
 
-  schedule = [
+
+  normalSchedule = [
     [],
     [],
     [],
@@ -166,30 +160,32 @@ function start(endDate) {
     [],
   ];
 
-  scheduleSend = schedule;
+  schedule = normalSchedule;
 
-  if (isPLC(dater())) scheduleSend = plcSchedule;
+  if (window.PLC) schedule = plcSchedule;
 
-  run(scheduleSend);
-}
-
-function run(schedule) {
-  window.usedSchedule = schedule;
-
-  dayMessage = 'Today is ' + formatDate(dater()) + ', ';
-
-  if (window.PLC) {
+  if (today.getDay() === 6 || today.getDay() === 0) {
+    alert("It's the weekend. Why are you here?");
+    dayMessage = dayMessage + 'and it is the weekend.';
+    setText(dayMessage, 'date');
+    return;
+  } else if (isUnusual(today)) {
+    alert("Today is an unusual day. Countdown won't work today. Sorry!");
+    dayMessage = dayMessage + 'and it is a unusual day.';
+    setText(dayMessage, 'date');
+    return;
+  } else if (window.PLC) {
     alert('Today is a PLC day. Hurray!');
     dayMessage = dayMessage + 'and it is a PLC day.';
     setText(dayMessage, 'date');
     schedule = window.plcSchedule;
     startTimer(schedule);
     return;
+  } else {
+    dayMessage = dayMessage + 'and it is a regular weekday.';
+    setText(dayMessage, 'date');
+    startTimer(schedule);
   }
-
-  dayMessage = dayMessage + 'and it is a regular weekday.';
-  setText(dayMessage, 'date');
-  startTimer(schedule);
 }
 
 function startTimer(schedule) {
