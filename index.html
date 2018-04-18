@@ -96,13 +96,13 @@
             <label for="customOpener"></label> <label for="customOpener"></label>
             <h3 class="header-text"><label for="customOpener">Custom Countdown:</label></h3>
             <div class="expanding">
-              <label clasfor="customCountdown">Date:</label>
+              <label for="customCountdown">Date:</label>
               <input id="customCountdown"
                      name="customCountdown"
                      style="width: 225px;"
                      type="datetime-local">
               <input id="customButton"
-                     onclick="start(new Date().setHours(22));"
+                     onclick="start(new Date(document.getElementById(customCountdown).value));"
                      type="button"
                      value="Start">
               <script>

@@ -76,3 +76,65 @@ function isUnusual(date) {
   unusualDays = ['3/2/2018','3/23/2018'];
   return unusualDays.indexOf(dateStr) != -1;
 }
+
+function setText(text, ID) {
+  if (document.getElementById(ID)) {
+    document.getElementById(ID).innerHTML = text;
+  } else if (ID == 'title' && (window.location.hostname == 'www.countdownlhs.ga' || window.location.hostname == 'localhost')) {
+    document.title = text;
+  } else {
+    console.log(ID + ':', text);
+  }
+}
+
+function numberFormat(numberStr) {
+  if (numberStr.substr(-2) === '11') {
+    return 'th';
+  } else if (numberStr.substr(-2) === '12') {
+    return 'th';
+  } else if (numberStr.substr(-2) === '13') {
+    return 'th';
+  } else if (numberStr.substr(-1) === '1') {
+    return 'st';
+  } else if (numberStr.substr(-1) === '2') {
+    return 'nd';
+  } else if (numberStr.substr(-1) === '3') {
+    return 'rd';
+  } else {
+    return 'th';
+  }
+}
+
+function formatDate(date) {
+  var weekdays = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+  ];
+  var months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
+  return (
+    weekdays[date.getDay()] +
+    ', ' +
+    months[date.getMonth()] +
+    ' ' +
+    date.getDate() +
+    numberFormat('' + date.getDate())
+  );
+}
