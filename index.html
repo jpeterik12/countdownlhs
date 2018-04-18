@@ -2,6 +2,7 @@
 <html>
 
   <head>
+    <meta charset="utf-8">
     <script>
       window.mobilecheck = function() {
         var check = false;
@@ -16,7 +17,6 @@
         document.location.href += "/mobile";
       }
     </script>
-    <meta charset="utf-8">
     <title>CountdownLHS</title>
     <link href="css/index.css"
           rel="stylesheet"
@@ -102,7 +102,7 @@
                      style="width: 225px;"
                      type="datetime-local">
               <input id="customButton"
-                     onclick="run(new Date(document.getElementById('customCountdown').value));"
+                     onclick="start(new Date().setHours(22));"
                      type="button"
                      value="Start">
               <script>
@@ -115,9 +115,11 @@
                 /* retrieve (only on page load) */
                 if (window.localStorage.getItem("custom")) {
                   customCountdown.value = localStorage.getItem("custom");
+
                 }
                 customCountdown.oninput = saveCustom();
                 customCountdown.onkeypress = function(e) {
+                  saveCustom();
                   if (e.keyCode == 13) {
                     document.getElementById('customButton').click();
                   }

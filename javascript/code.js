@@ -18,7 +18,8 @@ function loop(endDate, message) {
   var minutes = Math.floor(diff % 3.6e6 / 6e4);
   var seconds = Math.floor(diff % 6e4 / 1000);
   if (seconds < 0) {
-    run(window.usedSchedule);
+    start();
+    console.log('Done');
     return;
   }
   timeLeft =
@@ -36,7 +37,7 @@ function loop(endDate, message) {
 
   setText(timeLeft + ' ' + message, 'title');
   setText(timeLeft, 'clock');
-  window.stopID = setTimeout(loop, 1000, endTime, scheduleArray[2]);
+  window.stopID = setTimeout(loop, 1000, endDate, message);
 }
 
 function startTimer(schedule) {
@@ -108,9 +109,32 @@ function formatDate(date) {
   );
 }
 
-function run(schedule, endDate) {
+function run(schedule) {
   window.usedSchedule = schedule;
-  if (window.stopID) clearTimeout(window.stopID);
+
+  dayMessage = 'Today is ' + formatDate(dater()) + ', ';
+
+  if (window.PLC) {
+    alert('Today is a PLC day. Hurray!');
+    dayMessage = dayMessage + 'and it is a PLC day.';
+    setText(dayMessage, 'date');
+    schedule = window.plcSchedule;
+    startTimer(schedule);
+    return;
+  }
+
+  dayMessage = dayMessage + 'and it is a regular weekday.';
+  setText(dayMessage, 'date');
+  startTimer(schedule);
+}
+
+function start(endDate) {
+  if (window.stopID) {
+    clearTimeout(window.stopID);
+  }
+
+  today = dater();
+  window.PLC = isPLC(today);
 
   window.delay = 0;
   if (window.location.hostname == 'www.countdownlhs.ga') {
@@ -119,38 +143,24 @@ function run(schedule, endDate) {
     }
   }
 
-  today = dater();
-  dayMessage = 'Today is ' + formatDate(today) + ', ';
-  window.PLC = isPLC(today);
   if (endDate) {
     alert('Custom countdown set!');
     dayMessage = dayMessage + 'and you are running a custom countdown.';
     setText(dayMessage, 'date');
-    window.stopID = setTimeout(loop, 1000, endTime, scheduleArray[2]);
+    window.stopID = setTimeout(loop, 1000, endDate, ' until date');
+    return;
   } else if (today.getDay() === 6 || today.getDay() === 0) {
-    alert("It's the weekend. Why are you here?");
-    dayMessage = dayMessage + 'and it is the weekend.';
-    setText(dayMessage, 'date');
-    return;
-  } else if (isUnusual(today)) {
-    alert("Today is an unusual day. Countdown won't work today. Sorry!");
-    dayMessage = dayMessage + 'and it is a unusual day.';
-    setText(dayMessage, 'date');
-    return;
-  } else if (window.PLC) {
-    alert('Today is a PLC day. Hurray!');
-    dayMessage = dayMessage + 'and it is a PLC day.';
-    setText(dayMessage, 'date');
-    schedule = window.plcSchedule;
-    startTimer(schedule);
-  } else {
-    dayMessage = dayMessage + 'and it is a regular weekday.';
-    setText(dayMessage, 'date');
-    startTimer(schedule);
-  }
-}
+      alert("It's the weekend. Why are you here?");
+      dayMessage = dayMessage + 'and it is the weekend.';
+      setText(dayMessage, 'date');
+      return;
+    } else if (isUnusual(today)) {
+      alert("Today is an unusual day. Countdown won't work today. Sorry!");
+      dayMessage = dayMessage + 'and it is a unusual day.';
+      setText(dayMessage, 'date');
+      return;
+    }
 
-function start() {
   schedule = [
     [],
     [],
