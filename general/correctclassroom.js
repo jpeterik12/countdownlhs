@@ -63,7 +63,6 @@ template = [
 
 messages = [
 	' and I\'m thinking of you',
-	' and I love you',
 	'. xoxox',
 	' and have fun',
 	' and don\'t let the world control you',
