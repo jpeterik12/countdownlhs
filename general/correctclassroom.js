@@ -8,5 +8,75 @@ if (window.location.hostname == 'www.countdownlhs.ga') {
 
 
 function cuteMessage() {
-  return 'Hey, I\'ve got a question: Would you rather have a small amount of handwritten messages to show up whenever you use this, or a random one from a long list of generated ones? \n Have Fun Today!!';
+template = 'Hey Callie! Have a _ day! __.';
+
+messages = [
+	'amazing',
+	'awesome',
+	'blithesome',
+	'excellent',
+	'fabulous',
+	'fantastic',
+	'favorable',
+	'great',
+	'incredible',
+	'outstanding',
+	'perfect',
+	'smart',
+	'remarkable',
+	'spectacular',
+	'splendid',
+	'stellar',
+	'stupendous',
+	'super',
+	'ultimate',
+	'unbelievable',
+	'wondrous',
+];
+
+position = template.indexOf('_');
+
+template = [
+	template.slice(0, position),
+	messages[Math.floor(Math.random() * messages.length)],
+	template.slice(position + 1),
+].join('');
+
+messages = [
+	'Stay happy',
+	'Stay cute',
+	'Enjoy yourself',
+	'Love yourself',
+	'Stay hydrated',
+	'Think positive',
+	'Stay positive',
+	'Don\'t die',
+];
+
+position = template.indexOf('_');
+
+template = [
+	template.slice(0, position),
+	messages[Math.floor(Math.random() * messages.length)],
+	template.slice(position + 1),
+].join('');
+
+messages = [
+	' and I\'m thinking of you',
+	' and I love you',
+	'. xoxox',
+	' and have fun',
+	' and don\'t let the world control you',
+	' and be mindful',
+];
+
+position = template.indexOf('_');
+
+template = [
+	template.slice(0, position),
+	messages[Math.floor(Math.random() * messages.length)],
+	template.slice(position + 1),
+].join('');
+  
+  return template;
 }
