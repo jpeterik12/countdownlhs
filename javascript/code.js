@@ -93,7 +93,7 @@ function start(endDate) {
     [[0, 'until block A']
     ],
     [[30, 'left in block A'],
-     [45, 'until block B'
+     [45, 'until block B']
     ],
     [
     ],
