@@ -126,25 +126,6 @@
                  onclick="run(new Date(document.getElementById('customCountdown').value.replace(/-/g,'/').replace('T',' '))); resizeClock();"
                  type="button"
                  value="Start">
-          <script>
-            /* the code */
-            var customCountdown = document.getElementById("customCountdown");
-            /* save */
-            var saveCustom = function() {
-              localStorage.setItem("custom", customCountdown.value);
-            }
-            /* retrieve (only on page load) */
-            if (window.localStorage.getItem("custom")) {
-              customCountdown.value = localStorage.getItem("custom");
-            }
-            customCountdown.onchange = saveCustom;
-            customCountdown.onkeypress = function(e) {
-              if (e.keyCode == 13) {
-                document.getElementById('customButton').click();
-              }
-            }
-            window.onunload = saveCustom();
-          </script>
         </div>
       </div>
       <div class="sidebar-div">
@@ -203,26 +184,6 @@
                  onclick="run();"
                  type="button"
                  value="Restart Countdown">
-          <script>
-            /* the code */
-            var delayInput = document.getElementById("delayInput");
-            /* save */
-            var saveDelay = function() {
-              localStorage.setItem("delay", delayInput.value);
-            }
-            /* retrieve (only on page load) */
-            if (window.localStorage.getItem("delay")) {
-              delayInput.value = localStorage.getItem("delay");
-            }
-            /* autosave onchange and every 10000ms and when you close the window */
-            delayInput.oninput = saveDelay();
-            delayInput.onkeypress = function(e) {
-              if (e.keyCode == 13) {
-                document.getElementById('delayButton').click();
-              }
-            }
-            window.onunload = saveDelay();
-          </script>
         </div>
       </div>
       <div class="sidebar-div">
@@ -237,25 +198,6 @@
                     class="notepad"
                     placeholder="This is a text box. Type here, and it will save the data if you close the site."></textarea>
         </div>
-        <script>
-          /* the code */
-          var notepad = document.getElementById("notepad");
-          /* save */
-          var saveNotepad = function() {
-            localStorage.setItem("notepad", notepad.value);
-          }
-          /* retrieve (only on page load) */
-          if (window.localStorage.getItem("notepad")) {
-            notepad.value = localStorage.getItem("notepad");
-          }
-          /* autosave onchange and every 10000ms and when you close the window */
-          notepad.oninput = function() {
-            saveNotepad()
-          };
-          window.onunload = function() {
-            saveNotepad()
-          };
-        </script>
       </div>
       <div style="padding-bottom: 2%">
         <!-- <p class="header-text">
@@ -271,6 +213,8 @@
     <script src="/javascript/common.js">
     </script>
     <script src="/javascript/code.js">
+    </script>
+    <script src="/javascript/saving.js">
     </script>
   </body>
 
