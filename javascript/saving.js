@@ -54,16 +54,23 @@ var saveAll = function() {
 
 
 if (localStorage.getItem('Daye') == 'true') {
-  if (notepad.value == 'Daye') {
-    localStorage.setItem("notepad", 'I love you Callie. You are the most amazing person I have ever known, and am willing to do anything for you. Happy Valentine\'s Day!!!');
-    localStorage.setItem("Daye", true);
-    alert('I love you');
-    setTimeout(function() {
-      window.location.href = '/images/callie.png';
-    }, 500);
-  } else {
-    notepad.classList.add('daye');
-  }
+  notepad.classList.add('daye');
+}
+
+if (notepad.value == 'Daye') {
+  notepad.value = 'no'
+  localStorage.setItem("notepad", 'I love you Callie. You are the most amazing person I have ever known, and am willing to do anything for you. Happy Valentine\'s Day!!!');
+  localStorage.setItem("Daye", true);
+  alert('I love you');
+  setTimeout(function() {
+    window.location.href = '/images/callie.png';
+  }, 500);
+} else if (notepad.value == '365DAYES') {
+  notepad.value = 'no'
+  localStorage.setItem("notepad", 'Look at the page with my face.');
+  setTimeout(function() {
+    window.location.href = '/images/callie.html';
+  }, 1000);
 }
 
 setInterval(saveAll, 2000);
