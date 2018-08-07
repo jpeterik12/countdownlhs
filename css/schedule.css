@@ -1,8 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
+/* Eric Meyer's CSS Reset */
 html,
 body,
 div,
@@ -84,11 +80,11 @@ time,
 mark,
 audio,
 video {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
   margin: 0;
   padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -127,72 +123,54 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* End of Reset */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+/* End of Eric Meyer's CSS Reset */
 
-/* Default Options */
 body {
   font-family: 'Lucida Console', Monaco, monospace;
 }
 
-.container {
-  width: 100vw;
-  height: 100vh;
-}
-
-.top {
-  height: 10%;
-}
-
-.middle {
-  height: 70%;
-}
-
-.bottom {
-  height: 20%;
-}
-
-.logo {
-  display: inline-block;
-  height: 8vh;
-  width: auto;
-  margin: 1vh;
-}
-
-.name {
-  display: inline;
-  font-size: 3em;
-  line-height: 10vh;
-  position: absolute;
-}
-
-.clock {
-  display: inline;
-  font-size: 2em;
-  position: absolute;
-  right: 0;
-}
-
-.schedule {
-  display: inline-block;
-  width: 70%;
+.schedule-base {
+  background-color: #ffffff;
+  border-collapse: collapse;
+  border-spacing: 0;
   height: 100%;
-}
-
-.side {
-  float: right;
-  height: 80%;
-  width: 25%;
-}
-
-textarea {
-  width: calc(100% - 2px);
-  height: calc(100% - 2px);
-  padding: 0;
   margin: 0;
-  border-width: 1px;
-  resize: none;
+  width: 100%;
 }
 
-h3 {
-  font-size: 2em;
+.schedule-base td,
+th {
+  border-style: solid;
+  border-width: 1px;
+  font-size: 3vw;
+  overflow: hidden;
+  padding: 2px 5px;
+  text-align: right;
+}
+
+.schedule-base .small {
+  font-size: 2.5vw;
+}
+
+.schedule-base .header {
+  background-color: #1627f3;
+  color: #ffffff;
+}
+
+.schedule-base .alternate {
+  background-color: #60b0fb;
 }
