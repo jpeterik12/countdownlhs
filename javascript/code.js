@@ -82,7 +82,7 @@ function start(endDate) {
 
   // var exampleSchedule = [[], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []];
 
-  var schedule = window.PLC ? normalSchedule : plcSchedule;
+  var schedule = window.PLC ? plcSchedule : normalSchedule;
 
   if (today.getDay() === 6 || today.getDay() === 0) {
     alert('It\'s the weekend. Why are you here?');
