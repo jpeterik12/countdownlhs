@@ -47,10 +47,32 @@
             <a href="/files/2018-2019_calender.pdf">School Calender</a>
           </li>
         </ul>
+        <h3>Custom Countdown:</h3>
+        <input id="customCountdown" name="customCountdown" style="width: 225px;" type="datetime-local">
+        <input id="customButton" onclick="start(new Date(document.getElementById('customCountdown').value));" type="button" value="Start">
+        <h3>Countdown Anywhere:</h3>
+        <p>Countdown Anywhere places a countdown on any webpage. Drag this link to your bookmarks bar, and click it on any webpage.
+          The first link creates a countdown, the second shows the schedule.</p>
+        <ul>
+          <li>
+            <a href="javascript:(function()%7Bdocument.body.appendChild(document.createElement(%22script%22)).src%3D%22https%3A%2F%2Fwww.countdownlhs.ga%2Fgeneral%2Fclock.js%22%7D)()">Countdown Anywhere
+            </a>
+          </li>
+          <li>
+            <a href="javascript:(function()%7Bdocument.body.appendChild(document.createElement(%22script%22)).src%3D%22https%3A%2F%2Fwww.countdownlhs.ga%2Fgeneral%2Ftempschedule.js%22%7D)()">
+              Schedule Anywhere</a>
+          </li>
+        </ul>
+        <h3>Delay?</h3>
+        <p class="below-header">Change this number and hit submit to fine tune the countdown. Raise the number if the bell was before the countdown,
+          and lower it if the bell was after.</p>
+        <label for="delayInput">Seconds:</label>
+        <input id="delayInput" name="delayInput" style="width: 50px;" type="number" value="0">
+        <input id="delayButton" onclick="start();" type="button" value="Restart Countdown">
       </div>
     </div>
     <div class="bottom">
-      <textarea></textarea>
+      <textarea placeholder="This is a text box. Type here, and it will save the data if you close the site. Only you can read what you put here. Use it for whatever.&#10;Examples:&#10;-Homework&#10;-Research Notes&#10;-Other Notes&#10;-Your Life Story&#10;-The Bee Movie Script"></textarea>
     </div>
   </div>
   <!-- <script src="/javascript/saving.js"></script> -->

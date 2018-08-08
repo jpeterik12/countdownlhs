@@ -1,6 +1,6 @@
 var schedule = document.createElement('object');
-schedule.type = "text/html";
-schedule.data = "https://www.countdownlhs.ga/html/schedule.html";
+schedule.type = 'text/html';
+schedule.data = 'https://www.countdownlhs.ga/html/schedule.html';
 schedule.height = '450px';
 schedule.width = '657px';
 schedule.style.position = 'fixed';

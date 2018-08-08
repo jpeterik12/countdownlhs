@@ -176,6 +176,7 @@ body {
   display: inline-block;
   width: 70%;
   height: 100%;
+  padding-left: 2%;
 }
 
 .side {
@@ -194,5 +195,10 @@ textarea {
 }
 
 h3 {
-  font-size: 2em;
+  padding-top: 0.5em;
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 0.7em;
 }
