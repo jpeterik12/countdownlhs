@@ -14,5 +14,5 @@ const mobilecheck = function() {
   return check;
 };
 if (mobilecheck()) {
-  document.location.href += '/mobile';
+  document.location.href = '/mobile';
 }

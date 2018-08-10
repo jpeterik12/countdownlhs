@@ -202,3 +202,12 @@ h3 {
 p {
   font-size: 0.7em;
 }
+
+.daye {
+  background: url(/images/callie.png);
+  background-color: gray;
+  background-size: auto 100%;
+  color: white;
+  font-size: 2em;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
