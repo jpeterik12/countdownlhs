@@ -415,11 +415,17 @@ function startTimer(endDate) {
 }
 
 // Run everything
-function start() {
+function start(customDate) {
   if (window.timer) {
-    window.timer.clearInterval();
+    clearInterval(window.timer);
   }
   window.delay = localStorage.getItem('delay');
+
+  if (customDate) {
+    customDate.message = 'until custom date.';
+    startTimer(customDate);
+    return;
+  }
 
   const date = genDate();
   getNextEvent(date, lisleScheduleGrabber)
