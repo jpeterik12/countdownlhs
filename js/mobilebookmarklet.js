@@ -1,5 +1,4 @@
-/*jshint maxerr: 1000 */
-
+/* global start */
 //bookmarklet
 
 function clockMove() {
@@ -62,6 +61,9 @@ function createClock() {
   clockdiv.id = 'clock-div';
 
   clockdiv.onmouseover = clockMove;
+  clockdiv.onload = () => {
+    start;
+  };
 
   document.body.appendChild(clockdiv);
 }
