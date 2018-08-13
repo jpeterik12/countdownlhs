@@ -61,11 +61,11 @@ function createClock() {
   clockdiv.id = 'clock-div';
 
   clockdiv.onmouseover = clockMove;
-  clockdiv.onload = () => {
-    start();
-  };
 
   document.body.appendChild(clockdiv);
 }
 
 createClock();
+setTimeout(() => {
+  start();
+}, 2000);
