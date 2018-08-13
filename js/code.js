@@ -186,9 +186,6 @@ const finalsSchedule = [
   [],
 ];
 
-// Will be adjustable by user
-const delay = 0;
-
 // Checks PLC based on date
 function isPLC(date) {
   let tempDate = new Date(date.getTime());
@@ -365,7 +362,7 @@ function createDate(eventArray, startDate) {
 
 // Create date with delay or other special cases
 function genDate() {
-  return new Date(Date.now() + 1000 * delay);
+  return new Date(Date.now() + 1000 * window.delay);
 }
 
 // Turn ms to d,h,m,s
@@ -384,11 +381,11 @@ function convertMS(ms) {
 // Actual countdown logic
 function startTimer(endDate) {
   return new Promise((resolve, reject) => {
-    const timer = setInterval(() => {
+    window.timer = setInterval(() => {
       let diff = convertMS(endDate - genDate());
       if (diff.d < 0) {
         reject(new Error('Event Ended'));
-        clearInterval(timer);
+        clearInterval(window.timer);
         return;
       }
       let timeString;
@@ -419,6 +416,11 @@ function startTimer(endDate) {
 
 // Run everything
 function start() {
+  if (window.timer) {
+    window.timer.clearInterval();
+  }
+  window.delay = localStorage.getItem('delay');
+
   const date = genDate();
   getNextEvent(date, lisleScheduleGrabber)
     .then(result => {
