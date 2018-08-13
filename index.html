@@ -2,6 +2,7 @@
 <html>
 
 <head>
+<<<<<<< HEAD
   <meta charset="utf-8">
   <script>
     window.mobilecheck = function () {
@@ -26,19 +27,39 @@
 
   <link href="css/index.css" rel="stylesheet" type="text/css">
 
+=======
+  <!-- Mobile Check -->
+  <!-- <script src="/js/mobile_redirect.js"></script> -->
+  <title>CountdownLHS</title>
+
+  <link href="css/index.css" rel="stylesheet" type="text/css">
+
+
+>>>>>>> rewrite
   <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png?v=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png?v=1.0">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png?v=1.0">
   <link rel="manifest" href="/images/icons/site.webmanifest?v=1.0">
   <link rel="mask-icon" href="/images/icons/safari-pinned-tab.svg?v=1.0" color="#0ac9ff">
   <link rel="shortcut icon" href="/images/icons/favicon.ico?v=1.0">
+<<<<<<< HEAD
   <meta name="apple-mobile-web-app-title" content="CountdownLHS">
+=======
+
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-title" content="CountdownLHS">
+  <meta name="description" content="Countdown for the Lisle High School Bells">
+  <meta name="keywords" content="Countdown, LHS, Lisle High School">
+  <meta name="author" content="jpeterik12">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+>>>>>>> rewrite
   <meta name="application-name" content="CountdownLHS">
   <meta name="msapplication-TileColor" content="#00aba9">
   <meta name="msapplication-config" content="/images/icons/browserconfig.xml?v=1.0">
   <meta name="theme-color" content="#ffffff">
 </head>
 
+<<<<<<< HEAD
 <body>
   <div class="wrapper" style="overflow: auto;">
 
@@ -141,4 +162,57 @@
   <script src="/javascript/code.js"></script>
 </body>
 
+=======
+<body onload="start()">
+  <div class="container">
+    <div class="top">
+      <img class="logo" src="images/icons/favicon.ico">
+      <h1 class="name">CountdownLHS</h1>
+      <h4 class="clock" id="clock">00:00</h4>
+    </div>
+    <div class="middle">
+      <embed src="/html/schedule.html" class="schedule">
+      <div class="side">
+        <h3>Links:</h3>
+        <ul>
+          <li>
+            <a href="https://rogerhub.com/final-grade-calculator/">Finals Calculator</a>
+          </li>
+          <li>
+            <a href="/files/2018-2019_calender.pdf">School Calender</a>
+          </li>
+        </ul>
+        <h3>Custom Countdown:</h3>
+        <input id="customCountdown" name="customCountdown" style="width: 225px;" type="datetime-local">
+        <input id="customButton" onclick="start(new Date(document.getElementById('customCountdown').value));" type="button" value="Start">
+        <h3>Countdown Anywhere:</h3>
+        <p>Countdown Anywhere places a countdown on any webpage. Drag this link to your bookmarks bar, and click it on any webpage.
+          The first link creates a countdown, the second shows the schedule.</p>
+        <ul>
+          <li>
+            <a href="javascript:(function()%7Bdocument.body.appendChild(document.createElement(%22script%22)).src%3D%22https%3A%2F%2Fwww.countdownlhs.ga%2Fgeneral%2Fclock.js%22%7D)()">Countdown Anywhere
+            </a>
+          </li>
+          <li>
+            <a href="javascript:(function()%7Bdocument.body.appendChild(document.createElement(%22script%22)).src%3D%22https%3A%2F%2Fwww.countdownlhs.ga%2Fgeneral%2Ftempschedule.js%22%7D)()">
+              Schedule Anywhere</a>
+          </li>
+        </ul>
+        <h3>Delay?</h3>
+        <p class="below-header">Change this number and hit submit to fine tune the countdown. Raise the number if the bell was before the countdown,
+          and lower it if the bell was after.</p>
+        <label for="delayInput">Seconds:</label>
+        <input id="delayInput" name="delayInput" style="width: 50px;" type="number" value="0">
+        <input id="delayButton" onclick="start();" type="button" value="Restart Countdown">
+      </div>
+    </div>
+    <div class="bottom">
+      <textarea id="notepad" placeholder="This is a text box. Type here, and it will save the data if you close the site. Only you can read what you put here. Use it for whatever.&#10;Examples:&#10;-Homework&#10;-Research Notes&#10;-Other Notes&#10;-Your Life Story&#10;-The Bee Movie Script"></textarea>
+    </div>
+  </div>
+  <script src="/js/saving.js"></script>
+  <script src="/js/code.js"></script>
+</body>
+
+>>>>>>> rewrite
 </html>
