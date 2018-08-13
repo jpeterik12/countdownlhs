@@ -28,7 +28,7 @@
   <meta name="theme-color" content="#ffffff">
 </head>
 
-<body>
+<body onload="start()">
   <div class="container">
     <div class="top">
       <img class="logo" src="images/icons/favicon.ico">
@@ -72,12 +72,11 @@
       </div>
     </div>
     <div class="bottom">
-      <textarea placeholder="This is a text box. Type here, and it will save the data if you close the site. Only you can read what you put here. Use it for whatever.&#10;Examples:&#10;-Homework&#10;-Research Notes&#10;-Other Notes&#10;-Your Life Story&#10;-The Bee Movie Script"></textarea>
+      <textarea id="notepad" placeholder="This is a text box. Type here, and it will save the data if you close the site. Only you can read what you put here. Use it for whatever.&#10;Examples:&#10;-Homework&#10;-Research Notes&#10;-Other Notes&#10;-Your Life Story&#10;-The Bee Movie Script"></textarea>
     </div>
   </div>
   <script src="/js/saving.js"></script>
-  <script src="/javascript/common.js"></script>
-  <script src="/javascript/code.js"></script>
+  <script src="/js/code.js"></script>
 </body>
 
 </html>
