@@ -26,18 +26,10 @@ customCountdown.onkeypress = function(e) {
   }
 };
 
-customCountdown.oninput = function() {
-  saveAll();
-};
-delayInput.oninput = function() {
-  saveAll();
-};
-notepad.oninput = function() {
-  saveAll();
-};
-window.onunload = function() {
-  saveAll();
-};
+customCountdown.oninput = saveAll;
+delayInput.oninput = saveAll;
+notepad.oninput = saveAll;
+window.onunload = saveAll;
 
 var saveAll = function() {
   localStorage.setItem('custom', customCountdown.value);
@@ -50,7 +42,8 @@ if (localStorage.getItem('Daye') == 'true') {
 }
 
 if (notepad.value == 'Daye') {
-  notepad.value = 'I love you Callie. You are the most amazing person I have ever known, and am willing to do anything for you. Happy Valentine\'s Day!!!';
+  notepad.value =
+    'I love you Callie. You are the most amazing person I have ever known, and am willing to do anything for you. Happy Valentine\'s Day!!!';
   localStorage.setItem(
     'notepad',
     'I love you Callie. You are the most amazing person I have ever known, and am willing to do anything for you. Happy Valentine\'s Day!!!'
