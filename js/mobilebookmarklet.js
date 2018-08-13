@@ -57,7 +57,8 @@ function createClock() {
   var clockdiv = document.createElement('div');
   clockdiv.innerHTML =
     '<p style="z-index: inherit; font-family:monospace; padding: 0 0 0 0; font-size: 20px; border: 1px solid #000000; background-color: white;" id="clock">00:00</p>';
-  clockdiv.style = 'z-index: 2147483647; position: fixed; top: 0px; right: 0px; padding: 0 0 0 0; transition: all 1s ease-out;';
+  clockdiv.style =
+    'z-index: 2147483647; position: fixed; top: 0px; right: 0px; padding: 0 0 0 0; transition: all 1s ease-out;';
   clockdiv.id = 'clock-div';
 
   clockdiv.onmouseover = clockMove;
