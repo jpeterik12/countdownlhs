@@ -288,12 +288,12 @@ function isFinals(date) {
 }
 // Choose schedule based on date
 function lisleScheduleGrabber(date) {
-  if (isOff()) return Array(24).fill([]);
-  else if (isUnusual()) {
+  if (isOff(date)) return Array(24).fill([]);
+  else if (isUnusual(date)) {
     alert('The next day on the schedule is unusual, skipping.');
     return Array(24).fill([]);
-  } else if (isFinals()) return formatSchedule(date.getDay(), finalsSchedule);
-  else if (isHalf()) return formatSchedule(date.getDay(), halfSchedule);
+  } else if (isFinals(date)) return formatSchedule(date.getDay(), finalsSchedule);
+  else if (isHalf(date)) return formatSchedule(date.getDay(), halfSchedule);
   else if (isPLC(date)) formatSchedule(date.getDay(), plcSchedule);
   else formatSchedule(date.getDay(), normalSchedule);
 }
