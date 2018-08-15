@@ -132,6 +132,7 @@ table {
 /* Default Options */
 body {
   font-family: 'Lucida Console', Monaco, monospace;
+  overflow: hidden;
 }
 
 .container {
