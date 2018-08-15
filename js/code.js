@@ -291,7 +291,7 @@ function lisleScheduleGrabber(date) {
     return Array(24).fill([]);
   } else if (isFinals(date)) return formatSchedule(date.getDay(), finalsSchedule);
   else if (isHalf(date)) return formatSchedule(date.getDay(), halfSchedule);
-  else if (isPLC(date)) return formatSchedule(date.getDay(), plcSchedule);
+//   else if (isPLC(date)) return formatSchedule(date.getDay(), plcSchedule);
   else return formatSchedule(date.getDay(), normalSchedule);
 }
 
