@@ -4,21 +4,21 @@
   border-spacing: 0;
   height: 100%;
   margin: 0;
-  width: 60vw;
+  width: 100%;
 }
 
 .schedule-base td,
 th {
   border-style: solid;
   border-width: 1px;
-  font-size: 3vw;
+  font-size: 2em;
   overflow: hidden;
   padding: 2px 5px;
   text-align: right;
 }
 
 .schedule-base .small {
-  font-size: 2.5vw;
+  font-size: 1.5em;
 }
 
 .schedule-base .header {
