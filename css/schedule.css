@@ -7,6 +7,11 @@
   width: 100%;
 }
 
+@media only screen and (max-width: 600px) {
+  .schedule-base {
+  max-width: 70vw;
+}
+}
 .schedule-base td,
 th {
   border-style: solid;
