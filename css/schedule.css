@@ -7,23 +7,19 @@
   width: 100%;
 }
 
-@media only screen and (max-width: 600px) {
-  .schedule-base {
-  max-width: 70vw;
-}
 }
 .schedule-base td,
 th {
   border-style: solid;
   border-width: 1px;
-  font-size: 2em;
+  font-size: 1.5em;
   overflow: hidden;
   padding: 2px 5px;
   text-align: right;
 }
 
 .schedule-base .small {
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 .schedule-base .header {
