@@ -173,9 +173,11 @@ body {
   right: 0;
 }
 
+
+
 .schedule {
   display: inline-block;
-  width: 10vw;
+  width: 70%;
   height: 80%;
   padding-left: 2%;
 }
