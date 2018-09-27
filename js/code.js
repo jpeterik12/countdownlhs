@@ -186,6 +186,60 @@ const finalsSchedule = [
   [],
 ];
 
+const hocoPepSchedule = [
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [
+    [45, 'until warning bell', [false, false, false, true, false, false, false]],
+    [50, 'until period 1', [false, false, false, true, false, false, false]],
+  ],
+  [
+    [26, 'left in period 1', [false, false, false, true, false, false, false]],
+    [30, 'until period 2', [false, false, false, true, false, false, false]],
+  ],
+  [
+    [6, 'left in period 2', [false, false, false, true, false, false, false]],
+    [10, 'until period 3', [false, false, false, true, false, false, false]],
+    [46, 'left in period 3', [false, false, false, true, false, false, false]],
+    [50, 'until period 4', [false, false, false, true, false, false, false]],
+  ],
+  [
+    [26, 'left in period 4', [false, false, false, true, false, false, false]],
+    [30, 'until period 6', [false, false, false, true, false, false, false]],
+  ],
+  [
+    [6, 'left in period 6', [false, false, false, true, false, false, false]],
+    [10, 'until lunch A', [false, false, false, true, false, false, false]],
+    [35, 'left in lunch A', [false, false, false, true, false, false, false]],
+    [39, 'until lunch B', [false, false, false, true, false, false, false]],
+  ],
+  [
+    [4, 'left in lunch B', [false, false, false, true, false, false, false]],
+    [8, 'until lunch C', [false, false, false, true, false, false, false]],
+    [33, 'left in lunch C', [false, false, false, true, false, false, false]],
+    [37, 'until period 7', [false, false, false, true, false, false, false]],
+  ],
+  [
+    [13, 'left in period 7', [false, false, false, true, false, false, false]],
+    [18, 'until assembly', [false, false, false, true, false, false, false]],
+  ],
+  [[37, 'left in assembly', [false, false, false, true, false, false, false]]],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+];
+
 // Checks PLC based on date
 function isPLC(date) {
   let tempDate = new Date(date.getTime());
@@ -261,8 +315,9 @@ function isUnusual(date) {
     ('0' + date.getDate()).slice(-2) +
     '/' +
     date.getFullYear();
-  const unusual = [];
-  return unusual.includes(dateString);
+  const unusual = ['09/28/2018'];
+  // return unusual.includes(dateString);
+  if (unusual.includes(dateString)) return hocoPepSchedule;
 }
 
 function isFinals(date) {
@@ -287,8 +342,10 @@ function isFinals(date) {
 function lisleScheduleGrabber(date) {
   if (isOff(date)) return Array(24).fill([]);
   else if (isUnusual(date)) {
-    alert('The next day on the schedule is unusual, skipping.');
-    return Array(24).fill([]);
+    if (typeof isUnusual(date) === 'boolean') {
+      alert('The next day on the schedule is unusual, skipping.');
+      return Array(24).fill([]);
+    }
   } else if (isFinals(date)) return formatSchedule(date.getDay(), finalsSchedule);
   else if (isHalf(date)) return formatSchedule(date.getDay(), halfSchedule);
   else if (isPLC(date)) return formatSchedule(date.getDay(), plcSchedule);
