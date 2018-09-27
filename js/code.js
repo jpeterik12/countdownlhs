@@ -345,6 +345,9 @@ function lisleScheduleGrabber(date) {
     if (typeof isUnusual(date) === 'boolean') {
       alert('The next day on the schedule is unusual, skipping.');
       return Array(24).fill([]);
+    } else {
+      alert('Today is an unusual day, here\'s the schedule');
+      return isUnusual(date);
     }
   } else if (isFinals(date)) return formatSchedule(date.getDay(), finalsSchedule);
   else if (isHalf(date)) return formatSchedule(date.getDay(), halfSchedule);
