@@ -1,4 +1,4 @@
-document.addEventListener('load', () => {
+const ad = () => {
   const x = document.createElement('img');
   x.src = '/images/ads/X1.jpg';
   x.style.height = '90vh';
@@ -13,4 +13,4 @@ document.addEventListener('load', () => {
   }
 
   setTimeout(deleteMe, 6000, x);
-});
+};
