@@ -1,4 +1,4 @@
-document.body.addEventListener('load', () => {
+document.addEventListener('load', () => {
   const x = document.createElement('img');
   x.src = '/images/ads/X1.jpg';
   x.style.height = '90vh';
