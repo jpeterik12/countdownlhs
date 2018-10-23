@@ -315,9 +315,9 @@ function isUnusual(date) {
     ('0' + date.getDate()).slice(-2) +
     '/' +
     date.getFullYear();
-  const unusual = ['09/28/2018'];
+  const unusual = ['10/25/2018'];
   // return unusual.includes(dateString);
-  if (unusual.includes(dateString)) return hocoPepSchedule;
+  if (unusual.includes(dateString)) return plcSchedule;
 }
 
 function isFinals(date) {
