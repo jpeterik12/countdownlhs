@@ -347,7 +347,6 @@ function lisleScheduleGrabber(date) {
       alert('The next day on the schedule is unusual, skipping.');
       return Array(24).fill([]);
     } else {
-      alert('Have fun at HOCO!');
       return formatSchedule(3, isUnusual(date));
     }
   } else if (isFinals(date)) return formatSchedule(date.getDay(), finalsSchedule);
