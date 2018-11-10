@@ -1,16 +1,20 @@
-const ad = () => {
+function ad() {
   const x = document.createElement('img');
-  x.src = '/images/ads/X1.jpg';
+  x.src = 'https://picsum.photos/200/?random';
   x.style.height = '90vh';
-  x.style.position = 'fixed';
-  x.style.top = 'calc(50% - 45vh)';
-  x.style.left = 'calc(50% - 45vh)';
+  x.style.width = '100vw';
+  x.style.objectFit = 'contain';
   x.style.zIndex = '2147483647';
+  x.style.display = 'block';
+  x.onload = yeet;
+  x.style.position = 'absolute';
+  x.style.top = 0;
   document.body.appendChild(x);
-
   function deleteMe(element) {
     element.parentNode.removeChild(element);
   }
 
-  setTimeout(deleteMe, 6000, x);
-};
+  function yeet() {
+    setTimeout(deleteMe, 6000, x);
+  }
+}

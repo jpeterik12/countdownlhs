@@ -2,9 +2,10 @@
   background-color: #ffffff;
   border-collapse: collapse;
   border-spacing: 0;
-  height: 100%;
   margin: 0;
-  width: 100%;
+  white-space: nowrap;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .schedule-base td,
@@ -18,7 +19,7 @@ th {
 }
 
 .schedule-base .small {
-  font-size: 1.3em;
+  font-size: 1.5em;
 }
 
 .schedule-base .header {

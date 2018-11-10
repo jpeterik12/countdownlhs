@@ -3,6 +3,7 @@
 <html style="height: 100%;">
 
 <head>
+  <meta charset="utf-8">
 
   <link rel="apple-touch-startup-image" href="/images/icons/android-chrome-512x512.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -25,22 +26,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, user-scalable=1">
 </head>
 
-<body style="height: 100%; width: 100%; overflow: visible;" onload="start();">
+<body style="height: 100%; width: 100%; overflow: visible;" onload="start(); ad(); loadResizer();">
 
   <div style="height: 100%; width: 100%; overflow: visible;">
     <span style="font-family: monospace; font-size: 1em;" id="clock">00:00</span>
-    <script>
-      function resizeClock() {
-        clock = document.getElementById('clock');
-        fontSize = parseInt(window.getComputedStyle(clock).fontSize, 10);
-        clockWidth = parseInt(clock.offsetWidth, 10);
-        totalWidth = window.innerWidth;
-        widthMultiplier = totalWidth / clockWidth;
-        fontSize *= widthMultiplier * 1;
-        clock.style.fontSize = fontSize + 'px';
-      }
-      setInterval(resizeClock, 1000);
-    </script>
     <h3 style="display: none;" id="date">Test</h3>
     <div class="sidebar-div">
       <input class="opener" id="scheduleOpener" type="checkbox">
@@ -50,10 +39,7 @@
         <label for="scheduleOpener">School Schedule:</label>
       </h3>
       <div class="expanding">
-        <div style="overflow: hidden; height:53vw">
-          <object data="/html/schedule.html" type="text/html" style="width: 100%; height: 100%;"></object>
-
-        </div>
+        <img src="/images/schedule.png" class="schedule">
       </div>
     </div>
     <div class="sidebar-div">
@@ -121,19 +107,12 @@
       </div>
     </div>
     <div style="padding-bottom: 2%">
-      <!-- <p class="header-text">
-          Your ad here !
-        </p> -->
-<!--       <img src="/images/ads/X1.jpg" style="width:100%; padding: 0; margin: 0; display: block; overflow: visible;"> -->
-      <!-- <p class="header-text">
-          Message me for details
-        </p> -->
     </div>
   </div>
-  <script src="/js/code.js">
-  </script>
-  <script src="/js/saving.js">
-  </script>
+  <script src="/js/resizer.js"></script>
+  <script src="/js/ad.js"></script>
+  <script src="/js/code.js"></script>
+  <script src="/js/saving.js"></script>
 </body>
 
 </html>

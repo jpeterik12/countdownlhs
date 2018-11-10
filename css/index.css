@@ -145,11 +145,11 @@ body {
 }
 
 .middle {
-  height: 70%;
+  height: 60vh;
 }
 
 .bottom {
-  height: 20%;
+  height: 20vh;
 }
 
 .logo {
@@ -161,9 +161,16 @@ body {
 
 .name {
   display: inline;
-  font-size: 3em;
+  font-size: 6vh;
   line-height: 10vh;
   position: absolute;
+}
+
+.owner {
+  display: inline;
+  font-size: 3vh;
+  position: absolute;
+  top: 6vh;
 }
 
 .clock {
@@ -173,28 +180,32 @@ body {
   right: 0;
 }
 
-
-
 .schedule {
   display: inline-block;
-  width: 70%;
-  height: 80%;
-  padding-left: 2%;
+  position: absolute;
+  width: 70vw;
+  height: 60vh;
+  padding: 2%;
+  object-fit: contain;
+  object-position: left top;
 }
 
 .side {
   float: right;
-  height: 80%;
-  width: 25%;
+  height: 70vh;
+  width: 25vw;
+  padding-right: 1vw;
+  overflow: auto;
 }
 
 textarea {
-  width: calc(100% - 2px);
-  height: calc(100% - 2px);
+  width: 100%;
   padding: 0;
   margin: 0;
   border-width: 1px;
   resize: none;
+  position: absolute;
+  bottom: 0;
 }
 
 h3 {
