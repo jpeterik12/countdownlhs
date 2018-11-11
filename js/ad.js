@@ -1,6 +1,6 @@
 function ad() {
   const x = document.createElement('img');
-  x.src = 'https://picsum.photos/200/?random';
+  x.src = '/images/sorry.png';
   x.style.height = '90vh';
   x.style.width = '100vw';
   x.style.objectFit = 'contain';
