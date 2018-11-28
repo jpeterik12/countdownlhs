@@ -6,11 +6,11 @@ function resizeClock() {
   var widthMultiplier = totalWidth / clockWidth;
   fontSize *= widthMultiplier * 1;
   var windowSize = (Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - 20)
-  if (fontSize >= windowSize) fontsize = windowSize
+  fontSize = Math.min(fontSize, windowSize); 
   clock.style.fontSize = fontSize + 'px';
 }
 
 function loadResizer() {
-  document.body.addEventListener('load', () => {setTimeout(1000, resizeClock)});
+  setTimeout(1000, resizeClock);
   document.body.addEventListener('resize', resizeClock);
 }
