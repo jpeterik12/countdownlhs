@@ -5,10 +5,12 @@ function resizeClock() {
   var totalWidth = window.innerWidth;
   var widthMultiplier = totalWidth / clockWidth;
   fontSize *= widthMultiplier * 1;
+  var windowSize = (Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - 20)
+  if (fontSize >= windowSize) fontsize = windowSize
   clock.style.fontSize = fontSize + 'px';
 }
 
 function loadResizer() {
-  setTimeout(resizeClock, 3000);
-  document.body.onresize = resizeClock;
+  document.body.addEventListener('load',resizeClock);
+  document.body.addEventListener('resize', resizeClock);
 }
