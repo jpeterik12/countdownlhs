@@ -11,7 +11,7 @@ function resizeClock() {
 }
 
 function loadResizer() {
-  resizeClock();
-  document.body.addEventListener('resize', resizeClock);
+  setTimeout(resizeClock, 2000);
+  document.body.onresize = resizeClock;
   setInterval(resizeClock, 1000 * 60);
 }
