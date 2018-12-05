@@ -206,6 +206,7 @@ textarea {
   resize: none;
   position: absolute;
   bottom: 0;
+  padding: 5px;
 }
 
 h3 {
