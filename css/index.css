@@ -178,6 +178,7 @@ body {
   font-size: 2em;
   position: absolute;
   right: 0;
+  cursor: pointer;
 }
 
 .schedule {
