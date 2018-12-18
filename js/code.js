@@ -481,7 +481,7 @@ function lisleScheduleGrabber(date) {
         return formatSchedule(5, finalsScheduleFri);
         break;
     }
-  };
+  }
   else if (isHalf(date)) return formatSchedule(date.getDay(), halfSchedule);
   else if (isPLC(date)) return formatSchedule(date.getDay(), plcSchedule);
   else return formatSchedule(date.getDay(), normalSchedule);
