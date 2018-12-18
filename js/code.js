@@ -153,7 +153,7 @@ const halfSchedule = [
   [],
 ];
 
-const finalsSchedule = [
+const finalsScheduleWed = [
   [],
   [],
   [],
@@ -162,18 +162,84 @@ const finalsSchedule = [
   [],
   [],
   [],
-  [[0, 'until block A', [false, true, true, true, true, true, false]]],
+  [[0, 'until study period', [false, true, true, true, true, true, false]]],
   [
-    [30, 'left in block A', [false, true, true, true, true, true, false]],
-    [45, 'until block B', [false, true, true, true, true, true, false]],
+    [30, 'left study period', [false, true, true, true, true, true, false]],
+    [45, 'until period 1', [false, true, true, true, true, true, false]],
   ],
   [],
   [
-    [15, 'left in block B', [false, true, true, true, true, true, false]],
-    [30, 'until block C', [false, true, true, true, true, true, false]],
+    [15, 'left period 1', [false, true, true, true, true, true, false]],
+    [30, 'until period 2', [false, true, true, true, true, true, false]],
   ],
   [],
-  [[0, 'left in block C', [false, true, true, true, true, true, false]]],
+  [[0, 'left in period 2', [false, true, true, true, true, true, false]]],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+];
+
+const finalsScheduleThurs = [
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [[0, 'until period 3', [false, true, true, true, true, true, false]]],
+  [
+    [30, 'left period 3', [false, true, true, true, true, true, false]],
+    [45, 'until period 4', [false, true, true, true, true, true, false]],
+  ],
+  [],
+  [
+    [15, 'left in period 4', [false, true, true, true, true, true, false]],
+    [30, 'until period 5', [false, true, true, true, true, true, false]],
+  ],
+  [],
+  [[0, 'left in period 5', [false, true, true, true, true, true, false]]],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+];
+
+const finalsScheduleFri = [
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [[0, 'until period 6', [false, true, true, true, true, true, false]]],
+  [
+    [30, 'left in period 6', [false, true, true, true, true, true, false]],
+    [45, 'until period 7', [false, true, true, true, true, true, false]],
+  ],
+  [],
+  [
+    [15, 'left in period 7', [false, true, true, true, true, true, false]],
+    [30, 'until make-up', [false, true, true, true, true, true, false]],
+  ],
+  [],
+  [[0, 'left in make-up', [false, true, true, true, true, true, false]]],
   [],
   [],
   [],
@@ -403,7 +469,19 @@ function lisleScheduleGrabber(date) {
     } else {
       return formatSchedule(3, isUnusual(date));
     }
-  } else if (isFinals(date)) return formatSchedule(date.getDay(), finalsSchedule);
+  } else if (isFinals(date)) {
+    switch(date.getDay()) {
+      case 3:
+        return formatSchedule(3, finalsScheduleWed);
+        break;
+      case 4:
+        return formatSchedule(4, finalsScheduleThurs);
+        break;
+      case 5:
+        return formatSchedule(5, finalsScheduleFri);
+        break;
+    }
+  };
   else if (isHalf(date)) return formatSchedule(date.getDay(), halfSchedule);
   else if (isPLC(date)) return formatSchedule(date.getDay(), plcSchedule);
   else return formatSchedule(date.getDay(), normalSchedule);
