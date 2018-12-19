@@ -169,7 +169,7 @@ const finalsScheduleWed = [
   ],
   [],
   [
-    [15, 'left period 1', [false, true, true, true, true, true, false]],
+    [15, 'left in period 1', [false, true, true, true, true, true, false]],
     [30, 'until period 2', [false, true, true, true, true, true, false]],
   ],
   [],
@@ -197,7 +197,7 @@ const finalsScheduleThurs = [
   [],
   [[0, 'until period 3', [false, true, true, true, true, true, false]]],
   [
-    [30, 'left period 3', [false, true, true, true, true, true, false]],
+    [30, 'left in period 3', [false, true, true, true, true, true, false]],
     [45, 'until period 4', [false, true, true, true, true, true, false]],
   ],
   [],
