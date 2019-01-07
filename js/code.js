@@ -373,8 +373,21 @@ function isPLC(date) {
     wednesdays.push(tempDate.getDate());
     tempDate.setDate(tempDate.getDate() + 7);
   }
+  
+  const dateString =
+    ('0' + (date.getMonth() + 1)).slice(-2) +
+    '/' +
+    ('0' + date.getDate()).slice(-2) +
+    '/' +
+    date.getFullYear();
+  
+  const otherPLC = ['01/09/2019','01/23/2019']
+  const notPLC = ['01/16/2019']
 
-  return date.getDate() === wednesdays[0] || date.getDate() === wednesdays[2];
+  return ((date.getDate() === wednesdays[0] ||
+          date.getDate() === wednesdays[2] ||
+          otherPLC.includes(dateString)) && 
+          !notPLC.includes(dateString));
 }
 
 function isHalf(date) {
