@@ -360,6 +360,62 @@ const veteransSchedule = [
   [],
 ];
 
+const fiveEssentials = [
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [
+    [45, 'until warning bell', [false, true, true, true, true, true, false]],
+    [50, 'until period 1', [false, true, true, true, true, true, false]],
+  ],
+  [
+    [35, 'left in period 1', [false, true, true, true, true, true, false]],
+    [39, 'until period 2', [false, true, true, true, true, true, false]],
+  ],
+  [
+    [24, 'left in period 2', [false, true, true, true, true, true, false]],
+    [28, 'until period 3', [false, true, true, true, true, true, false]],
+  ],
+  [
+    [13, 'left in period 3', [false, true, true, true, true, true, false]],
+    [15, 'until 5 Essentials', [false, true, true, true, true, true, false]],
+    [43, 'left in 5 Essentials', [false, true, true, true, true, true, false]],
+    [47, 'until period 4', [false, true, true, true, true, true, false]],
+  ],
+  [
+    [32, 'left in period 4', [false, true, true, true, true, true, false]],
+    [36, 'until lunch A', [false, true, true, true, true, true, false]],
+  ],
+  [
+    [1, 'left in lunch A', [false, true, true, true, true, true, false]],
+    [5, 'until lunch B', [false, true, true, true, true, true, false]],
+    [30, 'left in lunch B', [false, true, true, true, true, true, false]],
+    [34, 'until lunch C', [false, true, true, true, true, true, false]],
+    [59, 'left in lunch C', [false, true, true, true, true, true, false]],
+  ],
+  [
+    [3, 'until period 6', [false, true, true, true, true, true, false]],
+    [48, 'left in period 6', [false, true, true, true, true, true, false]],
+    [52, 'until period 7', [false, true, true, true, true, true, false]],
+  ],
+  [[37, 'left in period 7', [false, true, true, true, true, true, false]]],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+];
+
+
+
 // Checks PLC based on date
 function isPLC(date) {
   let tempDate = new Date(date.getTime());
@@ -449,9 +505,9 @@ function isUnusual(date) {
     ('0' + date.getDate()).slice(-2) +
     '/' +
     date.getFullYear();
-  const unusual = ['11/12/2018'];
+  const unusual = ['01/10/2019'];
   // return unusual.includes(dateString);
-  if (unusual.includes(dateString)) return veteransSchedule;
+  if (unusual.includes(dateString)) return fiveEssentials;
 }
 
 function isFinals(date) {
