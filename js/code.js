@@ -360,6 +360,63 @@ const veteransSchedule = [
   [],
 ];
 
+const springAssemblySchedule = [
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [
+    [45, 'until warning bell', [false, false, false, true, false, false, false]],
+    [50, 'until period 1', [false, false, false, true, false, false, false]],
+  ],
+  [
+    [30, 'left in period 1', [false, false, false, true, false, false, false]],
+    [34, 'until period 2', [false, false, false, true, false, false, false]],
+  ],
+  [
+    [14, 'left in period 2', [false, false, false, true, false, false, false]],
+    [18, 'until period 3', [false, false, false, true, false, false, false]],
+    [58, 'left in period 3', [false, false, false, true, false, false, false]],
+  ],
+  [
+    [2, 'until period 4', [false, false, false, true, false, false, false]],
+    [42, 'left in period 4', [false, false, false, true, false, false, false]],
+    [46, 'until lunch A', [false, false, false, true, false, false, false]],
+  ],
+  [
+    [11, 'left in lunch A', [false, false, false, true, false, false, false]],
+    [15, 'until lunch B', [false, false, false, true, false, false, false]],
+    [40, 'left in lunch B', [false, false, false, true, false, false, false]],
+    [44, 'until lunch C', [false, false, false, true, false, false, false]],
+  ],
+  [
+    [9, 'left in lunch C', [false, false, false, true, false, false, false]],
+    [13, 'until period 6', [false, false, false, true, false, false, false]],
+    [53, 'left in period 6', [false, false, false, true, false, false, false]],
+    [57, 'until period 7', [false, false, false, true, false, false, false]],
+  ],
+  [
+    [37, 'left in period 7', [false, false, false, true, false, false, false]],
+    [45, 'until period 6', [false, false, false, true, false, false, false]],
+  ],
+  [
+    [37, 'left in period 6', [false, false, false, true, false, false, false]],
+  ],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+];
+
+
 // Checks PLC based on date
 function isPLC(date) {
   let tempDate = new Date(date.getTime());
@@ -436,9 +493,9 @@ function isUnusual(date) {
     ('0' + date.getDate()).slice(-2) +
     '/' +
     date.getFullYear();
-  const unusual = ['11/12/2018'];
+  const unusual = ['03/22/2019'];
   // return unusual.includes(dateString);
-  if (unusual.includes(dateString)) return veteransSchedule;
+  if (unusual.includes(dateString)) return springAssemblySchedule;
 }
 
 function isFinals(date) {
@@ -470,7 +527,7 @@ function lisleScheduleGrabber(date) {
       return formatSchedule(3, isUnusual(date));
     }
   } else if (isFinals(date)) {
-    switch(date.getDay()) {
+    switch (date.getDay()) {
       case 3:
         return formatSchedule(3, finalsScheduleWed);
         break;
