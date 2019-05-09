@@ -153,7 +153,7 @@ const halfSchedule = [
   [],
 ];
 
-const finalsScheduleWed = [
+const finalsScheduleTues = [
   [],
   [],
   [],
@@ -165,15 +165,15 @@ const finalsScheduleWed = [
   [[0, 'until study period', [false, true, true, true, true, true, false]]],
   [
     [30, 'left study period', [false, true, true, true, true, true, false]],
-    [45, 'until period 1', [false, true, true, true, true, true, false]],
+    [45, 'until period 6', [false, true, true, true, true, true, false]],
   ],
   [],
   [
-    [15, 'left in period 1', [false, true, true, true, true, true, false]],
-    [30, 'until period 2', [false, true, true, true, true, true, false]],
+    [15, 'left in period 6', [false, true, true, true, true, true, false]],
+    [30, 'until period 7', [false, true, true, true, true, true, false]],
   ],
   [],
-  [[0, 'left in period 2', [false, true, true, true, true, true, false]]],
+  [[0, 'left in period 7', [false, true, true, true, true, true, false]]],
   [],
   [],
   [],
@@ -186,7 +186,7 @@ const finalsScheduleWed = [
   [],
 ];
 
-const finalsScheduleThurs = [
+const finalsScheduleWed = [
   [],
   [],
   [],
@@ -219,7 +219,7 @@ const finalsScheduleThurs = [
   [],
 ];
 
-const finalsScheduleFri = [
+const finalsScheduleThurs = [
   [],
   [],
   [],
@@ -228,14 +228,14 @@ const finalsScheduleFri = [
   [],
   [],
   [],
-  [[0, 'until period 6', [false, true, true, true, true, true, false]]],
+  [[0, 'until period 1', [false, true, true, true, true, true, false]]],
   [
-    [30, 'left in period 6', [false, true, true, true, true, true, false]],
-    [45, 'until period 7', [false, true, true, true, true, true, false]],
+    [30, 'left in period 1', [false, true, true, true, true, true, false]],
+    [45, 'until period 2', [false, true, true, true, true, true, false]],
   ],
   [],
   [
-    [15, 'left in period 7', [false, true, true, true, true, true, false]],
+    [15, 'left in period 2', [false, true, true, true, true, true, false]],
     [30, 'until make-up', [false, true, true, true, true, true, false]],
   ],
   [],
@@ -509,9 +509,9 @@ function isFinals(date) {
     '12/19/2018',
     '12/20/2018',
     '12/21/2018',
-    '05/21/2019',
-    '05/22/2019',
-    '05/23/2019',
+    '05/28/2019',
+    '05/29/2019',
+    '05/30/2019',
   ];
 
   return finals.includes(dateString);
@@ -528,14 +528,14 @@ function lisleScheduleGrabber(date) {
     }
   } else if (isFinals(date)) {
     switch (date.getDay()) {
+      case 2:
+        return formatSchedule(5, finalsScheduleTues);
+        break;
       case 3:
         return formatSchedule(3, finalsScheduleWed);
         break;
       case 4:
         return formatSchedule(4, finalsScheduleThurs);
-        break;
-      case 5:
-        return formatSchedule(5, finalsScheduleFri);
         break;
     }
   }
