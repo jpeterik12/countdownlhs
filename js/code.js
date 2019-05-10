@@ -441,7 +441,7 @@ function isHalf(date) {
     ('0' + date.getDate()).slice(-2) +
     '/' +
     date.getFullYear();
-  const half = ['09/21/2018', '11/02/2018', '01/18/2018', '04/12/2018', '05/10/2018'];
+  const half = ['09/21/2018', '11/02/2018', '01/18/2018', '04/12/2019', '05/10/2019'];
   return half.includes(dateString);
 }
 
