@@ -5,5 +5,7 @@ if (window.location.hostname == 'www.countdownlhs.ga') {
   document.body.appendChild(document.createElement('script')).src =
     'https://www.countdownlhs.ga/js/mobilebookmarklet.js';
   document.body.appendChild(document.createElement('script')).src =
-    'https://www.countdownlhs.ga/js/code.js';
+    'https://www.countdownlhs.ga/js/lisleschedule.js';
+  document.body.appendChild(document.createElement('script')).src =
+    'https://www.countdownlhs.ga/js/countdown.js';
 }

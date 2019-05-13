@@ -1,6 +1,6 @@
 alert(cuteMessage());
 document.body.appendChild(document.createElement('script')).src =
-  'https://www.countdownlhs.ga/js/code.js';
+  'https://www.countdownlhs.ga/js/countdown.js';
 document.body.appendChild(document.createElement('script')).src =
   'https://www.countdownlhs.ga/js/callie.js';
 
