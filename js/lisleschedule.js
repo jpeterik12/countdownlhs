@@ -511,9 +511,9 @@ function isUnusual(date) {
     ('0' + date.getDate()).slice(-2) +
     '/' +
     date.getFullYear();
-  const unusual = ['03/22/2019'];
+  const unusual = ['05/24/2019'];
   // return unusual.includes(dateString);
-  if (unusual.includes(dateString)) return springAssemblySchedule;
+  if (unusual.includes(dateString)) return plcSchedule;
 }
 
 function isFinals(date) {
