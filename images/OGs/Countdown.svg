@@ -1,0 +1,18 @@
+<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="502" width="502" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Clock</title>
+  <circle r="240" id="outer_border" cy="250" cx="250" stroke-width="20" stroke="#000" fill="#fff"/>
+  <circle r="230" id="inner_border" cy="250" cx="250" stroke-width="5" stroke="#fff" fill="#34495e"/>
+  <rect stroke="#999999" rx="5" id="hour" height="30" width="140" y="235" x="250" stroke-width="5" fill="#ffffff"/>
+  <rect stroke="#999999" rx="5" id="minute" height="200" width="30" y="50" x="235" stroke-width="5" fill="#ffffff"/>
+  <rect transform="rotate(45 175,325)" stroke="#600000" rx="5" id="second" height="200" width="20" y="225" x="165" stroke-width="5" fill="#c40505"/>
+  <circle r="25" id="middle" cy="250" cx="250" stroke-width="5" stroke="#999999" fill="#000000"/>
+ </g>
+</svg>

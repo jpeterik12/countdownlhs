@@ -1,19 +1,20 @@
 {
-    "name": "CountdownLHS",
-    "short_name": "CountdownLHS",
+    "name": "Countdown",
+    "short_name": "Countdown",
     "icons": [
         {
-            "src": "/images/icons/android-chrome-192x192.png?v=1.0",
+            "src": "/images/icons/android-chrome-192x192.png?v=kP3NKLk2Ox",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/images/icons/android-chrome-512x512.png?v=1.0",
+            "src": "/images/icons/android-chrome-512x512.png?v=kP3NKLk2Ox",
             "sizes": "512x512",
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "display": "standalone"
+    "theme_color": "#00aced",
+    "background_color": "#00aced",
+    "display": "standalone",
+    "orientation": "portrait"
 }
