@@ -5,11 +5,12 @@ function resizeClock() {
   var totalWidth = window.innerWidth;
   var widthMultiplier = totalWidth / clockWidth;
   fontSize *= widthMultiplier * 1;
-  var windowSize = (Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - 20)
-  fontSize = Math.min(fontSize, windowSize); 
+  var windowSize = (Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - 20);
+  fontSize = Math.min(fontSize, windowSize);
   clock.style.fontSize = fontSize + 'px';
 }
 
+// eslint-disable-next-line no-unused-vars
 function loadResizer() {
   setTimeout(resizeClock, 2000);
   document.body.onresize = resizeClock;

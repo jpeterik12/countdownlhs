@@ -7,7 +7,7 @@ function clockMove() {
       this.style.top = 'calc(100% - ' + this.offsetHeight + 'px)';
       this.onmouseover = null;
       setTimeout(
-        function(diver) {
+        function (diver) {
           diver.onmouseover = clockMove;
         },
         1000,
@@ -17,7 +17,7 @@ function clockMove() {
       this.style.right = '0px';
       this.onmouseover = null;
       setTimeout(
-        function(diver) {
+        function (diver) {
           diver.onmouseover = clockMove;
         },
         1000,
@@ -29,7 +29,7 @@ function clockMove() {
       this.style.right = 'calc(100% - ' + this.offsetWidth + 'px)';
       this.onmouseover = null;
       setTimeout(
-        function(diver) {
+        function (diver) {
           diver.onmouseover = clockMove;
         },
         1000,
@@ -39,7 +39,7 @@ function clockMove() {
       this.style.top = '0px';
       this.onmouseover = null;
       setTimeout(
-        function(diver) {
+        function (diver) {
           diver.onmouseover = clockMove;
         },
         1000,

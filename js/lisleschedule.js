@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // Normal Mon-Fri
 const normalSchedule = [
   [],
@@ -40,7 +41,7 @@ const normalSchedule = [
     [47, 'until period 7', [false, true, true, true, true, true, false]],
   ],
   [
-    [37, 'left in period 7', [false, true, true, true, true, true, false]]
+    [37, 'left in period 7', [false, true, true, true, true, true, false]],
   ],
   [],
   [],
@@ -139,7 +140,7 @@ const halfSchedule = [
     [56, 'until period 7', [false, true, true, true, true, true, false]],
   ],
   [
-    [22, 'left in period 7', [false, true, true, true, true, true, false]]
+    [22, 'left in period 7', [false, true, true, true, true, true, false]],
   ],
   [],
   [],
@@ -165,7 +166,7 @@ const finalsScheduleTues = [
   [],
   [],
   [
-    [0, 'until study period', [false, true, true, true, true, true, false]]
+    [0, 'until study period', [false, true, true, true, true, true, false]],
   ],
   [
     [30, 'left study period', [false, true, true, true, true, true, false]],
@@ -178,7 +179,7 @@ const finalsScheduleTues = [
   ],
   [],
   [
-    [0, 'left in period 7', [false, true, true, true, true, true, false]]
+    [0, 'left in period 7', [false, true, true, true, true, true, false]],
   ],
   [],
   [],
@@ -202,7 +203,7 @@ const finalsScheduleWed = [
   [],
   [],
   [
-    [0, 'until period 3', [false, true, true, true, true, true, false]]
+    [0, 'until period 3', [false, true, true, true, true, true, false]],
   ],
   [
     [30, 'left in period 3', [false, true, true, true, true, true, false]],
@@ -215,7 +216,7 @@ const finalsScheduleWed = [
   ],
   [],
   [
-    [0, 'left in period 5', [false, true, true, true, true, true, false]]
+    [0, 'left in period 5', [false, true, true, true, true, true, false]],
   ],
   [],
   [],
@@ -239,7 +240,7 @@ const finalsScheduleThurs = [
   [],
   [],
   [
-    [0, 'until period 1', [false, true, true, true, true, true, false]]
+    [0, 'until period 1', [false, true, true, true, true, true, false]],
   ],
   [
     [30, 'left in period 1', [false, true, true, true, true, true, false]],
@@ -252,7 +253,7 @@ const finalsScheduleThurs = [
   ],
   [],
   [
-    [0, 'left in make-up', [false, true, true, true, true, true, false]]
+    [0, 'left in make-up', [false, true, true, true, true, true, false]],
   ],
   [],
   [],
@@ -309,7 +310,7 @@ const hocoPepSchedule = [
     [18, 'until assembly', [false, false, false, true, false, false, false]],
   ],
   [
-    [37, 'left in assembly', [false, false, false, true, false, false, false]]
+    [37, 'left in assembly', [false, false, false, true, false, false, false]],
   ],
   [],
   [],
@@ -365,7 +366,7 @@ const veteransSchedule = [
     [53, 'until in period 7', [false, false, false, true, false, false, false]],
   ],
   [
-    [37, 'left in period 7', [false, false, false, true, false, false, false]]
+    [37, 'left in period 7', [false, false, false, true, false, false, false]],
   ],
   [],
   [],
@@ -548,13 +549,10 @@ function lisleScheduleGrabber(date) {
     switch (date.getDay()) {
       case 2:
         return formatSchedule(5, finalsScheduleTues);
-        break;
       case 3:
         return formatSchedule(3, finalsScheduleWed);
-        break;
       case 4:
         return formatSchedule(4, finalsScheduleThurs);
-        break;
     }
   } else if (isHalf(date)) return formatSchedule(date.getDay(), halfSchedule);
   else if (isPLC(date)) return formatSchedule(date.getDay(), plcSchedule);

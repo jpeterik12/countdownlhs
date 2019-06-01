@@ -1,4 +1,5 @@
 /* eslint no-console: 0 */
+/* eslint-global lisleScheduleGrabber */
 
 // Get next event using schedules from scheduleGetter
 function getNextEvent(startDate, scheduleGetter) {
@@ -71,7 +72,7 @@ function convertMS(ms) {
     d: d,
     h: h,
     m: m,
-    s: s
+    s: s,
   };
 }
 
@@ -123,23 +124,29 @@ function start(customDate) {
     startTimer(customDate);
     return;
   }
+  const schoolStart = new Date('8-14-2019');
+  schoolStart.message = ' until school starts.';
 
   const date = genDate();
+  if (date < schoolStart)
+    return startTimer(schoolStart);
+
+  // eslint-disable-next-line no-undef
   getNextEvent(date, lisleScheduleGrabber)
-    .then(result => {
+    .then((result) => {
       return createDate(result, date);
     })
-    .then(result => {
+    .then((result) => {
       return startTimer(result);
     })
-    .catch(error => {
+    .catch((error) => {
       if (error.message === 'Event Ended') return;
       throw error;
     })
     .then(() => {
       start();
     })
-    .catch(error => {
+    .catch((error) => {
       alert('Something went wrong. Please reload.');
       console.log(error);
     });
