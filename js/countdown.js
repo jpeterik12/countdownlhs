@@ -124,12 +124,9 @@ function start(customDate) {
     startTimer(customDate);
     return;
   }
-  // const schoolStart = new Date('8-14-2019');
-  // schoolStart.message = ' until school starts.';
+
 
   const date = genDate();
-  // if (date < schoolStart)
-  //   return startTimer(schoolStart);
 
   // eslint-disable-next-line no-undef
   getNextEvent(date, lisleScheduleGrabber)
