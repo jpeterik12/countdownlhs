@@ -1,6 +1,23 @@
 /* eslint-disable no-unused-vars */
 // Normal Mon-Fri
 const dates = {
+  plc: [
+    '2019-09-04',
+    '2019-09-18',
+    '2019-10-02',
+    '2019-10-16',
+    '2019-11-06',
+    '2019-11-20',
+    '2019-12-04',
+    '2019-01-08',
+    '2019-01-22',
+    '2019-02-05',
+    '2019-02-19',
+    '2019-03-04',
+    '2019-03-18',
+    '2019-04-08',
+    '2019-04-22',
+  ],
   off: [
     '2019-09-02',
     '2019-10-11',
@@ -253,24 +270,6 @@ const finalsSchedule = [
   [],
 ];
 
-
-// Checks PLC based on date
-function isPLC(date) {
-  let tempDate = new Date(date.getTime());
-  let wednesdays = [];
-  tempDate.setDate(1);
-
-  while (tempDate.getDay() != 3) {
-    tempDate.setDate(tempDate.getDate() + 1);
-  }
-  while (tempDate.getMonth() === date.getMonth()) {
-    wednesdays.push(tempDate.getDate());
-    tempDate.setDate(tempDate.getDate() + 7);
-  }
-
-  return date.getDate() === wednesdays[0] || date.getDate() === wednesdays[2];
-}
-
 // Choose schedule based on date
 function lisleScheduleGrabber(date) {
 
@@ -282,7 +281,7 @@ function lisleScheduleGrabber(date) {
     return Array(24).fill([]);
   } else if (dates.finals.includes(dateString)) return formatSchedule(date.getDay(), finalsSchedule);
   else if (dates.half.includes(dateString)) return formatSchedule(date.getDay(), halfSchedule);
-  else if (isPLC(date)) return formatSchedule(date.getDay(), plcSchedule);
+  else if (dates.plc.includes(dateString)) return formatSchedule(date.getDay(), plcSchedule);
   else return formatSchedule(date.getDay(), normalSchedule);
 }
 
