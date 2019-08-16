@@ -270,24 +270,6 @@ const finalsSchedule = [
   [],
 ];
 
-
-// Checks PLC based on date
-function isPLC(date) {
-  let tempDate = new Date(date.getTime());
-  let wednesdays = [];
-  tempDate.setDate(1);
-
-  while (tempDate.getDay() != 3) {
-    tempDate.setDate(tempDate.getDate() + 1);
-  }
-  while (tempDate.getMonth() === date.getMonth()) {
-    wednesdays.push(tempDate.getDate());
-    tempDate.setDate(tempDate.getDate() + 7);
-  }
-
-  return date.getDate() === wednesdays[0] || date.getDate() === wednesdays[2];
-}
-
 // Choose schedule based on date
 function lisleScheduleGrabber(date) {
 
@@ -299,7 +281,7 @@ function lisleScheduleGrabber(date) {
     return Array(24).fill([]);
   } else if (dates.finals.includes(dateString)) return formatSchedule(date.getDay(), finalsSchedule);
   else if (dates.half.includes(dateString)) return formatSchedule(date.getDay(), halfSchedule);
-  else if (isPLC(date)) return formatSchedule(date.getDay(), plcSchedule);
+  else if (dates.plc.includes(dateString)) return formatSchedule(date.getDay(), plcSchedule);
   else return formatSchedule(date.getDay(), normalSchedule);
 }
 
