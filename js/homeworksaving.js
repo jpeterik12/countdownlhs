@@ -21,4 +21,4 @@ for (let notepad of notepads) {
   }
   notepad.oninput = saveAll
 }
-
+window.onunload = saveAll;
