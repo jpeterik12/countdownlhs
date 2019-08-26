@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Homework</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png?v=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png?v=1.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png?v=1.0">
+  <link rel="manifest" href="/images/icons/site.webmanifest?v=1.0">
+  <link rel="mask-icon" href="/images/icons/safari-pinned-tab.svg?v=1.0" color="#0ac9ff">
+  <link rel="shortcut icon" href="/images/icons/favicon.ico?v=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png?v=kP3NKLk2Ox">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png?v=kP3NKLk2Ox">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png?v=kP3NKLk2Ox">
+  <link rel="manifest" href="/images/icons/site.webmanifest?v=kP3NKLk2Ox">
+  <link rel="mask-icon" href="/images/icons/safari-pinned-tab.svg?v=kP3NKLk2Ox" color="#5bbad5">
+  <link rel="shortcut icon" href="/images/icons/favicon.ico?v=kP3NKLk2Ox">
+  <meta name="apple-mobile-web-app-title" content="CountdownLHS">
+  <meta name="application-name" content="CountdownLHS">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="/images/icons/browserconfig.xml?v=kP3NKLk2Ox">
+  <meta name="theme-color" content="#00aced">
+</head>
+
+<body style="width: 100vw; height:100vh; padding: 0; margin: 0; overflow: hidden;" onload="start();">
+
+  <div style="display: grid; grid-template-columns: auto auto auto auto; padding: 0; margin: 0; width: 100vw; height:100vh; padding: 0; margin: 0;">
+    <textarea style="padding: 0; margin: 0; resize: none;" id="notepad1" placeholder="Period 1"></textarea>
+    <textarea style="padding: 0; margin: 0; resize: none;" id="notepad2" placeholder="Period 2"></textarea>
+    <textarea style="padding: 0; margin: 0; resize: none;" id="notepad3" placeholder="Period 3"></textarea>
+    <textarea style="padding: 0; margin: 0; resize: none;" id="notepad4" placeholder="Period 4"></textarea>
+    <textarea style="padding: 0; margin: 0; resize: none;" id="notepad5" placeholder="Period 5"></textarea>
+    <textarea style="padding: 0; margin: 0; resize: none;" id="notepad6" placeholder="Period 6"></textarea>
+    <textarea style="padding: 0; margin: 0; resize: none;" id="notepad7" placeholder="Period 7"></textarea>
+    <textarea style="padding: 0; margin: 0; resize: none;" id="notepad8" placeholder="Other   "></textarea>
+  </div>
+
+  <!-- <a style="position: absolute; right: 5px; top: 5px;" href="/">Back to normal view</a> -->
+    
+  <input id="customCountdown" name="customCountdown" style="width: 75%; display: hidden;" type="datetime-local" disabled>
+  <input id="delayInput" name="delayInput" style="width: 50px; display: hidden;" type="number" value="0" disabled>
+  <p id="clock" style="display: hidden;"></p>
+  <script src="/js/homeworksaving.js"></script>
+  <script src="/js/lisleschedule.js"></script>
+  <script src="/js/countdown.js"></script>
+</body>
+</html>
+
