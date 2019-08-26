@@ -19,6 +19,6 @@ for (let notepad of notepads) {
   if (window.localStorage.getItem(notepad.id)) {
     notepad.value = window.localStorage.getItem(notepad.id);
   }
-  notepad..oninput = saveAll
+  notepad.oninput = saveAll
 }
 
