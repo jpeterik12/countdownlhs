@@ -1,57 +1,75 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <title>Homework</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/notepadicons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/notepadicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/notepadicons/favicon-16x16.png">
-  <link rel="manifest" href="/images/notepadicons/site.webmanifest">
-  <link rel="mask-icon" href="/images/notepadicons/safari-pinned-tab.svg" color="#5bbad5">
-  <link rel="shortcut icon" href="/images/notepadicons/favicon.ico">
-  <meta name="msapplication-TileColor" content="#00aba9">
-  <meta name="msapplication-config" content="/images/notepadicons/browserconfig.xml">
-  <meta name="theme-color" content="#00dddd">
-  <style>
-    textarea {
-      padding: 4px;
-      margin: 5px;
-      resize: none;
-      background-color: black;
-      border: 3px solid;
-    }
-    ::placeholder {
-      color: green;
-    }
-    div {display: grid; grid-template-columns: auto auto auto auto; padding: 0; margin: 0; width: 100vw; height:100vh; padding: 0; margin: 0; background: black;}
-    body {
-width: 100vw; height:100vh; padding: 0; margin: 0; overflow: hidden;
-}
-    
-    *:focus {
-  outline: 5px solid;
-}
-  </style>
+    <meta charset="utf-8">
+    <title>Homework</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/notepadicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/notepadicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/notepadicons/favicon-16x16.png">
+    <link rel="manifest" href="/images/notepadicons/site.webmanifest">
+    <link rel="mask-icon" href="/images/notepadicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/images/notepadicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="/images/notepadicons/browserconfig.xml">
+    <meta name="theme-color" content="#00dddd">
+    <style>
+        textarea {
+            padding: 4px;
+            margin: 5px;
+            resize: none;
+            background-color: black;
+            border: 3px solid;
+        }
+        
+        ::placeholder {
+            color: green;
+        }
+        
+        div {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            padding: 0;
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+            background: black;
+        }
+        
+        body {
+            width: 100vw;
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+        
+        *:focus {
+            background-color: #0A0A0A;
+            outline: 5px solid;
+        }
+    </style>
 </head>
 
 <body onload="start();">
 
-  <div>
-    <textarea style="color: #f77;" id="notepad1" placeholder="Period 1"></textarea>
-    <textarea style="color: #ff7;" id="notepad2" placeholder="Period 2"></textarea>
-    <textarea style="color: #fff;" id="notepad3" placeholder="Period 3"></textarea>
-    <textarea style="color: #7ff;" id="notepad4" placeholder="Period 4"></textarea>
-    <textarea style="color: #f7f;" id="notepad5" placeholder="Period 5"></textarea>
-    <textarea style="color: #7f7" id="notepad6" placeholder="Period 6"></textarea>
-    <textarea style="color: #77f;" id="notepad7" placeholder="Period 7"></textarea>
-    <textarea style="color: #777;" id="notepad8" placeholder="Other   "></textarea>
-  </div>
-    
-  
-  <p id="clock" style="display: hidden;"></p>
-  <script src="/js/homeworksaving.js"></script>
-  <script src="/js/lisleschedule.js"></script>
-  <script src="/js/countdown.js"></script>
-</body>
-</html>
+    <div>
+        <textarea style="color: #f77;" id="notepad1" placeholder="Period 1"></textarea>
+        <textarea style="color: #ff7;" id="notepad2" placeholder="Period 2"></textarea>
+        <textarea style="color: #fff;" id="notepad3" placeholder="Period 3"></textarea>
+        <textarea style="color: #7ff;" id="notepad4" placeholder="Period 4"></textarea>
+        <textarea style="color: #f7f;" id="notepad5" placeholder="Period 5"></textarea>
+        <textarea style="color: #7f7;" id="notepad6" placeholder="Period 6"></textarea>
+        <textarea style="color: #77f;" id="notepad7" placeholder="Period 7"></textarea>
+        <textarea style="color: #777;" id="notepad8" placeholder="Other   "></textarea>
+    </div>
 
+    <p id="clock" style="display: hidden;"></p>
+    <script src="/js/homeworksaving.js"></script>
+    <script src="/js/lisleschedule.js"></script>
+    <script src="/js/countdown.js"></script>
+</body>
+
+</html>
