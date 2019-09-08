@@ -101,7 +101,7 @@ function startTimer(endDate) {
       }
       timeString = timeString.join(':');
       const timeMessage = timeString + ' ' + endDate.message;
-      document.getElementById('clock').innerHTML = timeString;
+      (document.getElementById('cdlhsclock') || document.getElementById('clock') || {}).innerHTML = timeString;
       if (
         window.location.hostname === 'www.countdownlhs.ga' ||
         window.location.hostname === 'localhost'
