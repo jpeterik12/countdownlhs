@@ -1,4 +1,4 @@
-const inputs = [...document.getElementsByTagName('input'), ...document.getElementsByTagName('textarea')]
+const inputs = [...document.getElementsByTagName('input'), ...document.getElementsByTagName('textarea')].filter(x => x.type !== 'button');
 
 function saveAll() {
   for (input of inputs) localStorage.setItem(input.id, input.value);
