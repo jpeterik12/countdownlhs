@@ -5,7 +5,7 @@ function saveAll() {
 };
 
 for (input of inputs) {
-  input.value = localstorage.getItem(input.id) || ''; 
+  input.value = localStorage.getItem(input.id) || ''; 
   input.oninput = saveAll;
 }
 window.onunload = saveAll;
