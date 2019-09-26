@@ -3,7 +3,7 @@ function ad() {
   const x = document.createElement('img');
   x.src = '/images/ads/ad2.png';
   x.style.height = '80vh';
-  x.style.width = '20vw';
+  x.style.width = '18vw';
   x.style.objectFit = 'contain';
   x.style.zIndex = '2147483647';
   x.style.display = 'block';
