@@ -10,7 +10,7 @@ function ad() {
 //   x.onload = yeet;
   x.style.position = 'absolute';
   x.style.top = '0';
-  x.style.left = '60vw'
+  x.style.left = '55vw'
   document.body.appendChild(x);
 
   function deleteMe(element) {
