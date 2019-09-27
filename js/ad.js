@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 function ad() {
   const x = document.createElement('img');
-  x.src = 'https://d33wubrfki0l68.cloudfront.net/908916af86778d1874151fabe45ac51a80289a8e/f8218/images/ogs/countdown.svg';
+  x.src = '/images/ads/Space%20Troves%20ad%201.png';
   x.style.height = '80vh';
   x.style.width = '18vw';
   x.style.objectFit = 'contain';
