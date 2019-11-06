@@ -26,9 +26,9 @@
             color: green;
         }
         
-        div {
+        div.container {
             display: grid;
-            grid-template-columns: auto auto auto auto;
+            grid-template-columns: 22vw 22vw 22vw 22vw 12vw;
             padding: 0;
             margin: 0;
             width: 100vw;
@@ -36,6 +36,17 @@
             padding: 0;
             margin: 0;
             background: black;
+        }
+
+        div.week {
+          grid-column: 5 / 6;
+          grid-row: 1 / 3;
+          display: flex;
+          flex-direction: column;
+        }
+
+        div.week>textarea {
+          flex-grow: 1;
         }
         
         body {
@@ -55,7 +66,7 @@
 
 <body onload="start();">
 
-    <div>
+    <div class="container">
         <textarea style="color: #f77;" id="notepad1" data-gramm="false" placeholder="Period 1"></textarea>
         <textarea style="color: #ff7;" id="notepad2" data-gramm="false" placeholder="Period 2"></textarea>
         <textarea style="color: #fff;" id="notepad3" data-gramm="false" placeholder="Period 3"></textarea>
@@ -64,6 +75,15 @@
         <textarea style="color: #7f7;" id="notepad6" data-gramm="false" placeholder="Period 6"></textarea>
         <textarea style="color: #77f;" id="notepad7" data-gramm="false" placeholder="Period 7"></textarea>
         <textarea style="color: #777;" id="notepad8" data-gramm="false" placeholder="Other   "></textarea>
+        <div class="week">
+          <textarea placeholder="Monday" id="mon" style="color: #f7f;"></textarea>
+          <textarea placeholder="Tuesday" id="tue" style="color: #f77;"></textarea>
+          <textarea placeholder="Wednesday" id="wed" style="color: #ff7;"></textarea>
+          <textarea placeholder="Thursday" id="thu" style="color: #d73;"></textarea>
+          <textarea placeholder="Friday" id="fri" style="color: #7f7;"></textarea>
+          <textarea placeholder="Saturday" id="sat" style="color: #77f;"></textarea>
+          <textarea placeholder="Sunday" id="sun" style="color: #fff;"></textarea>
+        </div>
     </div>
 
     <script src="/js/saving.js"></script>
