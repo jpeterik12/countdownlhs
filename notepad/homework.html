@@ -2,72 +2,72 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>Homework</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/notepadicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/notepadicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/notepadicons/favicon-16x16.png">
-    <link rel="manifest" href="/images/notepadicons/site.webmanifest">
-    <link rel="mask-icon" href="/images/notepadicons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/images/notepadicons/favicon.ico">
-    <meta name="msapplication-TileColor" content="#00aba9">
-    <meta name="msapplication-config" content="/images/notepadicons/browserconfig.xml">
-    <meta name="theme-color" content="#00dddd">
-    <style>
-        textarea {
-            padding: 4px;
-            margin: 5px;
-            resize: none;
-            background-color: black;
-            border: 3px solid;
-        }
+	<meta charset="utf-8">
+	<title>Homework</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/notepadicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/images/notepadicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/images/notepadicons/favicon-16x16.png">
+	<link rel="manifest" href="/images/notepadicons/site.webmanifest">
+	<link rel="mask-icon" href="/images/notepadicons/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="/images/notepadicons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#00aba9">
+	<meta name="msapplication-config" content="/images/notepadicons/browserconfig.xml">
+	<meta name="theme-color" content="#00dddd">
+	<style>
+		textarea {
+			padding: 4px;
+			margin: 5px;
+			resize: none;
+			background-color: black;
+			border: 3px solid;
+		}
 
-        ::placeholder {
-            color: green;
-        }
-        
-        div.container {
-            display: grid;
-            grid-template-columns: 22vw 22vw 22vw 22vw 12vw;
-            padding: 0;
-            margin: 0;
-            width: 100vw;
-            height: 100vh;
-            padding: 0;
-            margin: 0;
-            background: black;
-        }
+		::placeholder {
+			color: green;
+		}
 
-        div.week {
-          grid-column: 5 / 6;
-          grid-row: 1 / 3;
-          display: flex;
-          flex-direction: column;
-        }
+		div.container {
+			display: grid;
+			grid-template-columns: 22vw 22vw 22vw 22vw 12vw;
+			padding: 0;
+			margin: 0;
+			width: 100vw;
+			height: 100vh;
+			padding: 0;
+			margin: 0;
+			background: black;
+		}
 
-        div.week>textarea {
-          flex-grow: 1;
-        }
-        
-        body {
-            width: 100vw;
-            height: 100vh;
-            padding: 0;
-            margin: 0;
-            overflow: hidden;
-        }
-        
-        *:focus {
-            background-color: #0A0A0A;
-            outline: 5px solid;
-        }
-    </style>
+		div.week {
+			grid-column: 5 / 6;
+			grid-row: 1 / 3;
+			display: flex;
+			flex-direction: column;
+		}
+
+		div.week>textarea {
+			flex-grow: 1;
+		}
+
+		body {
+			width: 100vw;
+			height: 100vh;
+			padding: 0;
+			margin: 0;
+			overflow: hidden;
+		}
+
+		*:focus {
+			background-color: #0A0A0A;
+			outline: 5px solid;
+		}
+	</style>
 </head>
 
 <body onload="start();">
 
-    <div class="container">
-        <textarea style="color: #f77;" id="notepad1" data-gramm="false" placeholder="Period 1"></textarea>
+	<div class="container">
+		<textarea style="color: #f77;" id="notepad1" data-gramm="false" placeholder="Period 1"></textarea>
         <textarea style="color: #ff7;" id="notepad2" data-gramm="false" placeholder="Period 2"></textarea>
         <textarea style="color: #fff;" id="notepad3" data-gramm="false" placeholder="Period 3"></textarea>
         <textarea style="color: #7ff;" id="notepad4" data-gramm="false" placeholder="Period 4"></textarea>
@@ -76,13 +76,13 @@
         <textarea style="color: #77f;" id="notepad7" data-gramm="false" placeholder="Period 7"></textarea>
         <textarea style="color: #777;" id="notepad8" data-gramm="false" placeholder="Other   "></textarea>
         <div class="week">
-          <textarea placeholder="Monday" id="mon" style="color: #f7f;"></textarea>
-          <textarea placeholder="Tuesday" id="tue" style="color: #f77;"></textarea>
-          <textarea placeholder="Wednesday" id="wed" style="color: #ff7;"></textarea>
-          <textarea placeholder="Thursday" id="thu" style="color: #d73;"></textarea>
-          <textarea placeholder="Friday" id="fri" style="color: #7f7;"></textarea>
-          <textarea placeholder="Saturday" id="sat" style="color: #77f;"></textarea>
-          <textarea placeholder="Sunday" id="sun" style="color: #fff;"></textarea>
+          <textarea data-gramm="false" placeholder="Monday" id="mon" style="color: #f7f;"></textarea>
+          <textarea data-gramm="false" placeholder="Tuesday" id="tue" style="color: #f77;"></textarea>
+          <textarea data-gramm="false" placeholder="Wednesday" id="wed" style="color: #ff7;"></textarea>
+          <textarea data-gramm="false" placeholder="Thursday" id="thu" style="color: #d73;"></textarea>
+          <textarea data-gramm="false" placeholder="Friday" id="fri" style="color: #7f7;"></textarea>
+          <textarea data-gramm="false" placeholder="Saturday" id="sat" style="color: #77f;"></textarea>
+          <textarea data-gramm="false" placeholder="Sunday" id="sun" style="color: #fff;"></textarea>
         </div>
     </div>
 
