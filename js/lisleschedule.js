@@ -10,39 +10,39 @@ const schedules = {
     [],
     [],
     [
-      [45, 'until warning bell', [false, true, true, true, true, true, false]],
-      [50, 'until period 1', [false, true, true, true, true, true, false]],
+      [45, 'until warning bell'],
+      [50, 'until period 1'],
     ],
     [
-      [40, 'left in period 1', [false, true, true, true, true, true, false]],
-      [44, 'until period 2', [false, true, true, true, true, true, false]],
+      [40, 'left in period 1'],
+      [44, 'until period 2'],
     ],
     [
-      [34, 'left in period 2', [false, true, true, true, true, true, false]],
-      [38, 'until period 3', [false, true, true, true, true, true, false]],
+      [34, 'left in period 2'],
+      [38, 'until period 3'],
     ],
     [
-      [28, 'left in period 3', [false, true, true, true, true, true, false]],
-      [32, 'until period 4', [false, true, true, true, true, true, false]],
+      [28, 'left in period 3'],
+      [32, 'until period 4'],
     ],
     [
-      [22, 'left in period 4', [false, true, true, true, true, true, false]],
-      [26, 'until lunch A', [false, true, true, true, true, true, false]],
-      [51, 'left in lunch A', [false, true, true, true, true, true, false]],
-      [55, 'until lunch B', [false, true, true, true, true, true, false]],
+      [22, 'left in period 4'],
+      [26, 'until lunch A'],
+      [51, 'left in lunch A'],
+      [55, 'until lunch B'],
     ],
     [
-      [20, 'left in lunch B', [false, true, true, true, true, true, false]],
-      [24, 'until lunch C', [false, true, true, true, true, true, false]],
-      [49, 'left in lunch C', [false, true, true, true, true, true, false]],
-      [53, 'until period 6', [false, true, true, true, true, true, false]],
+      [20, 'left in lunch B'],
+      [24, 'until lunch C'],
+      [49, 'left in lunch C'],
+      [53, 'until period 6'],
     ],
     [
-      [43, 'left in period 6', [false, true, true, true, true, true, false]],
-      [47, 'until period 7', [false, true, true, true, true, true, false]],
+      [43, 'left in period 6'],
+      [47, 'until period 7'],
     ],
     [
-      [37, 'left in period 7', [false, true, true, true, true, true, false]],
+      [37, 'left in period 7'],
     ],
     [],
     [],
@@ -63,37 +63,37 @@ const schedules = {
     [],
     [],
     [
-      [45, 'until warning bell', [false, false, false, true, true, false, false]],
-      [50, 'until period 1', [false, false, false, true, true, false, false]],
+      [45, 'until warning bell'],
+      [50, 'until period 1'],
     ],
     [
-      [33, 'left in period 1', [false, false, false, true, true, false, false]],
-      [37, 'until period 2', [false, false, false, true, true, false, false]],
+      [33, 'left in period 1'],
+      [37, 'until period 2'],
     ],
     [
-      [20, 'left in period 2', [false, false, false, true, true, false, false]],
-      [24, 'until period 3', [false, false, false, true, true, false, false]],
+      [20, 'left in period 2'],
+      [24, 'until period 3'],
     ],
     [
-      [7, 'left in period 3', [false, false, false, true, true, false, false]],
-      [11, 'until period 4', [false, false, false, true, true, false, false]],
-      [54, 'left in period 4', [false, false, false, true, true, false, false]],
-      [58, 'until lunch A', [false, false, false, true, true, false, false]],
+      [7, 'left in period 3'],
+      [11, 'until period 4'],
+      [54, 'left in period 4'],
+      [58, 'until lunch A'],
     ],
     [
-      [23, 'left in lunch A', [false, false, false, true, true, false, false]],
-      [27, 'until lunch B', [false, false, false, true, true, false, false]],
-      [52, 'left in lunch B', [false, false, false, true, true, false, false]],
-      [56, 'until lunch C', [false, false, false, true, true, false, false]],
+      [23, 'left in lunch A'],
+      [27, 'until lunch B'],
+      [52, 'left in lunch B'],
+      [56, 'until lunch C'],
     ],
     [
-      [21, 'left in lunch C', [false, false, false, true, true, false, false]],
-      [25, 'until period 6', [false, false, false, true, true, false, false]],
+      [21, 'left in lunch C'],
+      [25, 'until period 6'],
     ],
     [
-      [7, 'left in period 6', [false, false, false, true, true, false, false]],
-      [11, 'until period 7', [false, false, false, true, true, false, false]],
-      [53, 'left in period 7', [false, false, false, true, true, false, false]],
+      [7, 'left in period 6'],
+      [11, 'until period 7'],
+      [53, 'left in period 7'],
     ],
     [],
     [],
@@ -115,29 +115,29 @@ const schedules = {
     [],
     [],
     [
-      [45, 'until warning bell', [false, true, true, true, true, true, false]],
-      [50, 'until period 1', [false, true, true, true, true, true, false]],
+      [45, 'until warning bell'],
+      [50, 'until period 1'],
     ],
     [
-      [17, 'left in period 1', [false, true, true, true, true, true, false]],
-      [21, 'until period 2', [false, true, true, true, true, true, false]],
-      [48, 'left in period 2', [false, true, true, true, true, true, false]],
-      [52, 'until period 3', [false, true, true, true, true, true, false]],
+      [17, 'left in period 1'],
+      [21, 'until period 2'],
+      [48, 'left in period 2'],
+      [52, 'until period 3'],
     ],
     [
-      [19, 'left in period 3', [false, true, true, true, true, true, false]],
-      [23, 'until period 4', [false, true, true, true, true, true, false]],
-      [50, 'left in period 4', [false, true, true, true, true, true, false]],
-      [54, 'until period 5', [false, true, true, true, true, true, false]],
+      [19, 'left in period 3'],
+      [23, 'until period 4'],
+      [50, 'left in period 4'],
+      [54, 'until period 5'],
     ],
     [
-      [21, 'left in period 5', [false, true, true, true, true, true, false]],
-      [25, 'until period 6', [false, true, true, true, true, true, false]],
-      [52, 'left in period 6', [false, true, true, true, true, true, false]],
-      [56, 'until period 7', [false, true, true, true, true, true, false]],
+      [21, 'left in period 5'],
+      [25, 'until period 6'],
+      [52, 'left in period 6'],
+      [56, 'until period 7'],
     ],
     [
-      [22, 'left in period 7', [false, true, true, true, true, true, false]],
+      [22, 'left in period 7'],
     ],
     [],
     [],
@@ -162,20 +162,20 @@ const schedules = {
     [],
     [],
     [
-      [0, 'until Block A', [false, true, true, true, true, true, false]],
+      [0, 'until Block A'],
     ],
     [
-      [30, 'left in Block A', [false, true, true, true, true, true, false]],
-      [45, 'until Block B', [false, true, true, true, true, true, false]],
-    ],
-    [],
-    [
-      [15, 'left in Block B', [false, true, true, true, true, true, false]],
-      [30, 'until Block C', [false, true, true, true, true, true, false]],
+      [30, 'left in Block A'],
+      [45, 'until Block B'],
     ],
     [],
     [
-      [0, 'left in Block C', [false, true, true, true, true, true, false]],
+      [15, 'left in Block B'],
+      [30, 'until Block C'],
+    ],
+    [],
+    [
+      [0, 'left in Block C'],
     ],
     [],
     [],
@@ -197,41 +197,41 @@ const schedules = {
     [],
     [],
     [
-      [45, 'until warning bell', [false, false, false, false, false, true, false]],
-      [50, 'until period 1', [false, false, false, false, false, true, false]],
+      [45, 'until warning bell'],
+      [50, 'until period 1'],
     ],
     [
-      [26, 'left in period 1', [false, false, false, false, false, true, false]],
-      [30, 'until period 2', [false, false, false, false, false, true, false]],
+      [26, 'left in period 1'],
+      [30, 'until period 2'],
     ],
     [
-      [6, 'left in period 2', [false, false, false, false, false, true, false]],
-      [10, 'until period 3', [false, false, false, false, false, true, false]],
-      [46, 'left in period 3', [false, false, false, false, false, true, false]],
-      [50, 'until period 4', [false, false, false, false, false, true, false]],
+      [6, 'left in period 2'],
+      [10, 'until period 3'],
+      [46, 'left in period 3'],
+      [50, 'until period 4'],
     ],
     [
-      [26, 'left in period 4', [false, false, false, false, false, true, false]],
-      [30, 'until period 6', [false, false, false, false, false, true, false]],
+      [26, 'left in period 4'],
+      [30, 'until period 6'],
     ],
     [
-      [6, 'left in period 6', [false, false, false, false, false, true, false]],
-      [10, 'until lunch A', [false, false, false, false, false, true, false]],
-      [35, 'left in lunch A', [false, false, false, false, false, true, false]],
-      [39, 'until lunch B', [false, false, false, false, false, true, false]],
+      [6, 'left in period 6'],
+      [10, 'until lunch A'],
+      [35, 'left in lunch A'],
+      [39, 'until lunch B'],
     ],
     [
-      [4, 'left in lunch B', [false, false, false, false, false, true, false]],
-      [8, 'until lunch C', [false, false, false, false, false, true, false]],
-      [33, 'left in lunch C', [false, false, false, false, false, true, false]],
-      [37, 'until period 7', [false, false, false, false, false, true, false]],
+      [4, 'left in lunch B'],
+      [8, 'until lunch C'],
+      [33, 'left in lunch C'],
+      [37, 'until period 7'],
     ],
     [
-      [13, 'left in period 7', [false, false, false, false, false, true, false]],
-      [18, 'until assembly', [false, false, false, false, false, true, false]],
+      [13, 'left in period 7'],
+      [18, 'until assembly'],
     ],
     [
-      [37, 'left in assembly', [false, false, false, false, false, true, false]],
+      [37, 'left in assembly'],
     ],
     [],
     [],
@@ -242,7 +242,62 @@ const schedules = {
     [],
     [],
     [],
-  ]
+  ],
+  veterans: [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      [45, 'until warning bell'],
+      [50, 'until period 1'],
+    ],
+    [
+      [34, 'left in period 1'],
+      [40, 'until assembly'],
+    ],
+    [
+      [10, 'left in assembly'],
+      [16, 'until period 2'],
+    ],
+    [
+      [0, 'left in period 2'],
+      [4, 'until period 3'],
+      [48, 'left in period 3'],
+      [52, 'until period 4'],
+    ],
+    [
+      [36, 'left in period 4'],
+      [40, 'until lunch A'],
+    ],
+    [
+      [5, 'left in lunch A'],
+      [9, 'until lunch B'],
+      [34, 'left in lunch B'],
+      [38, 'until lunch C'],
+    ],
+    [
+      [3, 'left in lunch C'],
+      [7, 'until period 6'],
+      [50, 'left in period 6'],
+      [54, 'until period 7'],
+    ],
+    [
+      [37, 'left in period 7'],
+    ],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+  ],
 };
 
 const dates = {
@@ -309,11 +364,12 @@ const dates = {
   ],
   special: [
     ['2019-09-27', schedules.hocoPep],
+    ['2019-11-11', schedules.veterans],
   ],
 };
 
 
-function getDateStr(d) {
+function getDateStr (d) {
   let month = '' + (d.getMonth() + 1);
   let day = '' + d.getDate();
   let year = d.getFullYear();
@@ -322,32 +378,32 @@ function getDateStr(d) {
   if (day.length < 2) day = '0' + day;
 
   return [year, month, day].join('-');
-};
+}
 
 // Choose schedule based on date
-function lisleScheduleGrabber(date) {
+function lisleScheduleGrabber (date) {
 
   const dateString = getDateStr(date);
 
-  for (special of dates.special) {
-    if (special[0] == dateString) return formatSchedule(date.getDay(), special[1]);
+  for (const special of dates.special) {
+    if (special[0] == dateString) return formatSchedule(special[1]);
   }
-  if (dates.off.includes(dateString)) {
+  if ([6, 0].includes(date.getDay()) || dates.off.includes(dateString)) {
     return Array(24).fill([]);
-  } else if (dates.finals.includes(dateString)) return formatSchedule(date.getDay(), schedules.finals);
-  else if (dates.half.includes(dateString)) return formatSchedule(date.getDay(), schedules.half);
-  else if (dates.plc.includes(dateString)) return formatSchedule(date.getDay(), schedules.plc);
-  else return formatSchedule(date.getDay(), schedules.standard);
+  } else if (dates.finals.includes(dateString)) return formatSchedule(schedules.finals);
+  else if (dates.half.includes(dateString)) return formatSchedule(schedules.half);
+  else if (dates.plc.includes(dateString)) return formatSchedule(schedules.plc);
+  else return formatSchedule(schedules.standard);
 }
 
 // Change true falses to schedule for day of week
-function formatSchedule(day, schedule) {
+function formatSchedule (schedule) {
   let formatedSchedule = Array(24).fill([]);
 
   for (let hour = 0; hour < 24; hour++) {
     formatedSchedule[hour] = [];
     for (const event of schedule[hour]) {
-      if (event[2][day]) formatedSchedule[hour].push([event[0], event[1]]);
+      formatedSchedule[hour].push([event[0], event[1]]);
     }
   }
   return formatedSchedule;
