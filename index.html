@@ -2,38 +2,38 @@
 <html>
 
 <head>
-	<!-- Mobile Check -->
-	<script src="/js/mobile_redirect.js">
-	</script>
-	<title>CountdownLHS</title>
+  <!-- Mobile Check -->
+  <script src="/js/mobile_redirect.js">
+  </script>
+  <title>CountdownLHS</title>
 
-	<link href="/css/index.css" rel="stylesheet" type="text/css">
+  <link href="/css/index.css" rel="stylesheet" type="text/css">
 
-	<link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png?v=1.0">
-	<link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png?v=1.0">
-	<link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png?v=1.0">
-	<link rel="manifest" href="/images/icons/site.webmanifest?v=1.0">
-	<link rel="mask-icon" href="/images/icons/safari-pinned-tab.svg?v=1.0" color="#0ac9ff">
-	<link rel="shortcut icon" href="/images/icons/favicon.ico?v=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png?v=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png?v=1.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png?v=1.0">
+  <link rel="manifest" href="/images/icons/site.webmanifest?v=1.0">
+  <link rel="mask-icon" href="/images/icons/safari-pinned-tab.svg?v=1.0" color="#0ac9ff">
+  <link rel="shortcut icon" href="/images/icons/favicon.ico?v=1.0">
 
-	<meta charset="utf-8">
-	<link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png?v=kP3NKLk2Ox">
-	<link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png?v=kP3NKLk2Ox">
-	<link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png?v=kP3NKLk2Ox">
-	<link rel="manifest" href="/images/icons/site.webmanifest?v=kP3NKLk2Ox">
-	<link rel="mask-icon" href="/images/icons/safari-pinned-tab.svg?v=kP3NKLk2Ox" color="#5bbad5">
-	<link rel="shortcut icon" href="/images/icons/favicon.ico?v=kP3NKLk2Ox">
-	<meta name="apple-mobile-web-app-title" content="CountdownLHS">
-	<meta name="application-name" content="CountdownLHS">
-	<meta name="msapplication-TileColor" content="#da532c">
-	<meta name="msapplication-config" content="/images/icons/browserconfig.xml?v=kP3NKLk2Ox">
-	<meta name="theme-color" content="#00aced">
+  <meta charset="utf-8">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png?v=kP3NKLk2Ox">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png?v=kP3NKLk2Ox">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png?v=kP3NKLk2Ox">
+  <link rel="manifest" href="/images/icons/site.webmanifest?v=kP3NKLk2Ox">
+  <link rel="mask-icon" href="/images/icons/safari-pinned-tab.svg?v=kP3NKLk2Ox" color="#5bbad5">
+  <link rel="shortcut icon" href="/images/icons/favicon.ico?v=kP3NKLk2Ox">
+  <meta name="apple-mobile-web-app-title" content="CountdownLHS">
+  <meta name="application-name" content="CountdownLHS">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="/images/icons/browserconfig.xml?v=kP3NKLk2Ox">
+  <meta name="theme-color" content="#00aced">
 </head>
 
-<body onload="start();">
-	<div class="container">
-		<div class="top">
-			<img class="logo" src="/images/OGs/Countdown.svg">
+<body onload="start(); ad();">
+  <div class="container">
+    <div class="top">
+      <img class="logo" src="/images/OGs/Countdown.svg">
       <h1 class="name">CountdownLHS</h1>
       <h3 class="owner">by Jackson Peterik</h3>
       <h4 class="clock" id="clock" onclick="window.location.pathname = 'clock'">00:00</h4>
@@ -62,17 +62,18 @@
           <h3>Countdown Anywhere:</h3>
         </a>
         <p>Places a countdown on any page. Drag this link to your bookmarks bar, and click it.</p>
+      </div>
+      <div class="bottom">
+        <a style="position: absolute; top: 80vh; right: 3px; z-index:1; font-size: .75em; text-alight: right;"
+          href="/notepad">Want seperate notepads for all classes?</a>
+        <textarea class="bottom" id="notepad"
+          placeholder="Type here, and it will save if you close the site. Only you can read what you put here. Use it for whatever.&#10;Examples:&#10;-Homework&#10;-Research Notes&#10;-Other Notes"></textarea>
+      </div>
     </div>
-    <div class="bottom">
-      <a style="position: absolute; top: 80vh; right: 3px; z-index:1; font-size: .75em; text-alight: right;" href="/notepad">Want seperate notepads for all classes?</a>
-      <textarea class="bottom" id="notepad"
-        placeholder="Type here, and it will save if you close the site. Only you can read what you put here. Use it for whatever.&#10;Examples:&#10;-Homework&#10;-Research Notes&#10;-Other Notes"></textarea>
-    </div>
-  </div>
-  <script src="/js/ad.js"></script>
-  <script src="/js/saving.js"></script>
-  <script src="/js/lisleschedule.js"></script>
-  <script src="/js/countdown.js"></script>
+    <script src="/js/ad.js"></script>
+    <script src="/js/saving.js"></script>
+    <script src="/js/lisleschedule.js"></script>
+    <script src="/js/countdown.js"></script>
 </body>
 
 </html>
