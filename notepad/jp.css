@@ -179,7 +179,7 @@ textarea {
   bottom: 0;
   right: 0;
   height: aut0;
-  transform: scale(1);
+  transform: scale(.8);
   transform-origin: bottom right;
 }
 
