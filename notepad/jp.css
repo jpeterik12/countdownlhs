@@ -178,7 +178,9 @@ textarea {
   position: absolute;
   bottom: 0;
   right: 0;
-  height: 100%;
+  height: aut0;
+  transform: scale(.6);
+  transform-origin: bottom right;
 }
 
 .link {
