@@ -180,7 +180,7 @@ textarea {
   right: 0;
   height: aut0;
   transform: scale(.8);
-  transform-origin: bottom right;
+/*   transform-origin: bottom right; */
 }
 
 .link {
