@@ -27,10 +27,10 @@ function ad () {
   }
 
   function moveMe (element) {
-    element.style.right = '5vw';
+    element.style.right = '27vw';
     element.style.bottom = '25vh';
-    element.style.height = '25vh';
-    element.style.width = '25vw';
+    element.style.height = '70vh';
+    element.style.width = '18vw';
   }
 
   function yeet () {
