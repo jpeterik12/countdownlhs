@@ -2,164 +2,150 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<title>Homework</title>
-	<link rel="apple-touch-icon" sizes="180x180" href="/images/notepadicons/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/images/notepadicons/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/images/notepadicons/favicon-16x16.png">
-	<link rel="manifest" href="/images/notepadicons/site.webmanifest">
-	<link rel="mask-icon" href="/images/notepadicons/safari-pinned-tab.svg" color="#5bbad5">
-	<link rel="shortcut icon" href="/images/notepadicons/favicon.ico">
-	<meta name="msapplication-TileColor" content="#00aba9">
-	<meta name="msapplication-config" content="/images/notepadicons/browserconfig.xml">
-	<meta name="theme-color" content="#00dddd">
-	<style>
-    body {
-			width: 100vw;
-			height: 100vh;
-			padding: 0;
-			margin: 0;
-			overflow: hidden;
-      background-color: black;
-		}
-
-    .container {
-      box-sizing: border-box;
-			display: grid;
-			grid-template-columns: auto auto auto auto 11%;
-      grid-gap: 10px;
-			padding: 0;
-			border: 5px solid black;
-      height: 100vh;
-      width: 100vw;
-		}
-
-    .input {
-      box-sizing: border-box;
-      position: relative;
-			resize: none;
-			border: 3px solid;
-      padding: 0;
-      margin: 0;
-    }
-
-    a {
-      font-size: 0;
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      display: box;
-      width: 30px;
-      padding: 0;
-      margin: 0;
-    }
-    img {
-      display: box;
-      width: 30px;
-      padding: 0;
-      margin: 0;
-    }
-
-		.input:focus-within {
-			background-color: #0A0A0A;
-			outline: 3px solid;
-		}
-
-    textarea {
-      padding: 4px;
-      border: none;
-      background-color: transparent;
-      resize: none;
-      outline: none;
-      color: inherit;
-      font-family: monospace;
-      width: 100%;
-      height: 100%;
-      font-size: 1em;
-    }
-
-    ::placeholder {
-      color: green;
-    }
-
-		.week {
-			grid-column: 5 / 6;
-			grid-row: 1 / 3;
-			display: grid;
-			grid-template-columns: auto;
-      grid-gap: 10px;
-		}
-	</style>
+  <meta charset="utf-8">
+  <title>Homework</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/notepadicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/notepadicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/notepadicons/favicon-16x16.png">
+  <link rel="manifest" href="/images/notepadicons/site.webmanifest">
+  <link rel="mask-icon" href="/images/notepadicons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/images/notepadicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="msapplication-config" content="/images/notepadicons/browserconfig.xml">
+  <meta name="theme-color" content="#00dddd">
+  <link href="jp.css" rel="stylesheet" type="text/css">
 </head>
 
-<body onload="start();" data-gramm="false">
+<body onload="start();">
+  <div class="container">
+    <div style="color: #f77;" class="input">
+      <textarea data-gramm="false" placeholder="Period 1" id="notepad1"></textarea>
+      <div class="links">
+        <a class="hamburger hamburger--vortex" href="javascript:void 0;" tabindex="-1">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </a>
+        <a tabindex="-1" target="_blank" href="https://classroom.google.com/u/0/c/MzU4NjEyMjE3MTla" class="link">
+          <img src="/images/classroomblack.png">
+        </a>
+      </div>
+    </div>
+    <div style="color: #ff7;" class="input">
+      <textarea data-gramm="false" placeholder="Period 2" id="notepad2"></textarea>
+      <div class="links">
+        <a class="hamburger hamburger--vortex" href="javascript:void 0;" tabindex="-1">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </a>
+        <a tabindex="-1" target="_blank" href="https://classroom.google.com/u/0/c/NDExMjg3Mzc2MDBa" class="link">
+          <img src="/images/classroomblack.png">
+        </a>
+      </div>
+    </div>
+    <div style="color: #fff;" class="input">
+      <textarea data-gramm="false" placeholder="Period 3" id="notepad3"></textarea>
+      <div class="links">
+        <a class="hamburger hamburger--vortex" href="javascript:void 0;" tabindex="-1">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </a>
+        <a tabindex="-1" target="_blank" href="https://classroom.google.com/u/0/c/NDExMDM2Njc3NjVa" class="link">
+          <img src="/images/classroomblack.png">
+        </a>
+      </div>
+    </div>
+    <div style="color: #7ff;" class="input">
+      <textarea data-gramm="false" placeholder="Period 4" id="notepad4"></textarea>
+      <div class="links">
+        <a class="hamburger hamburger--vortex" href="javascript:void 0;" tabindex="-1">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </a>
+        <a tabindex="-1" target="_blank" href="https://classroom.google.com/u/0/c/NDY5MDUwOTE5NDFa" class="link">
+          <img src="/images/classroomblack.png">
+        </a>
+      </div>
+    </div>
+    <div style="color: #f7f;" class="input">
+      <textarea data-gramm="false" placeholder="Period 5" id="notepad5"></textarea>
+      <div class="links">
+        <a class="hamburger hamburger--vortex" href="javascript:void 0;" tabindex="-1">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </a>
+        <a tabindex="-1" target="_blank" href="https://classroom.google.com/u/0/c/NDEwMjk1NDExOTZa" class="link">
+          <img src="/images/classroomblack.png">
+        </a>
+      </div>
+    </div>
+    <div style="color: #7f7;" class="input">
+      <textarea data-gramm="false" placeholder="Period 6" id="notepad6"></textarea>
+      <div class="links">
+        <a class="hamburger hamburger--vortex" href="javascript:void 0;" tabindex="-1">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </a>
+        <a tabindex="-1" target="_blank" href="https://classroom.google.com/u/0/c/NDExNTUwNDQ0NDJa" class="link">
+          <img src="/images/classroomblack.png">
+        </a>
+      </div>
+    </div>
+    <div style="color: #77f;" class="input">
+      <textarea data-gramm="false" placeholder="Period 7" id="notepad7"></textarea>
+      <div class="links">
+        <a class="hamburger hamburger--vortex" href="javascript:void 0;" tabindex="-1">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </a>
+        <a tabindex="-1" target="_blank" href="https://classroom.google.com/u/0/c/NDA4Njk2NTk3NTJa" class="link">
+          <img src="/images/classroomblack.png">
+        </a>
+      </div>
+    </div>
+    <div style="color: #777;" class="input">
+      <textarea data-gramm="false" placeholder="Other   " id="notepad8"></textarea>
+      <div class="links">
+        <a class="hamburger hamburger--vortex" href="javascript:void 0;" tabindex="-1">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </a>
+        <a tabindex="-1" target="_blank" href="https://classroom.google.com/" class="link">
+          <img src="/images/classroomblack.png">
+        </a>
+      </div>
+    </div>
+    <div class="week">
+      <div class="input" style="color: #f7f;"><textarea data-gramm="false" placeholder="Monday" id="mon"></textarea>
+      </div>
+      <div class="input" style="color: #f77;"><textarea data-gramm="false" placeholder="Tuesday" id="tue"></textarea>
+      </div>
+      <div class="input" style="color: #ff7;"><textarea data-gramm="false" placeholder="Wednesday" id="wed"></textarea>
+      </div>
+      <div class="input" style="color: #d73;"><textarea data-gramm="false" placeholder="Thursday" id="thu"></textarea>
+      </div>
+      <div class="input" style="color: #7f7;"><textarea data-gramm="false" placeholder="Friday" id="fri"></textarea>
+      </div>
+      <div class="input" style="color: #77f;"><textarea data-gramm="false" placeholder="Saturday" id="sat"></textarea>
+      </div>
+      <div class="input" style="color: #fff;"><textarea data-gramm="false" placeholder="Sunday" id="sun"></textarea>
+      </div>
+    </div>
+  </div>
 
-	<div class="container">
-		<div style="color: #f77;" class="input">
-      <textarea placeholder="Period 1" id="notepad1"></textarea>
-      <a tabindex="-1"    target="_blank" href="https://classroom.google.com/u/0/c/MzU4NjEyMjE3MTla">
-        <img src="/images/classroomblack.png">
-      </a>
-    </div>
-		<div style="color: #ff7;" class="input">
-      <textarea placeholder="Period 2" id="notepad2"></textarea>
-      <a tabindex="-1"    target="_blank" href="https://classroom.google.com/u/0/c/NDExMjg3Mzc2MDBa">
-        <img src="/images/classroomblack.png">
-      </a>
-    </div>
-		<div style="color: #fff;" class="input">
-      <textarea placeholder="Period 3" id="notepad3"></textarea>
-      <a tabindex="-1"    target="_blank" href="https://classroom.google.com/u/0/c/NDExMDM2Njc3NjVa">
-        <img src="/images/classroomblack.png">
-      </a>
-    </div>
-		<div style="color: #7ff;" class="input">
-      <textarea placeholder="Period 4" id="notepad4"></textarea>
-      <a tabindex="-1"    target="_blank" href="https://classroom.google.com/u/0/c/NDY5MDUwOTE5NDFa">
-        <img src="/images/classroomblack.png">
-      </a>
-    </div>
-		<div style="color: #f7f;" class="input">
-      <textarea placeholder="Period 5" id="notepad5"></textarea>
-      <a tabindex="-1"    target="_blank" href="https://classroom.google.com/u/0/c/NDEwMjk1NDExOTZa">
-        <img src="/images/classroomblack.png">
-      </a>
-    </div>
-		<div style="color: #7f7;" class="input">
-      <textarea placeholder="Period 6" id="notepad6"></textarea>
-      <a tabindex="-1"    target="_blank" href="https://classroom.google.com/u/0/c/NDExNTUwNDQ0NDJa">
-        <img src="/images/classroomblack.png">
-      </a>
-    </div>
-		<div style="color: #77f;" class="input">
-      <textarea placeholder="Period 7" id="notepad7"></textarea>
-      <a tabindex="-1"    target="_blank" href="https://classroom.google.com/u/0/c/NDA4Njk2NTk3NTJa">
-        <img src="/images/classroomblack.png">
-      </a>
-    </div>
-		<div style="color: #777;" class="input">
-      <textarea placeholder="Other   " id="notepad8"></textarea>
-      <a tabindex="-1"    target="_blank" href="https://classroom.google.com/">
-        <img src="/images/classroomblack.png">
-      </a>
-    </div>
-		<div class="week">
-			<div class="input" style="color: #f7f;"><textarea placeholder="Monday" id="mon"></textarea></div>
-			<div class="input" style="color: #f77;"><textarea placeholder="Tuesday" id="tue"></textarea></div>
-			<div class="input" style="color: #ff7;"><textarea placeholder="Wednesday" id="wed"></textarea></div>
-			<div class="input" style="color: #d73;"><textarea placeholder="Thursday" id="thu"></textarea></div>
-			<div class="input" style="color: #7f7;"><textarea placeholder="Friday" id="fri"></textarea></div>
-			<div class="input" style="color: #77f;"><textarea placeholder="Saturday" id="sat"></textarea></div>
-			<div class="input" style="color: #fff;"><textarea placeholder="Sunday" id="sun"></textarea></div>
-		</div>
-	</div>
-
-	<script src="/js/saving.js">
-	</script>
-	<script src="/js/lisleschedule.js">
-	</script>
-	<script src="/js/countdown.js">
-	</script>
+  <script src="/js/saving.js">
+  </script>
+  <script src="/js/lisleschedule.js">
+  </script>
+  <script src="/js/countdown.js">
+  </script>
 </body>
 
 </html>
