@@ -1,24 +1,40 @@
 /* eslint-disable no-unused-vars */
 function ad () {
-  const x = document.createElement('img');
-  x.src = '/images/ads/caffe_di_moda.png';
-  x.style.objectFit = 'contain';
-  x.style.zIndex = '2147483647';
+  const x = document.createElement('a');
+  x.target = '_blank';
+  x.href = 'https://www.caffedimoda.com/';
   x.style.display = 'block';
-  x.onload = yeet;
   x.style.position = 'absolute';
-  x.style.top = '10vh';
-  x.style.left = '10vw';
   x.style.bottom = '10vh';
   x.style.right = '10vw';
+  x.style.width = '80vw';
+  x.style.height = '80vh';
+  x.style.transition = 'all 1s';
 
+  const y = document.createElement('img');
+  y.src = '/images/ads/caffe_di_moda.png';
+  y.style.objectFit = 'contain';
+  y.style.zIndex = '2147483647';
+  y.onload = yeet;
+  y.style.height = '100%';
+  y.style.width = '100%';
+
+  x.appendChild(y);
   document.body.appendChild(x);
 
   function deleteMe (element) {
     element.parentNode.removeChild(element);
   }
 
+  function moveMe (element) {
+    element.style.right = '5vw';
+    element.style.bottom = '25vh';
+    element.style.height = '25vh';
+    element.style.width = '25vw';
+  }
+
   function yeet () {
-    setTimeout(deleteMe, 6000, x);
+    // setTimeout(deleteMe, 6000, x);
+    setTimeout(moveMe, 6000, x);
   }
 }
