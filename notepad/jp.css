@@ -1,5 +1,5 @@
 .hamburger {
-  padding: 10px 5px 5px 5px;
+  padding: 7px 8px 4px 5px;
   display: inline-block;
   cursor: pointer;
   transition-property: opacity, filter;
@@ -29,7 +29,7 @@
 }
 
 .hamburger-box {
-  width: 40px;
+  width: 30px;
   height: 24px;
   display: inline-block;
   position: relative;
@@ -44,7 +44,7 @@
 .hamburger-inner,
 .hamburger-inner::before,
 .hamburger-inner::after {
-  width: 40px;
+  width: 30px;
   height: 4px;
   background-color: #fff;
   border-radius: 4px;
@@ -174,13 +174,11 @@ textarea {
 .links {
   display: flex;
   flex-direction: column-reverse;
-  width: 50px;
+  width: 40px;
   position: absolute;
   bottom: 0;
   right: 0;
-  height: aut0;
-  transform: scale(.8);
-  transform-origin: bottom right;
+  height: auto;
 }
 
 .link {
@@ -204,5 +202,5 @@ textarea {
 }
 
 .hamburger:focus~.link {
-  height: 50px;
+  height: 40px;
 }
