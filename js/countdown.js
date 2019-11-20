@@ -106,7 +106,9 @@ function startTimer(endDate) {
         window.location.hostname === 'www.countdownlhs.ga' ||
         window.location.hostname === 'localhost' ||
         window.location.hostname === 'countdown.jpeterik12.repl.co' ||
-        window.location.hostname === 'jpsys.jpeterik12.repl.co'
+        window.location.hostname === 'jpsys.jpeterik12.repl.co' ||
+        window.location.hostname === 'jp12.ga' ||
+        window.location.hostname === 'www.jp12.ga'
       )
         document.title = timeMessage;
       // console.log(timeString + '\n' + timeMessage);
