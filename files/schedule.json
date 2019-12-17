@@ -207,5 +207,83 @@
         "name": "Period 7"
       }
     ]
+  },
+  {
+    "name": "LHS Finals Wed",
+    "enabled": true,
+    "layer": "main",
+    "priority": 3,
+    "dates": [
+      "2019-12-18"
+    ],
+    "events": [
+      {
+        "startTime": "08:00",
+        "endTime": "09:30",
+        "name": "Study Period"
+      },
+      {
+        "startTime": "09:45",
+        "endTime": "11:45",
+        "name": "Period 1"
+      },
+      {
+        "startTime": "11:30",
+        "endTime": "13:00",
+        "name": "Period 2"
+      }
+    ]
+  },
+  {
+    "name": "LHS Finals Thurs",
+    "enabled": true,
+    "layer": "main",
+    "priority": 4,
+    "dates": [
+      "2019-12-19"
+    ],
+    "events": [
+      {
+        "startTime": "08:00",
+        "endTime": "09:30",
+        "name": "Period 3"
+      },
+      {
+        "startTime": "09:45",
+        "endTime": "11:45",
+        "name": "Period 4"
+      },
+      {
+        "startTime": "11:30",
+        "endTime": "13:00",
+        "name": "Period 5"
+      }
+    ]
+  },
+  {
+    "name": "LHS Finals Fri",
+    "enabled": true,
+    "layer": "main",
+    "priority": 5,
+    "dates": [
+      "2019-12-20"
+    ],
+    "events": [
+      {
+        "startTime": "08:00",
+        "endTime": "09:30",
+        "name": "Period 6"
+      },
+      {
+        "startTime": "09:45",
+        "endTime": "11:45",
+        "name": "Period 7"
+      },
+      {
+        "startTime": "11:30",
+        "endTime": "13:00",
+        "name": "Make-up Period"
+      }
+    ]
   }
 ]
