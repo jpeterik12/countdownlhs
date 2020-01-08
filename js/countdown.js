@@ -1,6 +1,3 @@
-const url = 'https://api.jsonbin.io/b/5df135581c19843d88ea6645/latest';
-const key = '$2b$10$kpjbv4KgMM4fo6T3xnJOueEd.l6p74c96/RwdUin.Wq6Y6q7m42vu';
-
 function convertMS(ms) {
   let d, h, m, s;
   s = Math.floor(ms / 1000);
@@ -102,12 +99,12 @@ function getNextTime(currentDate, scheduleArr) {
 }
 
 let stopper;
-function startCountdown(scheduleArr, countdownDate) {
+function startCountdown(scheduleArr, countdownDate, cb) {
   let eventDate;
   let nextEvent;
   if (countdownDate) {
     eventDate = countdownDate;
-    nextEvent = {message: 'Custom Date'}
+    nextEvent = { name: 'Custom Date' }
   } else setEventDate();
 
 
@@ -132,75 +129,87 @@ function startCountdown(scheduleArr, countdownDate) {
   }
   if (stopper) clearInterval(stopper);
   stopper = setInterval(() => {
-    diff = convertMS(eventDate - Date.now());
+    let diff = convertMS(eventDate - Date.now());
+    let lastEnded;
     if (diff.d < 0) {
       setEventDate();
+      lastEnded = true;
       diff = convertMS(eventDate - Date.now());
     }
-    let timeString;
-    if (diff.d) {
-      timeString = [
-        diff.d,
-        ('0' + diff.h).slice(-2),
-        ('0' + diff.m).slice(-2),
-        ('0' + diff.s).slice(-2),
-      ];
-    } else if (diff.h) {
-      timeString = [('0' + diff.h).slice(-2), ('0' + diff.m).slice(-2), ('0' + diff.s).slice(-2)];
-    } else {
-      timeString = [('0' + diff.m).slice(-2), ('0' + diff.s).slice(-2)];
-    }
-    timeString = timeString.join(':');
-    const timeMessage = timeString + ` ${!nextEvent.end ? 'until' : 'left in'} ` + nextEvent.name;
-    if (document) {
-      const clock = document.getElementById('cdlhsclock')
-      if (clock) document.getElementById('cdlhsclock').innerHTML = timeString;
-    }
-    if (
-        window.location.hostname === 'www.countdownlhs.ga' ||
-        window.location.hostname === 'localhost' ||
-        window.location.hostname === 'countdownlhs.jpeterik12.repl.co' ||
-        window.location.hostname === 'jpsys.jpeterik12.repl.co' ||
-        window.location.hostname === 'jp12.ga' ||
-        window.location.hostname === 'www.jp12.ga'
-      )
-        document.title = timeMessage;
+    cb(diff, nextEvent, lastEnded)
 
-    console.log(timeMessage);
+
   }, 1000);
 }
 
-function start(date) {
-  if (typeof process !== "undefined") {
+if (typeof module != 'undefined') module.exports = {
+  start: startCountdown,
+  setup: processScheduleArr,
+  stop: () => {
+    clearInterval(stopper);
+  }
+};
+
+const browser = typeof window !== 'undefined';
+const node = typeof process !== 'undefined';
+
+const url = `https://countdownlhs.ga/files/schedule.json?${Date.now()}`;
+
+let customDate;
+
+function cb(diff, nextEvent, lastEnded) {
+  if (lastEnded) console.log('ENDED');
+  let timeString = [diff.m,diff.s];
+  if (diff.d) timeString.unshift(diff.h, diff.d);
+  else if (diff.h) timeString.unshift(diff.h);
+  timeString.forEach((v,i,a) => {
+    a[i] = String(v).padStart(2,'0');
+  });
+  timeString = timeString.join(':');
+  
+  const timeMessage = timeString + ` ${!nextEvent.end ? 'until' : 'left in'} ` + nextEvent.name;
+
+  if (browser) {
+    const clock = document.getElementById('cdlhsclock');
+    if (clock) clock.innerHTML = timeString;
+    if ([
+      'www.countdownlhs.ga',
+      'localhost',
+      'countdownlhs.jpeterik12.repl.co',
+      'jpsys.jpeterik12.repl.co',
+      'jp12.ga',
+      'www.jp12.ga'
+    ].includes(window.location.hostname))
+      document.title = timeMessage;
+  }
+  console.log(timeMessage);
+}
+
+
+if (node) {
+  const cd = require('./countdown.js');
   process.env.TZ = 'America/Chicago'
-  require('https').get(url, {
-    headers: {
-      'secret-key': key
-    }
-  }).on('response', function (response) {
+  require('https').get(url).on('response', function(response) {
     var body = '';
-    var i = 0;
-    response.on('data', function (chunk) {
-      i++;
+    response.on('data', function(chunk) {
       body += chunk;
     });
-    response.on('end', function () {
-      startCountdown(processScheduleArr(JSON.parse(body), date));
+    response.on('end', function() {
+      cd.start(cd.setup(JSON.parse(body)), customDate, cb);
     });
   });
-} else if (window) {
+} else if (browser) {
   let req = new XMLHttpRequest();
 
   req.onreadystatechange = () => {
     if (req.readyState == XMLHttpRequest.DONE) {
-        startCountdown(processScheduleArr(JSON.parse(req.response)), date);
+      startCountdown(processScheduleArr(JSON.parse(req.response)), customDate, cb);
     }
   };
 
-  req.open("GET", url, true);
-  req.setRequestHeader("secret-key", key);
+  req.open('GET', url, true);
   req.send();
 } else {
-  console.log('Where the fuck is this code running?')
+  console.log('Where the fuck is this code running?');
 }
-}
+void 0;
