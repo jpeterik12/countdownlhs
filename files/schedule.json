@@ -285,5 +285,70 @@
         "name": "Make-up Period"
       }
     ]
+  },
+  {
+    "name": "LHS 5 Essentials",
+    "enabled": true,
+    "layer": "main",
+    "priority": 6,
+    "dates": [
+      "2020-01-09",
+    ],
+    "events": [
+      {
+        "time": "07:45",
+        "name": "Warning Bell"
+      },
+      {
+        "startTime": "07:50",
+        "endTime": "08:35",
+        "name": "Period 1"
+      },
+      {
+        "startTime": "08:39",
+        "endTime": "09:24",
+        "name": "Period 2"
+      },
+      {
+        "startTime": "09:28",
+        "endTime": "10:13",
+        "name": "Period 3"
+      },
+      {
+        "startTime": "10:15",
+        "endTime": "10:43",
+        "name": "Period 3"
+      },
+      {
+        "startTime": "10:47",
+        "endTime": "11:32",
+        "name": "Period 4"
+      },
+      {
+        "startTime": "11:36",
+        "endTime": "12:01",
+        "name": "Lunch A"
+      },
+      {
+        "startTime": "12:05",
+        "endTime": "12:30",
+        "name": "Lunch B"
+      },
+      {
+        "startTime": "12:34",
+        "endTime": "12:59",
+        "name": "Lunch C"
+      },
+      {
+        "startTime": "13:05",
+        "endTime": "13:48",
+        "name": "Period 6"
+      },
+      {
+        "startTime": "13:52",
+        "endTime": "14:37",
+        "name": "Period 7"
+      }
+    ]
   }
 ]
