@@ -190,10 +190,10 @@ body {
 
 .schedule {
   display: inline-block;
+  padding: 5vh;
   position: absolute;
   width: 70vw;
   height: 60vh;
-  padding: 2%;
   object-fit: contain;
   object-position: left top;
 }

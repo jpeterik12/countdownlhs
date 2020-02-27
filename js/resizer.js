@@ -1,5 +1,5 @@
 function resizeClock() {
-  var clock = document.getElementById('clock');
+  var clock = document.getElementById('cdlhsclock');
   var fontSize = parseInt(window.getComputedStyle(clock).fontSize, 10) || 1;
   var clockWidth = parseInt(clock.offsetWidth, 10);
   var totalWidth = window.innerWidth;

@@ -1,0 +1,354 @@
+[
+  {
+    "name": "LHS Standard",
+    "enabled": true,
+    "layer": "main",
+    "priority": 0,
+    "days": {
+      "sun": false,
+      "mon": true,
+      "tue": true,
+      "wed": true,
+      "thu": true,
+      "fri": true,
+      "sat": false
+    },
+    "skipDates": [
+      "2019-09-02",
+      "2019-10-11",
+      "2019-10-14",
+      "2019-10-25",
+      "2019-11-27/2019-11-29",
+      "2019-12-23/2020-01-03",
+      "2020-01-20",
+      "2020-02-14",
+      "2020-02-17",
+      "2020-02-28",
+      "2020-03-30/2020-04-03",
+      "2020-04-10",
+      "2020-05-22/2020-08-01"
+    ],
+    "events": [
+      {
+        "time": "07:45",
+        "name": "Warning Bell"
+      },
+      {
+        "startTime": "07:50",
+        "endTime": "08:40",
+        "name": "Period 1"
+      },
+      {
+        "startTime": "08:44",
+        "endTime": "09:34",
+        "name": "Period 2"
+      },
+      {
+        "startTime": "09:38",
+        "endTime": "10:28",
+        "name": "Period 3"
+      },
+      {
+        "startTime": "10:32",
+        "endTime": "11:22",
+        "name": "Period 4"
+      },
+      {
+        "startTime": "11:26",
+        "endTime": "11:51",
+        "name": "Lunch A"
+      },
+      {
+        "startTime": "11:55",
+        "endTime": "12:20",
+        "name": "Lunch B"
+      },
+      {
+        "startTime": "12:24",
+        "endTime": "12:49",
+        "name": "Lunch C"
+      },
+      {
+        "startTime": "12:53",
+        "endTime": "13:43",
+        "name": "Period 6"
+      },
+      {
+        "startTime": "13:47",
+        "endTime": "14:37",
+        "name": "Period 7"
+      }
+    ]
+  },
+  {
+    "name": "LHS PLC",
+    "enabled": true,
+    "layer": "main",
+    "priority": 1,
+    "dates": [
+      "2019-09-04",
+      "2019-09-18",
+      "2019-10-02",
+      "2019-10-16",
+      "2019-10-24",
+      "2019-11-06",
+      "2019-11-20",
+      "2019-12-04",
+      "2020-01-08",
+      "2020-01-22",
+      "2020-02-05",
+      "2020-02-19",
+      "2020-03-04",
+      "2020-03-18",
+      "2020-04-08",
+      "2020-04-22"
+    ],
+    "events": [
+      {
+        "time": "07:45",
+        "name": "Warning Bell"
+      },
+      {
+        "startTime": "07:50",
+        "endTime": "08:33",
+        "name": "Period 1"
+      },
+      {
+        "startTime": "08:37",
+        "endTime": "09:20",
+        "name": "Period 2"
+      },
+      {
+        "startTime": "09:24",
+        "endTime": "10:07",
+        "name": "Period 3"
+      },
+      {
+        "startTime": "10:11",
+        "endTime": "10:54",
+        "name": "Period 4"
+      },
+      {
+        "startTime": "10:58",
+        "endTime": "11:23",
+        "name": "Lunch A"
+      },
+      {
+        "startTime": "11:27",
+        "endTime": "11:52",
+        "name": "Lunch B"
+      },
+      {
+        "startTime": "11:56",
+        "endTime": "12:21",
+        "name": "Lunch C"
+      },
+      {
+        "startTime": "12:25",
+        "endTime": "13:07",
+        "name": "Period 6"
+      },
+      {
+        "startTime": "13:11",
+        "endTime": "13:53",
+        "name": "Period 7"
+      }
+    ]
+  },
+  {
+    "name": "LHS Half",
+    "enabled": true,
+    "layer": "main",
+    "priority": 2,
+    "dates": [
+      "2019-09-20",
+      "2019-11-01",
+      "2020-01-17",
+      "2020-05-08"
+    ],
+    "events": [
+      {
+        "time": "07:45",
+        "name": "Warning Bell"
+      },
+      {
+        "startTime": "07:50",
+        "endTime": "08:17",
+        "name": "Period 1"
+      },
+      {
+        "startTime": "08:21",
+        "endTime": "08:48",
+        "name": "Period 2"
+      },
+      {
+        "startTime": "08:52",
+        "endTime": "09:19",
+        "name": "Period 3"
+      },
+      {
+        "startTime": "09:23",
+        "endTime": "09:50",
+        "name": "Period 4"
+      },
+      {
+        "startTime": "09:54",
+        "endTime": "10:21",
+        "name": "Period 5"
+      },
+      {
+        "startTime": "10:25",
+        "endTime": "10:52",
+        "name": "Period 6"
+      },
+      {
+        "startTime": "10:56",
+        "endTime": "11:22",
+        "name": "Period 7"
+      }
+    ]
+  },
+  {
+    "name": "LHS Finals Wed",
+    "enabled": true,
+    "layer": "main",
+    "priority": 3,
+    "dates": [
+      "2019-12-18"
+    ],
+    "events": [
+      {
+        "startTime": "08:00",
+        "endTime": "09:30",
+        "name": "Study Period"
+      },
+      {
+        "startTime": "09:45",
+        "endTime": "11:45",
+        "name": "Period 1"
+      },
+      {
+        "startTime": "11:30",
+        "endTime": "13:00",
+        "name": "Period 2"
+      }
+    ]
+  },
+  {
+    "name": "LHS Finals Thurs",
+    "enabled": true,
+    "layer": "main",
+    "priority": 4,
+    "dates": [
+      "2019-12-19"
+    ],
+    "events": [
+      {
+        "startTime": "08:00",
+        "endTime": "09:30",
+        "name": "Period 3"
+      },
+      {
+        "startTime": "09:45",
+        "endTime": "11:45",
+        "name": "Period 4"
+      },
+      {
+        "startTime": "11:30",
+        "endTime": "13:00",
+        "name": "Period 5"
+      }
+    ]
+  },
+  {
+    "name": "LHS Finals Fri",
+    "enabled": true,
+    "layer": "main",
+    "priority": 5,
+    "dates": [
+      "2019-12-20"
+    ],
+    "events": [
+      {
+        "startTime": "08:00",
+        "endTime": "09:30",
+        "name": "Period 6"
+      },
+      {
+        "startTime": "09:45",
+        "endTime": "11:45",
+        "name": "Period 7"
+      },
+      {
+        "startTime": "11:30",
+        "endTime": "13:00",
+        "name": "Make-up Period"
+      }
+    ]
+  },
+  {
+    "name": "LHS 5 Essentials",
+    "enabled": true,
+    "layer": "main",
+    "priority": 6,
+    "dates": [
+      "2020-01-09"
+    ],
+    "events": [
+      {
+        "time": "07:45",
+        "name": "Warning Bell"
+      },
+      {
+        "startTime": "07:50",
+        "endTime": "08:35",
+        "name": "Period 1"
+      },
+      {
+        "startTime": "08:39",
+        "endTime": "09:24",
+        "name": "Period 2"
+      },
+      {
+        "startTime": "09:28",
+        "endTime": "10:13",
+        "name": "Period 3"
+      },
+      {
+        "startTime": "10:15",
+        "endTime": "10:43",
+        "name": "Period 3"
+      },
+      {
+        "startTime": "10:47",
+        "endTime": "11:32",
+        "name": "Period 4"
+      },
+      {
+        "startTime": "11:36",
+        "endTime": "12:01",
+        "name": "Lunch A"
+      },
+      {
+        "startTime": "12:05",
+        "endTime": "12:30",
+        "name": "Lunch B"
+      },
+      {
+        "startTime": "12:34",
+        "endTime": "12:59",
+        "name": "Lunch C"
+      },
+      {
+        "startTime": "13:05",
+        "endTime": "13:48",
+        "name": "Period 6"
+      },
+      {
+        "startTime": "13:52",
+        "endTime": "14:37",
+        "name": "Period 7"
+      }
+    ]
+  }
+]

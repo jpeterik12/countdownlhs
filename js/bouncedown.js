@@ -18,5 +18,5 @@ function createClock() {
 createClock();
 
 setTimeout(() => {
-  start();
+  startCDLHS();
 }, 2000);

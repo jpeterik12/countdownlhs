@@ -25,10 +25,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, user-scalable=1">
 </head>
 
-<body style="height: 100%; width: 100%; overflow: visible;" onload="start(); loadResizer(); ad();">
+<body style="height: 100%; width: 100%; overflow: visible;" onload="startCDLHS(); loadResizer(); ad();">
 
   <div style="height: 100%; width: 100%; overflow: visible;">
-    <span style="font-family: monospace; font-size: 1em;" id="clock">00:00</span>
+    <span style="font-family: monospace; font-size: 1em;" id="cdlhsclock">00:00</span>
     <h3 style="display: none;" id="date">Test</h3>
     <div class="sidebar-div">
       <input class="opener" id="scheduleOpener" type="checkbox">
@@ -38,7 +38,7 @@
         <label for="scheduleOpener">School Schedule:</label>
       </h3>
       <div class="expanding">
-        <img src="/images/schedule.png" class="schedule">
+              <iframe class="schedule" src="/html/schedule.html"></iframe>
       </div>
     </div>
     <div class="sidebar-div">
@@ -98,7 +98,6 @@
   </div>
   <script src="/js/resizer.js"></script>
   <script src="/js/mobilead.js"></script>
-  <script src="/js/lisleschedule.js"></script>
   <script src="/js/countdown.js"></script>
   <script src="/js/saving.js"></script>
 </body>

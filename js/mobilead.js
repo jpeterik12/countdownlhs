@@ -20,7 +20,7 @@ function ad () {
   y.style.width = '100%';
 
   x.appendChild(y);
-  document.body.appendChild(x);
+//   document.body.appendChild(x);
 
   function deleteMe (element) {
     element.parentNode.removeChild(element);

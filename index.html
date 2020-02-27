@@ -30,16 +30,18 @@
   <meta name="theme-color" content="#00aced">
 </head>
 
-<body onload="start(); ad();">
+<body onload="startCDLHS(); ad();">
   <div class="container">
     <div class="top">
       <img class="logo" src="/images/OGs/Countdown.svg">
       <h1 class="name">CountdownLHS</h1>
       <h3 class="owner">by Jackson Peterik</h3>
-      <h4 class="clock" id="clock" onclick="window.location.pathname = 'clock'">00:00</h4>
+      <h4 class="clock" id="cdlhsclock" onclick="window.location.pathname = 'clock'">00:00</h4>
     </div>
     <div class="middle">
-      <img class="schedule" src="/images/schedule.png">
+      <iframe class="schedule" src="/html/schedule.html"></iframe>
+<!--             <img class="schedule" src="/images/photo.jpeg"> -->
+
       <div class="side">
         <h3>Links:</h3>
         <ul>
@@ -72,7 +74,6 @@
     </div>
     <script src="/js/ad.js"></script>
     <script src="/js/saving.js"></script>
-    <script src="/js/lisleschedule.js"></script>
     <script src="/js/countdown.js"></script>
 </body>
 
