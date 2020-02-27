@@ -206,6 +206,14 @@ body {
   overflow: auto;
 }
 
+.notif {
+  position: absolute;
+  top: 80vh;
+  right: 3px;
+  z-index:1;
+  font-size: .75em;
+}
+
 textarea {
   width: 100%;
   padding: 0;
