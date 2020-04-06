@@ -1,4 +1,4 @@
-function convertMS(ms) {
+function convertMS (ms) {
   let d, h, m, s;
   s = Math.floor(ms / 1000);
   m = Math.floor(s / 60);
@@ -15,12 +15,12 @@ function convertMS(ms) {
   };
 }
 
-function toISODateOnly(date, utc) {
+function toISODateOnly (date, utc) {
   if (utc) return `${date.getUTCFullYear()}-${String(date.getUTCMonth() + 1).padStart(2, '0')}-${String(date.getUTCDate()).padStart(2, '0')}`
   else return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
 }
 
-function expandDateRange(range) {
+function expandDateRange (range) {
   if (!range.includes('/')) return [range];
   const date = new Date(range.split('/')[0] + 'T00:00:00Z');
   const dates = [range.split('/')[0]];
@@ -31,7 +31,7 @@ function expandDateRange(range) {
   return dates;
 }
 
-function processScheduleArr(scheduleArr) {
+function processScheduleArr (scheduleArr) {
   const conflictDates = {};
   for (schedule of scheduleArr) {
     if (schedule.layer) {
@@ -79,7 +79,7 @@ function processScheduleArr(scheduleArr) {
   return scheduleArr;
 }
 
-function getNextTime(currentDate, scheduleArr) {
+function getNextTime (currentDate, scheduleArr) {
   const day = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'][currentDate.getDay()];
   const time = currentDate.getHours() * 60 + currentDate.getMinutes();
   let nextEvent = {
@@ -88,8 +88,9 @@ function getNextTime(currentDate, scheduleArr) {
   for (schedule of scheduleArr) {
     if (!schedule.enabled) continue;
     if (schedule.days && !schedule.days[day]) continue;
-    if (schedule.dates && !schedule.dates.includes(toISODateOnly(currentDate))) continue;
-    if (schedule.skipDates && schedule.skipDates.includes(toISODateOnly(currentDate))) continue;
+    iso = toISODateOnly(currentDate)
+    if (schedule.dates && !schedule.dates.includes(iso)) continue;
+    if (schedule.skipDates && schedule.skipDates.includes(iso)) continue;
     const nextTime = Math.min(...schedule.events.filter((event) => {
       return event.time > time;
     }).map((x) => x.time), nextEvent.time);
@@ -99,7 +100,7 @@ function getNextTime(currentDate, scheduleArr) {
 }
 
 let stopper;
-function startCountdown(scheduleArr, countdownDate, cb) {
+function startCountdown (scheduleArr, countdownDate, cb) {
   let eventDate;
   let nextEvent;
   if (countdownDate) {
@@ -108,7 +109,7 @@ function startCountdown(scheduleArr, countdownDate, cb) {
   } else setEventDate();
 
 
-  function setEventDate() {
+  function setEventDate () {
     let mathDate = new Date();
     let dayOffset = 0;
     do {
@@ -153,9 +154,9 @@ if (typeof module != 'undefined') module.exports = {
 const browser = typeof window !== 'undefined';
 const node = typeof process !== 'undefined';
 
-const url = `https://countdownlhs.ga/files/schedule.json?${Date.now()}`;
+const url = `https://www.countdownlhs.ga/files/schedule.json?${Date.now()}`;
 
-function cb(diff, nextEvent, lastEnded) {
+function cb (diff, nextEvent, lastEnded) {
   if (lastEnded) console.log('ENDED');
   let timeString = [diff.m, diff.s];
   if (diff.d) timeString.unshift(diff.h, diff.d);
@@ -183,9 +184,8 @@ function cb(diff, nextEvent, lastEnded) {
   console.log(timeMessage);
 }
 
-function startCDLHS(customDate) {
+function startCDLHS (customDate) {
   if (node) {
-    const cd = require('./countdown.js');
     process.env.TZ = 'America/Chicago'
     require('https').get(url).on('response', function (response) {
       var body = '';
@@ -193,7 +193,7 @@ function startCDLHS(customDate) {
         body += chunk;
       });
       response.on('end', function () {
-        cd.start(cd.setup(JSON.parse(body)), customDate, cb);
+        startCountdown(processScheduleArr(JSON.parse(body)), customDate, cb);
       });
     });
   } else if (browser) {
@@ -211,3 +211,4 @@ function startCDLHS(customDate) {
     console.log('Where the fuck is this code running?');
   }
 }
+startCDLHS()
