@@ -1,7 +1,7 @@
 [
   {
     "name": "LHS Standard",
-    "enabled": true,
+    "enabled": false,
     "layer": "main",
     "priority": 0,
     "days": {
@@ -82,7 +82,7 @@
   },
   {
     "name": "LHS PLC",
-    "enabled": true,
+    "enabled": false,
     "layer": "main",
     "priority": 1,
     "dates": [
@@ -157,7 +157,7 @@
   },
   {
     "name": "LHS Half",
-    "enabled": true,
+    "enabled": false,
     "layer": "main",
     "priority": 2,
     "dates": [
@@ -210,7 +210,7 @@
   },
   {
     "name": "LHS Finals Wed",
-    "enabled": true,
+    "enabled": false,
     "layer": "main",
     "priority": 3,
     "dates": [
@@ -236,7 +236,7 @@
   },
   {
     "name": "LHS Finals Thurs",
-    "enabled": true,
+    "enabled": false,
     "layer": "main",
     "priority": 4,
     "dates": [
@@ -262,7 +262,7 @@
   },
   {
     "name": "LHS Finals Fri",
-    "enabled": true,
+    "enabled": false,
     "layer": "main",
     "priority": 5,
     "dates": [
@@ -288,7 +288,7 @@
   },
   {
     "name": "LHS 5 Essentials",
-    "enabled": true,
+    "enabled": false,
     "layer": "main",
     "priority": 6,
     "dates": [
