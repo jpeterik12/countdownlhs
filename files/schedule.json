@@ -350,5 +350,193 @@
         "name": "Period 7"
       }
     ]
+  },
+  {
+    "name": "Corona Tuesday",
+    "enabled": true,
+    "layer": "main",
+    "priority": 3,
+    "days": {
+      "sun": false,
+      "mon": true,
+      "tue": false,
+      "wed": false,
+      "thu": false,
+      "fri": false,
+      "sat": false
+    },
+    "events": [
+      {
+        "startTime": "09:00",
+        "endTime": "09:45",
+        "name": "Period 1"
+      },
+      {
+        "startTime": "10:00",
+        "endTime": "10:45",
+        "name": "Period 2"
+      },
+      {
+        "startTime": "11:00",
+        "endTime": "12:00",
+        "name": "Teacher Q&A"
+      },
+      {
+        "startTime": "12:00",
+        "endTime": "12:45",
+        "name": "Period 3"
+      },
+      {
+        "startTime": "13:00",
+        "endTime": "13:45",
+        "name": "Period 4"
+      },
+      {
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "name": "Teacher Q&A"
+      }
+    ]
+  },
+  {
+    "name": "Corona Monday",
+    "enabled": true,
+    "layer": "main",
+    "priority": 3,
+    "days": {
+      "sun": false,
+      "mon": false,
+      "tue": true,
+      "wed": false,
+      "thu": false,
+      "fri": false,
+      "sat": false
+    },
+    "events": [
+      {
+        "startTime": "09:00",
+        "endTime": "09:45",
+        "name": "Period 5"
+      },
+      {
+        "startTime": "10:00",
+        "endTime": "10:45",
+        "name": "Period 6"
+      },
+      {
+        "startTime": "11:00",
+        "endTime": "12:00",
+        "name": "Teacher Q&A"
+      },
+      {
+        "startTime": "12:00",
+        "endTime": "12:45",
+        "name": "Period 7"
+      },
+      {
+        "startTime": "13:00",
+        "endTime": "13:45",
+        "name": "Earlybird"
+      },
+      {
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "name": "Teacher Q&A"
+      }
+    ]
+  },
+  {
+    "name": "Corona Thursday",
+    "enabled": true,
+    "layer": "main",
+    "priority": 3,
+    "days": {
+      "sun": false,
+      "mon": false,
+      "tue": false,
+      "wed": false,
+      "thu": true,
+      "fri": false,
+      "sat": false
+    },
+    "events": [
+      {
+        "startTime": "09:00",
+        "endTime": "09:45",
+        "name": "Period 4"
+      },
+      {
+        "startTime": "10:00",
+        "endTime": "10:45",
+        "name": "Period 3"
+      },
+      {
+        "startTime": "11:00",
+        "endTime": "12:00",
+        "name": "Teacher Q&A"
+      },
+      {
+        "startTime": "12:00",
+        "endTime": "12:45",
+        "name": "Period 2"
+      },
+      {
+        "startTime": "13:00",
+        "endTime": "13:45",
+        "name": "Period 1"
+      },
+      {
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "name": "Teacher Q&A"
+      }
+    ]
+  },
+  {
+    "name": "Corona Friday",
+    "enabled": true,
+    "layer": "main",
+    "priority": 3,
+    "days": {
+      "sun": false,
+      "mon": false,
+      "tue": false,
+      "wed": false,
+      "thu": false,
+      "fri": true,
+      "sat": false
+    },
+    "events": [
+      {
+        "startTime": "09:00",
+        "endTime": "09:45",
+        "name": "Earlybird"
+      },
+      {
+        "startTime": "10:00",
+        "endTime": "10:45",
+        "name": "Period 7"
+      },
+      {
+        "startTime": "11:00",
+        "endTime": "12:00",
+        "name": "Teacher Q&A"
+      },
+      {
+        "startTime": "12:00",
+        "endTime": "12:45",
+        "name": "Period 6"
+      },
+      {
+        "startTime": "13:00",
+        "endTime": "13:45",
+        "name": "Period 5"
+      },
+      {
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "name": "Teacher Q&A"
+      }
+    ]
   }
 ]
