@@ -20,7 +20,7 @@
     }
 
     .schedule-base {
-      font-size: 3.5vh;
+      font-size: 1em;
       background-color: #ffffff;
       border-collapse: collapse;
       border-spacing: 0;
@@ -35,15 +35,27 @@
       border-style: solid;
       border-width: .05em;
       font-size: 1.4em;
-      font-weight: 600;
+      font-weight: 300;
       overflow: hidden;
-      padding: .4em .1em .4em .8em;
+      padding: .4em .4em .4em .4em;
       text-align: right;
+    }
+
+    .header.sm {
+      font-size: .9em;
+    }
+
+    .gray.sm {
+      font-size: .9em;
     }
 
     .schedule-base .header {
       background-color: #1627f3;
       color: #ffffff;
+    }
+
+    .schedule-base .gray {
+      background-color: #999999;
     }
 
     .schedule-base .alternate {
@@ -56,52 +68,59 @@
   <table class="schedule-base">
     <tr>
       <th class="header"></th>
-      <th class="header">Monday</th>
-      <th class="header">Tuesday</th>
-      <th class="header">Thursday</th>
-      <th class="header">Friday</th>
+      <th class="header">Monday 4/13</th>
+      <th class="header">Tuesday 4/14</th>
+      <th class="header">Wednesday 4/15</th>
+      <th class="header">Thursday 4/16</th>
+      <th class="header">Friday 4/17</th>
     </tr>
     <tr>
-      <td class="header">09:00 AM - 09:45 AM</td>
+      <td class="header sm">09:00 AM - 09:45 AM</td>
       <td class="white-background">Period 1</td>
       <td class="alternate">Period 5</td>
-      <td class="white-background">Period 4</td>
-      <td class="alternate">Earlybird</td>
+      <td class="gray sm">Departmental PLC</td>
+      <td class="alternate">Period 4</td>
+      <td class="white-background">Earlybird</td>
     </tr>
     <tr>
-      <td class="header">10:00 AM - 10:45 AM</td>
+      <td class="header sm">10:00 AM - 10:45 AM</td>
       <td class="white-background">Period 2</td>
       <td class="alternate">Period 6</td>
-      <td class="white-background">Period 3</td>
-      <td class="alternate">Period 7</td>
+      <td class="gray">Teacher AMA</td>
+      <td class="alternate">Period 3</td>
+      <td class="white-background">Period 7</td>
     </tr>
     <tr>
-      <td class="header">11:00 AM - 12:00 PM</td>
+      <td class="header sm">11:00 AM - 12:00 PM</td>
       <td class="white-background">Teacher AMA</td>
       <td class="alternate">Teacher AMA</td>
-      <td class="white-background">Teacher AMA</td>
+      <td class="gray">Teacher AMA</td>
       <td class="alternate">Teacher AMA</td>
+      <td class="white-background">Teacher AMA</td>
     </tr>
     <tr>
-      <td class="header">12:00 PM - 12:45 PM</td>
+      <td class="header sm">12:00 PM - 12:45 PM</td>
       <td class="white-background">Period 3</td>
       <td class="alternate">Period 7</td>
-      <td class="white-background">Period 2</td>
-      <td class="alternate">Period 6</td>
+      <td class="gray sm">Departmental Work Time</td>
+      <td class="alternate">Period 2</td>
+      <td class="white-background">Period 6</td>
     </tr>
     <tr>
-      <td class="header">01:00 PM - 01:45 PM</td>
+      <td class="header sm">01:00 PM - 01:45 PM</td>
       <td class="white-background">Period 4</td>
       <td class="alternate">Earlybird</td>
-      <td class="white-background">Period 1</td>
-      <td class="alternate">Period 5</td>
+      <td class="gray sm">Departmental Work Time</td>
+      <td class="alternate">Period 1</td>
+      <td class="white-background">Period 5</td>
     </tr>
     <tr>
-      <td class="header">02:00 PM - 03:00 PM</td>
+      <td class="header sm">02:00 PM - 03:00 PM</td>
       <td class="white-background">Teacher AMA</td>
       <td class="alternate">Teacher AMA</td>
-      <td class="white-background">Teacher AMA</td>
+      <td class="gray">Teacher AMA</td>
       <td class="alternate">Teacher AMA</td>
+      <td class="white-background">Teacher AMA</td>
     </tr>
   </table>
 </body>
