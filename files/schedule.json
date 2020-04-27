@@ -463,12 +463,12 @@
       {
         "startTime": "09:00",
         "endTime": "10:00",
-        "name": "Period 5"
+        "name": "Departmental PLC"
       },
       {
         "startTime": "10:00",
         "endTime": "12:00",
-        "name": "Departmental PLC"
+        "name": "Teacher Q&A"
       },
       {
         "startTime": "12:00",
@@ -574,6 +574,9 @@
         "endTime": "15:00",
         "name": "Teacher Q&A"
       }
+    ],
+    "skipDates": [
+      "2020-05-01"
     ]
   }
 ]
