@@ -178,7 +178,7 @@ label + label {
 }
 
 .opener + label {
-  background: url(https://www.countdownlhs.ga/images/arrows.png) left top no-repeat;
+  background: url(https://www.cdlhs.ga/images/arrows.png) left top no-repeat;
   cursor: pointer;
   display: inline-block;
   height: 19px;

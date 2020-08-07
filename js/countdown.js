@@ -154,7 +154,7 @@ if (typeof module != 'undefined') module.exports = {
 const browser = typeof window !== 'undefined';
 const node = typeof process !== 'undefined';
 
-const url = `https://www.countdownlhs.ga/files/schedule.json?${Date.now()}`;
+const url = `https://www.cdlhs.ga/files/schedule.json?${Date.now()}`;
 
 function cb (diff, nextEvent, lastEnded) {
   if (lastEnded) console.log('ENDED');
@@ -172,7 +172,7 @@ function cb (diff, nextEvent, lastEnded) {
     const clock = document.getElementById('cdlhsclock');
     if (clock) clock.innerHTML = timeString;
     if ([
-      'www.countdownlhs.ga',
+      'www.cdlhs.ga',
       'localhost',
       'countdownlhs.jpeterik12.repl.co',
       'jpsys.jpeterik12.repl.co',
